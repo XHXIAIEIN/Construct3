@@ -1,7 +1,7 @@
 # Scripting cheatsheet [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
 
-## Global variable
+## 全局变量(Global variable)
 
 用脚本获取全局变量。
 
@@ -9,7 +9,7 @@
 runtime.globalVars.Variable1
 ```
 
-## Local variable
+## 局部变量(Local variable)
 
 在事件表的事件条内，用脚本获取本地变量。备注，获取函数传入参数 `Function parameter` 也是使用这个方法获取。
 
@@ -25,7 +25,7 @@ localVars["Score"]
 instVars["Score"]
 ```
 
-## Instances variable
+## 实例变量(Instances variable)
 
 获取实例对象的实例变量。需要先获取到 `instance` 对象，才可以引用它的属性。
 
@@ -33,17 +33,16 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
-## Instances Object
+## 实例对象(Instances Object)
 
-获取实例对象。
 
-### 获取第一个实例对象
+## 获取第一个实例对象
 
 ```javascript
 runtime.objects.Sprite.getFirstInstance()
 ```
 
-### 获取所有实例对象
+## 获取所有实例对象
 
 返回的是一个数组。
 
@@ -51,7 +50,7 @@ runtime.objects.Sprite.getFirstInstance()
 runtime.objects.Sprite.getAllInstances()
 ```
 
-### 遍历所有实例对象的实例变量
+## 遍历所有实例对象的实例变量
 
 遍历所有 Sprite 对象的实例变量 `Score` ，同时销毁所有变量小于 60 的实例。
 
