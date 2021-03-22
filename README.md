@@ -9,6 +9,8 @@
 runtime.globalVars.Variable1
 ```
 
+  
+
 ## 局部变量(Local variable)
 
 在事件表的事件条内，用脚本获取本地变量。备注，获取函数传入参数 `Function parameter` 也是使用这个方法获取。
@@ -25,6 +27,8 @@ localVars["Score"]
 instVars["Score"]
 ```
 
+  
+
 ## 实例变量(Instances variable)
 
 获取实例对象的实例变量。需要先获取到 `instance` 对象，才可以引用它的属性。
@@ -33,12 +37,15 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
+  
 
 ## 获取第一个实例对象(First Instances Object)
 
 ```javascript
 runtime.objects.Sprite.getFirstInstance()
 ```
+
+  
 
 ## 获取所有实例对象(All Instances Object)
 
@@ -47,6 +54,8 @@ runtime.objects.Sprite.getFirstInstance()
 ```javascript
 runtime.objects.Sprite.getAllInstances()
 ```
+
+  
 
 ## 遍历所有实例对象的实例变量
 
