@@ -1,7 +1,7 @@
 # Scripting cheatsheet [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
 
-## global variable
+## Global variable
 
 用脚本获取全局变量。
 
@@ -9,7 +9,7 @@
 runtime.globalVars.Variable1
 ```
 
-## local variable
+## Local variable
 
 在事件表的事件条内，用脚本获取本地变量。备注，获取函数传入参数 `Function parameter` 也是使用这个方法获取。
 
