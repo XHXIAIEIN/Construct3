@@ -1,6 +1,6 @@
 # Scripting cheatsheet [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
-Construct 3 脚本备忘笔记
+Scripting in Construct 3 脚本备忘笔记
 
 ## 全局变量(Global variable)
 
