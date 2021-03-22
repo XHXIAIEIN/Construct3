@@ -34,13 +34,13 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
-## 获取第一个实例对象(First Instances Object)
+## 获取第一个实例对象(First Instance Object)
 
 ```javascript
 runtime.objects.Sprite.getFirstInstance()
 ```
 
-## 获取所有实例对象(All Instances Object)
+## 获取所有实例对象(All Instances objects)
 
 返回的是一个数组。
 
@@ -65,7 +65,7 @@ for (const player of runtime.objects.Sprite.instances())
 ```
 
 
-## 获取实例对象的行为属性(Instances behaviors)
+## 获取实例对象的行为属性(Instance behaviors)
 
 ```javascript
 instance.behaviors.Bullet.speed
