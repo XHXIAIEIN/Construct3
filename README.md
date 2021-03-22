@@ -40,7 +40,7 @@ instance.instVars.Variable1
 ### 获取第一个实例对象
 
 ```javascript
-runtime.objects.Sprite.getFirstInstance();
+runtime.objects.Sprite.getFirstInstance()
 ```
 
 ### 获取所有实例对象
