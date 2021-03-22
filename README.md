@@ -1,6 +1,5 @@
 # Scripting cheatsheet [![Awesome](https://awesome.re/badge-flat.svg)](https://awesome.re)
 
-
 ## 全局变量(Global variable)
 
 用脚本获取全局变量。
@@ -8,8 +7,6 @@
 ```javascript
 runtime.globalVars.Variable1
 ```
-
-  
 
 ## 局部变量(Local variable)
 
@@ -27,8 +24,6 @@ localVars["Score"]
 instVars["Score"]
 ```
 
-  
-
 ## 实例变量(Instances variable)
 
 获取实例对象的实例变量。需要先获取到 `instance` 对象，才可以引用它的属性。
@@ -37,15 +32,11 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
-  
-
 ## 获取第一个实例对象(First Instances Object)
 
 ```javascript
 runtime.objects.Sprite.getFirstInstance()
 ```
-
-  
 
 ## 获取所有实例对象(All Instances Object)
 
@@ -54,8 +45,6 @@ runtime.objects.Sprite.getFirstInstance()
 ```javascript
 runtime.objects.Sprite.getAllInstances()
 ```
-
-  
 
 ## 遍历所有实例对象的实例变量
 
@@ -72,4 +61,3 @@ for (const player of runtime.objects.Sprite.instances())
     }
 }
 ```
-
