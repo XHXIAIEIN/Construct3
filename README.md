@@ -51,3 +51,19 @@ runtime.objects.Sprite.getFirstInstance()
 runtime.objects.Sprite.getAllInstances()
 ```
 
+### 遍历所有实例对象的实例变量
+
+遍历所有 Sprite 对象的实例变量 `Score` ，同时销毁所有变量小于 60 的实例。
+
+```javascript
+for (const player of runtime.objects.Sprite.instances())
+{
+    const score = inst.instVars["Score"];
+
+    if (score <= 60) 
+    {
+        player.destroy();
+    }
+}
+```
+
