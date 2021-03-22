@@ -63,3 +63,17 @@ for (const player of runtime.objects.Sprite.instances())
     }
 }
 ```
+
+
+## 获取实例对象的行为属性(Instances behaviors)
+
+```javascript
+instance.behaviors.Bullet.speed
+```
+
+在某些情况下，有些名称可能不是有效的标识符，此时，还可以用字符串来引用。
+
+```javascript
+instance.instVars["8Direction"]
+```
+
