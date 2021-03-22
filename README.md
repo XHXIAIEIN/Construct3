@@ -33,16 +33,14 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
-## 实例对象(Instances Object)
 
-
-## 获取第一个实例对象
+## 获取第一个实例对象(First Instances Object)
 
 ```javascript
 runtime.objects.Sprite.getFirstInstance()
 ```
 
-## 获取所有实例对象
+## 获取所有实例对象(All Instances Object)
 
 返回的是一个数组。
 
