@@ -17,8 +17,6 @@ runtime.globalVars.Variable1
 localVars.Variable2
 ```
 
-## 补充
-
 在某些情况下，如果你的变量名称可能不是有效的标识符，此时，你还可以用字符串来引用。
 
 ```javascript
