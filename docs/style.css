@@ -58,6 +58,14 @@ h4 {
     margin: 18px 0 7px;
 }
 
+address {
+    font-style: normal;
+    font-size: 15px;
+    line-height: 18px;
+    color: var(--gray-color, gray);
+    margin-bottom: 14px;
+}
+
 table + table {
     padding-top: 3ch;
 }
