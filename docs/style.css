@@ -70,9 +70,8 @@ table + table {
     padding-top: 3ch;
 }
 
-tr,
-th,
-td {
+tr th,
+tr td {
     text-align:left;
     white-space: nowrap;
 }
