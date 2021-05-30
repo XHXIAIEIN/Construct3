@@ -70,7 +70,8 @@ table + table {
     padding-top: 3ch;
 }
 
-td {
+th,td {
+    text-align:left;
     white-space: nowrap;
 }
 
@@ -105,6 +106,15 @@ code[class*="language-"] {
 
 p > code[class*="language-"] {
     padding: 2px 4px;
+}
+
+.area + .area{
+    padding-top: 2ch;
+    padding-bottom: 2ch;
+}
+
+h3 + table {
+    padding-top: 1ch;
 }
 
 
