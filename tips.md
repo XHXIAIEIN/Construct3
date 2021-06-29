@@ -37,7 +37,8 @@ Bullet 行为默认的角度方向是 0°，也就是往右边发射。如果希
 正常：angle(0, 0, 1, 0)  
 镜像：angle(0, 0, -1, 0)
 
-再看看这张图，你就懂了吧？
+再看看这张图，你就懂了吧？  
+
 <img width="515" alt="Snipaste_2021-06-29_16-27-18" src="https://user-images.githubusercontent.com/45864744/123763949-e5916e80-d8f6-11eb-8585-4f5e0deb366a.png">
 
 
