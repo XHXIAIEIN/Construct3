@@ -8,7 +8,7 @@ Bullet 行为默认的角度方向是 0°，也就是往右边发射。如果希
 
 
 #### 公式做法：  
-利用公式：`round(angle(0, 0, sign(Player.Width), 0))` 
+`round(angle(0, 0, sign(Player.Width), 0))` 
 <img width="1016" src="https://user-images.githubusercontent.com/45864744/123760509-7e25ef80-d8f3-11eb-8249-8b522965134d.png">
 
 具体讲解：  
@@ -33,12 +33,14 @@ Bullet 行为默认的角度方向是 0°，也就是往右边发射。如果希
 那么，最终公式的计算方式就变成了：  
 正常：angle(0, 0, 1, 0)  
 镜像：angle(0, 0, -1, 0)
-
+  
+  
 再看看这张图，你就懂了吧？  
   
 <img width="515" alt="Snipaste_2021-06-29_16-27-18" src="https://user-images.githubusercontent.com/45864744/123763949-e5916e80-d8f6-11eb-8585-4f5e0deb366a.png">
     
 还有 @hcatarrunas 制作的这张角度关系图，右边是子弹的角度方向：  
+  
 ![by-hcatarrunas](https://user-images.githubusercontent.com/45864744/123764134-1671a380-d8f7-11eb-8486-3ac9b95cbc26.png)
 
 
