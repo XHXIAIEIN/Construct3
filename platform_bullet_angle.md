@@ -1,18 +1,15 @@
-
-
-
 ## Platform 子弹角度跟随玩家朝向
 
 Bullet 行为默认的角度方向是 0°，也就是往右边发射。如果希望子弹向左方向飞，就是将角度调整为 180° 或 -180°。  
 
 #### 简单做法1：  
 在**发射子弹**的事件下添加子条件，判断玩家是否镜像，如果玩家已经镜像，那么将子弹的角度调整为 180°  
-<img width="1020" alt="Snipaste_2021-06-29_15-53-40" src="https://user-images.githubusercontent.com/45864744/123759739-c55fb080-d8f2-11eb-83f3-8257fe9228d1.png">
+<img width="1020" src="https://user-images.githubusercontent.com/45864744/123759739-c55fb080-d8f2-11eb-83f3-8257fe9228d1.png">
 
 
 #### 公式做法：  
 利用公式：`round(angle(0, 0, sign(Player.Width), 0))` 
-<img width="1016" alt="Snipaste_2021-06-29_16-02-56" src="https://user-images.githubusercontent.com/45864744/123760509-7e25ef80-d8f3-11eb-8249-8b522965134d.png">
+<img width="1016" src="https://user-images.githubusercontent.com/45864744/123760509-7e25ef80-d8f3-11eb-8249-8b522965134d.png">
 
 具体讲解：  
 
