@@ -83,3 +83,14 @@ for (const player of runtime.objects.Sprite.instances())
 }
 ```
 
+
+## 编辑文本
+
+```javascript
+const textObject = runtime.objects.Text;
+const textInstance = textObject.getFirstPickedInstance();
+
+textInstance.text = "Hello World"
+```
+
+
