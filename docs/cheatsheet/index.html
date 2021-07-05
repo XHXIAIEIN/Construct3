@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="img/icon.png" rel="icon">
+    <title>Construct 3 Cheatsheet</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="bootstrap" charset="utf-8">
+    <link rel="stylesheet" href="css/highlight/monokai.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div id="content" class="container api">
+      <!-- HEADER -->
+      <div class="page-header">
+        <h1>Scripting in Construct 3 Cheatsheet</h1>
+      </div>
+
+      <!-- NAVBAR -->
+      <ul class="nav nav-pills">
+        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="img/icon.png" height="12em" alt="Welcome"></a></li>
+        <li role="presentation"><a href="#object" aria-controls="audio" role="tab" data-toggle="tab">object</a></li>
+      </ul>
+
+      <div class="tab-content clearfix">
+        <!-- HOME -->
+        <div role="tabpanel" class="tab-pane active" id="home">
+          <h6>run on the loading screen</h6>
+          <pre><code class="js">runOnStartup(async runtime =>
+{
+	// This code runs on startup with
+	// the 'runtime' variable available
+});</code></pre>
+
+
+          <h6>Runtime events</h6>
+          <pre><code class="js">runOnStartup(async runtime =>
+{
+  runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
+  runtime.addEventListener("afterprojectstart", () => OnAfterProjectStart(runtime));
+});
+
+function OnBeforeProjectStart(runtime)
+{
+  runtime.addEventListener("tick", () => OnTick(runtime));
+  runtime.addEventListener("beforelayoutstart", () => OnBeforeLayoutStart(runtime));
+  runtime.addEventListener("afterlayoutstart", () => OnAfterLayoutStart(runtime));
+
+  runtime.addEventListener("keydown", () => OnKeyDown(runtime));
+  runtime.addEventListener("keyup", () => OnKeyUp(runtime));
+
+  runtime.addEventListener("mousedown", () => OnMouseDown(runtime));
+  runtime.addEventListener("mousemove", () => OnMouseMove(runtime));
+  runtime.addEventListener("mouseup", () => OnMouseUp(runtime));
+  runtime.addEventListener("dblclick", () => OnMouseDoubleClick(runtime));
+  runtime.addEventListener("wheel", () => OnMouseWheel(runtime));
+
+  runtime.addEventListener("pointerdown", () => OnPointDown(runtime));
+  runtime.addEventListener("pointermove", () => OnPointMove(runtime));
+  runtime.addEventListener("pointerup", () => OnPointUp(runtime));
+  runtime.addEventListener("pointercancel", () => OnPointCancel(runtime));
+
+  runtime.addEventListener("deviceorientation", () => OnDeviceOrientation(runtime));
+  runtime.addEventListener("devicemotion", () => OnDevicemotion(runtime));
+
+  runtime.addEventListener("save", () => OnSave(runtime));
+  runtime.addEventListener("load", () => OnLoad(runtime));
+
+  runtime.addEventListener("instancecreate", () => OnInstanceCreate(runtime));
+  runtime.addEventListener("instancedestroy", () => OnInstanceDestroy(runtime));
+}
+
+// On start of layout
+function OnBeforeLayoutStart(runtime)
+{
+
+}
+</code></pre>
+        </div>
+
+        <!-- Object -->
+        <div role="tabpanel" class="tab-pane fade" id="object">
+          <h6>create</h6>
+          <pre><code class="javascript">
+
+          </code></pre>
+        </div>
+
+
+
+      </div>
+
+    <div class="footer">
+      <div class="row">
+        <div class="col-md-4" style="text-align: center;">construct by <a href="https://www.construct.net/" target="_blank">Scirra</a> <img src="img/scirra.png" style="width: 25px;"></img></div>
+        <div class="col-md-4" style="text-align: center;">made with <i class="fa fa-heart text-danger"></i> by <a href="https://xhxiaiein.github.io/construct3" target="_blank">xhxiaiein</a></div>
+        <div class="col-md-4" style="text-align: center;">theme with <a href="https://github.com/iiviigames/pico8-api" target="_blank">neko250</a> <i class="fa fa-lg fa-code-fork text-primary"></i></div>
+      </div>
+    </div>
+
+    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  </body>
+</html>
