@@ -46,28 +46,28 @@ function OnBeforeProjectStart(runtime)
   runtime.addEventListener("beforelayoutstart", () => OnBeforeLayoutStart(runtime));
   runtime.addEventListener("afterlayoutstart", () => OnAfterLayoutStart(runtime));
 
-  runtime.addEventListener("keydown", () => OnKeyDown(runtime));
-  runtime.addEventListener("keyup", () => OnKeyUp(runtime));
+  runtime.addEventListener("keydown", e => OnKeyDown(e,runtime));
+  runtime.addEventListener("keyup", e => OnKeyUp(e,runtime));
 
-  runtime.addEventListener("mousedown", () => OnMouseDown(runtime));
-  runtime.addEventListener("mousemove", () => OnMouseMove(runtime));
-  runtime.addEventListener("mouseup", () => OnMouseUp(runtime));
-  runtime.addEventListener("dblclick", () => OnMouseDoubleClick(runtime));
-  runtime.addEventListener("wheel", () => OnMouseWheel(runtime));
+  runtime.addEventListener("mousedown", e => OnMouseDown(e,runtime));
+  runtime.addEventListener("mousemove", e => OnMouseMove(e,runtime));
+  runtime.addEventListener("mouseup", e => OnMouseUp(e,runtime));
+  runtime.addEventListener("dblclick", e => OnMouseDoubleClick(e,runtime));
+  runtime.addEventListener("wheel", e => OnMouseWheel(e,runtime));
 
-  runtime.addEventListener("pointerdown", () => OnPointDown(runtime));
-  runtime.addEventListener("pointermove", () => OnPointMove(runtime));
-  runtime.addEventListener("pointerup", () => OnPointUp(runtime));
-  runtime.addEventListener("pointercancel", () => OnPointCancel(runtime));
+  runtime.addEventListener("pointerdown", e => OnPointDown(e,runtime));
+  runtime.addEventListener("pointermove", e => OnPointMove(e,runtime));
+  runtime.addEventListener("pointerup", e => OnPointUp(e,runtime));
+  runtime.addEventListener("pointercancel", e => OnPointCancel(e,runtime));
 
-  runtime.addEventListener("deviceorientation", () => OnDeviceOrientation(runtime));
-  runtime.addEventListener("devicemotion", () => OnDevicemotion(runtime));
+  runtime.addEventListener("deviceorientation", e => OnDeviceOrientation(e,runtime));
+  runtime.addEventListener("devicemotion", e => OnDevicemotion(e,runtime));
 
-  runtime.addEventListener("save", () => OnSave(runtime));
-  runtime.addEventListener("load", () => OnLoad(runtime));
+  runtime.addEventListener("save", e => OnSave(e,runtime));
+  runtime.addEventListener("load", e => OnLoad(e,runtime));
 
-  runtime.addEventListener("instancecreate", () => OnInstanceCreate(runtime));
-  runtime.addEventListener("instancedestroy", () => OnInstanceDestroy(runtime));
+  runtime.addEventListener("instancecreate", e => OnInstanceCreate(e,runtime));
+  runtime.addEventListener("instancedestroy", e => OnInstanceDestroy(e,runtime));
 }
 
 // On start of layout
