@@ -1,40 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="img/icon.png" rel="icon">
     <title>Construct 3 Cheatsheet</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="bootstrap" charset="utf-8">
-    <link rel="stylesheet" href="css/highlight/monokai.min.css">
+    <link rel="stylesheet" href="css/highlight/seti-ui.min.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <div id="content" class="container api">
-      <!-- HEADER -->
-      <div class="page-header">
-        <h1>Scripting in Construct 3 Cheatsheet</h1>
+
+    <!-- header  --->
+    <div class="page-header">
+      <h1>Scripting in Construct 3</h1>
+    </div>
+
+    <!-- navbar  --->
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><img src="img/icon.png" height="12em" alt="Welcome"></a></button>
+        <button class="nav-link" id="nav-runtime-tab" data-bs-toggle="tab" data-bs-target="#nav-runtime" type="button" role="tab" aria-controls="nav-runtime" aria-selected="false">Runtime</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
       </div>
+    </nav>
 
-      <!-- NAVBAR -->
-      <ul class="nav nav-pills">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab"><img src="img/icon.png" height="12em" alt="Welcome"></a></li>
-        <li role="presentation"><a href="#object" aria-controls="audio" role="tab" data-toggle="tab">object</a></li>
-      </ul>
+    <!-- content  -->
+    <div class="tab-content" id="nav-tabContent">
 
-      <div class="tab-content clearfix">
-        <!-- HOME -->
-        <div role="tabpanel" class="tab-pane active" id="home">
-          <h6>run on the loading screen</h6>
-          <pre><code class="js">runOnStartup(async runtime =>
+      <!-- HOME -->
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+        <h6>run on the loading screen</h6>
+        <pre><code class="javascript">runOnStartup(async runtime =>
 {
-	// This code runs on startup with
-	// the 'runtime' variable available
-});</code></pre>
-
-
-          <h6>Runtime events</h6>
-          <pre><code class="js">runOnStartup(async runtime =>
+  // This code runs on startup with
+  // the 'runtime' variable available
+});
+</code></pre>
+     </div>
+    
+    <!-- Runtime -->
+    <div class="tab-pane fade" id="nav-runtime" role="tabpanel" aria-labelledby="nav-runtime-tab">
+      <h6>Runtime events</h6>
+      <pre><code class="javascript">runOnStartup(async runtime =>
 {
   runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
   runtime.addEventListener("afterprojectstart", () => OnAfterProjectStart(runtime));
@@ -43,8 +51,6 @@
 function OnBeforeProjectStart(runtime)
 {
   runtime.addEventListener("tick", () => OnTick(runtime));
-  runtime.addEventListener("beforelayoutstart", () => OnBeforeLayoutStart(runtime));
-  runtime.addEventListener("afterlayoutstart", () => OnAfterLayoutStart(runtime));
 
   runtime.addEventListener("keydown", e => OnKeyDown(e,runtime));
   runtime.addEventListener("keyup", e => OnKeyUp(e,runtime));
@@ -70,35 +76,30 @@ function OnBeforeProjectStart(runtime)
   runtime.addEventListener("instancedestroy", e => OnInstanceDestroy(e,runtime));
 }
 
-// On start of layout
-function OnBeforeLayoutStart(runtime)
-{
 
+function Tick(runtime)
+{
+	// Code to run every tick
 }
 </code></pre>
-        </div>
-
-        <!-- Object -->
-        <div role="tabpanel" class="tab-pane fade" id="object">
-          <h6>create</h6>
-          <pre><code class="javascript">
-
-          </code></pre>
-        </div>
-
-
-
       </div>
 
-    <div class="footer">
+      <!-- Contact -->
+      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+        <h6>contact</h6>
+      </div>
+    
+    </div>
+
+    <div class="container">
       <div class="row">
-        <div class="col-md-4" style="text-align: center;">construct by <a href="https://www.construct.net/" target="_blank">Scirra</a> <img src="img/scirra.png" style="width: 25px;"></img></div>
-        <div class="col-md-4" style="text-align: center;">made with <i class="fa fa-heart text-danger"></i> by <a href="https://xhxiaiein.github.io/construct3" target="_blank">xhxiaiein</a></div>
-        <div class="col-md-4" style="text-align: center;">theme with <a href="https://github.com/iiviigames/pico8-api" target="_blank">neko250</a> <i class="fa fa-lg fa-code-fork text-primary"></i></div>
+        <div class="col">Construct 3 by <a href="https://www.construct.net/" target="_blank">Scirra</a></div>
+        <div class="col"><a href="https://github.com/XHXIAIEIN/Construct3" target="_blank">XHXIAIEIN</a></div>
+        <div class="col">QQ Group <a href="https://jq.qq.com/?_wv=1027&k=goJR2rPx" target="_blank">180911504</a></div>
       </div>
     </div>
 
-    <script src="js/jquery.min.js" charset="utf-8"></script>
+    <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
     <script src="js/bootstrap.min.js" charset="utf-8"></script>
     <script src="js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
