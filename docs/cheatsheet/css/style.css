@@ -1,34 +1,106 @@
-body {
-  background-color: #e6e6e6;
+html, body {
+  height: 100%;
+  width: 100%;
 }
-h6{
-  color: black;
-  font-size: 14px;
 
+body {
+  color: #4d4e53;
+  background-color: white;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: 16px;
 }
-pre+h6{
-  padding-top: 20px;
+
+a,
+a:active {
+  text-decoration: none;
 }
-.nav-pills > li > a {
-  border-radius: 4px 4px 0 0;
+
+p, ul, ol, blockquote {
+  margin: 1em 0 .3em;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 48px;
+  margin: 1em 0 .5em;
+}
+
+h1.page-title {
+  font-size: 28px;
+  word-wrap: break-word;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 18px;
+  color: #4d4e53;
+}
+
+h5, .container-overview .subsection-title {
+  font-size: 120%;
+  letter-spacing: -0.01em;
+  margin: 8px 0 3px 0;
+}
+
+h6 {
+  letter-spacing: -0.01em;
+  margin: 6px 0 3px 0;
+}
+pre {
+  border-radius: .25rem;
+	max-height: 50em;
+	overflow: auto;
+}
+
+.tab-pane +.subsection-title {
+  margin-top: 2em;
+}
+
+pre + .subsection-title {
+  margin-top: 1.75em;
+}
+
+.disabled {
+  color: #454545
+}
+
+
 .tab-content {
-  color: white;
-  background-color: #f8f8f8;
   padding: 15px 15px 5px 15px;
 }
+
 div.tab-pane ul {
   padding-left: 1.7rem;
   padding-bottom: 1.7rem;
 }
+
 .api {
-  background-color: #fff;
   border-radius: 5px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 .footer {
-  background-color: #fff;
-  margin-top: 20px;
+  font-size: 80%;
+  margin-top: 10px;
   margin-bottom: 10px;
 }

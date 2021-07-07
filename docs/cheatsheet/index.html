@@ -1,48 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="img/icon.png" rel="icon">
-    <title>Construct 3 Cheatsheet</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="bootstrap" charset="utf-8">
-    <link rel="stylesheet" href="css/highlight/seti-ui.min.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="img/icon.png" rel="icon">
+<title>Construct 3 Cheatsheet</title>
+<link rel="stylesheet" href="css/bootstrap.min.css" media="screen" title="bootstrap" charset="utf-8">
+<link rel="stylesheet" href="css/prism.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
 
-    <!-- header  --->
-    <div class="page-header">
-      <h1>Scripting in Construct 3</h1>
-    </div>
+<!-- header  --->
+<div class="page-header">
+<h1 class="page-title">Scripting in Construct 3</h1>
+</div>
 
-    <!-- navbar  --->
-    <nav>
-      <div class="nav nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><img src="img/icon.png" height="12em" alt="Welcome"></a></button>
-        <button class="nav-link" id="nav-runtime-tab" data-bs-toggle="tab" data-bs-target="#nav-runtime" type="button" role="tab" aria-controls="nav-runtime" aria-selected="false">Runtime</button>
-        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</button>
-      </div>
-    </nav>
+<!-- navbar  --->
+<nav>
+<div class="nav nav-tabs" id="nav-tab" role="tablist">
+<button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><img src="img/icon.png" height="12em" alt="Welcome"></a></button>
+<button class="nav-link" id="nav-runtime-tab" data-bs-toggle="tab" data-bs-target="#nav-runtime" type="button" role="tab" aria-controls="nav-runtime" aria-selected="false">Runtime</button>
+<button class="nav-link" id="nav-variable-tab" data-bs-toggle="tab" data-bs-target="#nav-variable" type="button" role="tab" aria-controls="nav-variable" aria-selected="false">Variable</button>
+<button class="nav-link" id="nav-instance-tab" data-bs-toggle="tab" data-bs-target="#nav-instance" type="button" role="tab" aria-controls="nav-instance" aria-selected="false">Instance</button>
+</div>
+</nav>
 
-    <!-- content  -->
-    <div class="tab-content" id="nav-tabContent">
+<!-- content  -->
+<div class="tab-content" id="nav-tabContent">
 
-      <!-- HOME -->
-      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <h6>run on the loading screen</h6>
-        <pre><code class="javascript">runOnStartup(async runtime =>
+<!-- HOME -->
+<div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+<h2 class="subsection-title">run on the loading screen</h2>
+<pre><code class="language-javascript">runOnStartup(async runtime =>
 {
   // This code runs on startup with
   // the 'runtime' variable available
-});
-</code></pre>
-     </div>
-    
-    <!-- Runtime -->
-    <div class="tab-pane fade" id="nav-runtime" role="tabpanel" aria-labelledby="nav-runtime-tab">
-      <h6>Runtime events</h6>
-      <pre><code class="javascript">runOnStartup(async runtime =>
+});</code></pre>
+</div>
+
+<!-- Runtime -->
+<div class="tab-pane fade" id="nav-runtime" role="tabpanel" aria-labelledby="nav-runtime-tab">
+<h2 class="subsection-title">Runtime events</h2>
+<pre><code class="language-javascript">runOnStartup(async runtime =>
 {
   runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
   runtime.addEventListener("afterprojectstart", () => OnAfterProjectStart(runtime));
@@ -76,32 +76,78 @@ function OnBeforeProjectStart(runtime)
   runtime.addEventListener("instancedestroy", e => OnInstanceDestroy(e,runtime));
 }
 
-
 function Tick(runtime)
 {
-	// Code to run every tick
-}
-</code></pre>
-      </div>
+// Code to run every tick
+}</code></pre>
+</div>
 
-      <!-- Contact -->
-      <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
-        <h6>contact</h6>
-      </div>
-    
-    </div>
+<!-- Variable -->
+<div class="tab-pane fade" id="nav-variable" role="tabpanel" aria-labelledby="nav-variable-tab">
 
-    <div class="container">
-      <div class="row">
-        <div class="col">Construct 3 by <a href="https://www.construct.net/" target="_blank">Scirra</a></div>
-        <div class="col"><a href="https://github.com/XHXIAIEIN/Construct3" target="_blank">XHXIAIEIN</a></div>
-        <div class="col">QQ Group <a href="https://jq.qq.com/?_wv=1027&k=goJR2rPx" target="_blank">180911504</a></div>
-      </div>
-    </div>
+<h2 class="subsection-title">全局变量(Global variable)</h2>
+<p>用脚本获取全局变量。直接对它进行赋值操作也是可以的。</p>
+<pre><code class="language-javascript">runtime.globalVars.Variable1</code></pre>
 
-    <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
-    <script src="js/bootstrap.min.js" charset="utf-8"></script>
-    <script src="js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-  </body>
+<h2 class="subsection-title">局部变量(Local variable)</h2>
+<p>在事件条范围内，用脚本获取本地变量。备注，函数的传入参数(`Function parameter`) 也是通过它来获取。</p>
+<pre><code class="language-javascript">localVars.Variable2</code></pre>
+
+<p>提示，在某些情况下，变量名称可能不是有效的标识符，例如可能跟保留关键字冲突了。此时你还可以用字符串来引用这个变量。</p>
+<pre><code class="language-javascript">runtime.globalVars["Variable1"]
+localVars["Variable2"]
+instVars["Variable3"]</code></pre>
+</div>
+
+<!-- Instance -->
+<div class="tab-pane fade" id="nav-instance" role="tabpanel" aria-labelledby="nav-instance-tab">
+<h2 class="subsection-title">获取第一个实例对象(First Instance Object)</h2>
+<pre><code class="language-javascript">runtime.objects.Sprite.getFirstInstance()</code></pre>
+
+<h2 class="subsection-title">获取所有实例对象(All Instances objects)</h2>
+<p>返回的是一个数组。</p>
+<pre><code class="language-javascript">runtime.objects.Sprite.getAllInstances()</code></pre>
+
+<h2 class="subsection-title">获取实例对象的行为属性(Instance behaviors)</h2>
+<pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
+const playerBehavior = player.behaviors.Platform;
+// console.log(playerBehavior.maxSpeed)</code></pre>
+
+<p>在某些情况下，有些名称可能不是有效的标识符，此时，还可以用字符串来引用。</p>
+<pre><code class="language-javascript">instance.behaviors["8Direction"]["maxSpeed"]</code></pre>
+
+<h2 class="subsection-title">遍历所有实例对象的实例变量</h2>
+<p>遍历所有 Sprite 对象的实例变量 <span>Score</span>，同时销毁所有变量小于 60 的实例。</p>
+<pre><code class="language-javascript">for (const obj of runtime.objects.Sprite.instances())
+{
+  const score = player.instVars["Score"];
+
+  if (score <= 60) 
+  {
+    obj.destroy();
+  }
+}</code></pre>
+
+<p>在某些情况下，有些名称可能不是有效的标识符，此时，还可以用字符串来引用。</p>
+<pre><code class="language-javascript">const textObject = runtime.objects.Text;
+const textInstance = textObject.getFirstPickedInstance();
+textInstance.text = "Hello World"</code></pre>
+</div>
+
+</div>
+
+<!-- footer -->
+<div class="container footer">
+<div class="row">
+<div class="col">Construct by <a href="https://www.construct.net/" target="_blank">Scirra</a></div>
+<div class="col"><a href="https://github.com/XHXIAIEIN/Construct3" target="_blank">XHXIAIEIN</a></div>
+<div class="col">QQ Group <a href="https://jq.qq.com/?_wv=1027&k=goJR2rPx" target="_blank">180911504</a></div>
+</div>
+</div>
+
+<script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
+<script src="js/bootstrap.min.js" charset="utf-8"></script>
+<script src="js/prism.js"></script>
+<script>hljs.highlightAll();</script>
+</body>
 </html>
