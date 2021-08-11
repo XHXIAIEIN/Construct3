@@ -70,13 +70,27 @@ table + table {
     padding-top: 3ch;
 }
 
+table thead {
+    line-height: 32px;
+    height: 40px;
+}
+
+tr th {
+    vertical-align:middle;
+}
+
+tr th img {
+    vertical-align: sub;
+    margin-right: 8px;
+}
+
 tr th,
 tr td {
     text-align:left;
     white-space: nowrap;
 }
 
-td:nth-of-type(1) {
+tr td:nth-of-type(1) {
     min-width: 80ch;
 }
 
