@@ -94,3 +94,21 @@ textInstance.text = "Hello World"
 ```
 
 
+## 加载文件
+
+在脚本中代替事件表AJAX加载文件的操作。
+  
+```javascript
+async function OnBeforeProjectStart(runtime)
+{
+	const InfoData = await runtime.assets.fetchJson('info.json')
+	runtime.objects.JSON.getFirstInstance().setJsonDataCopy(InfoData);
+}
+```
+
+## 读取JSON
+
+```javascript
+const Data = runtime.objects.JSON.getFirstInstance().getJsonDataCopy();
+console.log(Data['Name'])
+```
