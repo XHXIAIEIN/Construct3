@@ -3,7 +3,8 @@
 ## AlphaCutout
 
 parms:
-|:----------------- |:-------------------------- |:--------------- |
+|                   |                            |             |
+|:----------------- |:-------------------------- |:----------- |
 | centerX           | centerX (pixels)           | 中心坐标X    |
 | centerY           | centerY (pixels)           | 中心坐标Y    |
 | radius            | radius of cutout (pixels)  | 范围         |
