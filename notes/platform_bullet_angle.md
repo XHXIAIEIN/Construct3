@@ -33,7 +33,7 @@ set angle to `round(angle(0, 0, sign(Player.Width), 0))`
 | **round(x)**         |
 | -------------------- |
 | 四舍五入，向上取整。  |
-| 例 `round(5.6) = 6`  |
+| 例 round(5.6) = 6    |
 
 
 ### 公式讲解
