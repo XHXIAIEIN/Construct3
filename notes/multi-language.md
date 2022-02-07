@@ -104,7 +104,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 1. 准备一个全局变量，Default_language，默认值：zh_CN
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
+<img width="420" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
 
 2. AJAX，加载翻译文件，基本操作了。
 
@@ -112,7 +112,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
   
 如果此时预览游戏，可以看到数据已经可以加载到了。  
 
-<img width="240" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="240" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
+<img width="320" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="320" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
 
 3. 为了更方便地管理数据，可以将他们储存在字典(Dictionary)里。
 
@@ -122,7 +122,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 如果此时预览游戏，可以看到数据已经可以加载到了。
 
-<img width="800" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
+<img width="480" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
 
 
 4. 现在只需要将所有 Text 文本的内容进行替换就可以了~
