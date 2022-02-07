@@ -97,12 +97,6 @@
 
 <img width="460" src="https://user-images.githubusercontent.com/45864744/152724527-b75b067c-f208-4fa0-8e4d-70d579f950e4.png">
 
-4. 再复制出1个实例对象，把它们的实例变量分别设置为：GameStart 和 GameSetting  
-
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152724642-e2479d78-a8c9-43fc-a13c-bdf7e63a8860.png">
-
-小提示：按住 Ctrl + 鼠标左键拖动实例对象时，可以复制出一个实例对象。当然，你选中 Ctrl + C / Ctrl + V 也是同样的效果。
-
 
 ## 事件表
 
