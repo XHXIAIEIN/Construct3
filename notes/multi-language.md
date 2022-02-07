@@ -118,16 +118,16 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 因为字典是 Key-Value 的结构，我们需要用 JSON 的 For-each 对每个键值进行遍历，找到每一条文本的索引路径进行储存。
 
-<img width="800" src="https://user-images.githubusercontent.com/45864744/152728627-31ce8285-6e36-4d01-968e-af3d33cab22c.png">
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/152728627-31ce8285-6e36-4d01-968e-af3d33cab22c.png">
 
 如果此时预览游戏，可以看到数据已经可以加载到了。
 
-<img width="480" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
+<img width="460" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
 
 
 4. 现在只需要将所有 Text 文本的内容进行替换就可以了~
 
-<img width="800" src="https://user-images.githubusercontent.com/45864744/152729855-5df3c86b-c349-46e2-a301-2dcc438c07db.png">
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/152729855-5df3c86b-c349-46e2-a301-2dcc438c07db.png">
 
 
 还记得数据结构吗？
@@ -148,7 +148,7 @@ Dictionary.Get(LayoutName & "." & Self.MessageID & "." & Default_language)
 
 ## 最终结果
 
-<img width="800" src="https://user-images.githubusercontent.com/45864744/152730214-d753137f-59b4-4aee-bb04-57b2fb70d52a.png">
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/152730214-d753137f-59b4-4aee-bb04-57b2fb70d52a.png">
 
 事件表剪贴板
 ```
