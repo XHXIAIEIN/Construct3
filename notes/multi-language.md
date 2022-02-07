@@ -140,8 +140,9 @@ LayoutName + MessageID + language
 Dictionary.Get(LayoutName & "." & Self.MessageID & "." & Default_language)
 ```
 
-然后预览游戏，就完成了~
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152730606-c9aeee45-5795-44a4-b8d6-62e4aaa2e36c.png">
+然后预览游戏，就完成了~  
+
+<img width="240" src="https://user-images.githubusercontent.com/45864744/152730606-c9aeee45-5795-44a4-b8d6-62e4aaa2e36c.png">
 
 
 ## 最终结果
