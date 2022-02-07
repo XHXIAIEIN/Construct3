@@ -93,7 +93,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 2. 在场景安排一个 Text 对象。  
 
-<img width="640" src="https://user-images.githubusercontent.com/45864744/152724455-3794572d-5523-4060-bbab-f000cd8cd204.png">
+<img width="360" src="https://user-images.githubusercontent.com/45864744/152724455-3794572d-5523-4060-bbab-f000cd8cd204.png">
 
 3. 给 Text 对象添加一个实例变量，MessageID
 
@@ -104,7 +104,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 1. 准备一个全局变量，Default_language，默认值：zh_CN
 
-<img width="420" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
+<img width="480" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
 
 2. AJAX，加载翻译文件，基本操作了。
 
@@ -116,7 +116,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 3. 为了更方便地管理数据，可以将他们储存在字典(Dictionary)里。
 
-因为字典是 Key-Value 的结构，我们需要用 JSON 的 For-each 对每个键值进行遍历
+因为字典是 Key-Value 的结构，我们需要用 JSON 的 For-each 对每个键值进行遍历，找到每一条文本的索引路径进行储存。
 
 <img width="800" src="https://user-images.githubusercontent.com/45864744/152728627-31ce8285-6e36-4d01-968e-af3d33cab22c.png">
 
