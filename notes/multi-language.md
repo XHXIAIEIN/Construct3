@@ -89,45 +89,45 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 1. 准备一个场景(Layout)，重命名为 Menu  
 
-<img width="120" src="https://user-images.githubusercontent.com/45864744/152724410-e28d63a2-8787-4e97-bb12-49ff54b2796c.png">
+<img width="220" src="https://user-images.githubusercontent.com/45864744/152724410-e28d63a2-8787-4e97-bb12-49ff54b2796c.png">
 
 2. 在场景安排一个 Text 对象。  
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152724455-3794572d-5523-4060-bbab-f000cd8cd204.png">
+<img width="640" src="https://user-images.githubusercontent.com/45864744/152724455-3794572d-5523-4060-bbab-f000cd8cd204.png">
 
 3. 给 Text 对象添加一个实例变量，MessageID
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152724527-b75b067c-f208-4fa0-8e4d-70d579f950e4.png">
+<img width="640" src="https://user-images.githubusercontent.com/45864744/152724527-b75b067c-f208-4fa0-8e4d-70d579f950e4.png">
 
 
 ## 事件表
 
 1. 准备一个全局变量，Default_language，默认值：zh_CN
 
-<img width="240" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
+<img width="460" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
 
 2. AJAX，加载翻译文件，基本操作了。
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152727071-9c748a8b-d706-4c45-8b4e-4400c4198024.png">
+<img width="800" src="https://user-images.githubusercontent.com/45864744/152727071-9c748a8b-d706-4c45-8b4e-4400c4198024.png">
   
 如果此时预览游戏，可以看到数据已经可以加载到了。  
 
-<img width="240" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="230" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
+<img width="240" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="240" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
 
 3. 为了更方便地管理数据，可以将他们储存在字典(Dictionary)里。
 
 因为字典是 Key-Value 的结构，我们需要用 JSON 的 For-each 对每个键值进行遍历
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152728627-31ce8285-6e36-4d01-968e-af3d33cab22c.png">
+<img width="800" src="https://user-images.githubusercontent.com/45864744/152728627-31ce8285-6e36-4d01-968e-af3d33cab22c.png">
 
 如果此时预览游戏，可以看到数据已经可以加载到了。
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
+<img width="800" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
 
 
 4. 现在只需要将所有 Text 文本的内容进行替换就可以了~
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152729855-5df3c86b-c349-46e2-a301-2dcc438c07db.png">
+<img width="800" src="https://user-images.githubusercontent.com/45864744/152729855-5df3c86b-c349-46e2-a301-2dcc438c07db.png">
 
 
 还记得数据结构吗？
@@ -148,7 +148,7 @@ Dictionary.Get(LayoutName & "." & Self.MessageID & "." & Default_language)
 
 ## 最终结果
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/152730214-d753137f-59b4-4aee-bb04-57b2fb70d52a.png">
+<img width="800" src="https://user-images.githubusercontent.com/45864744/152730214-d753137f-59b4-4aee-bb04-57b2fb70d52a.png">
 
 事件表剪贴板
 ```
