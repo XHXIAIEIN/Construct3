@@ -5,13 +5,14 @@
 - Dictionary 
 - JSON 
 
-<img width="100" src="https://user-images.githubusercontent.com/45864744/152724375-26a90101-ec3f-490e-b9ef-a1404402c474.png">
+<img width="120" src="https://user-images.githubusercontent.com/45864744/152724375-26a90101-ec3f-490e-b9ef-a1404402c474.png">
 
 
 ## 翻译文件
 
-新建一个 JSON 文件，重命名为 translations.json 
-<img width="100" src="https://user-images.githubusercontent.com/45864744/152725165-170460cf-c286-4692-9a9c-6e7a2db4ab5a.png">
+新建一个 JSON 文件，重命名为 translations.json   
+
+<img width="120" src="https://user-images.githubusercontent.com/45864744/152725165-170460cf-c286-4692-9a9c-6e7a2db4ab5a.png">
 
 双击编辑它，就可以进行编辑了。 
 
