@@ -114,9 +114,16 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 <img width="230" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="230" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
 
+3. 为了更方便地管理数据，可以将他们储存在字典(Dictionary)里。
 
-3. 打算
-															   
+因为字典是 Key-Value 的结构，我们需要用 JSON 的 For-each 对每个键值进行遍历
+
+<img width="460" src="https://user-images.githubusercontent.com/45864744/152728627-31ce8285-6e36-4d01-968e-af3d33cab22c.png">
+
+如果此时预览游戏，可以看到数据已经可以加载到了。
+
+<img width="460" src="https://user-images.githubusercontent.com/45864744/152728992-b680592c-9b08-451d-befc-1b8adf0a2d70.png">
+
 															   
 															   
 
