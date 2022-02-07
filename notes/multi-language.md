@@ -1,6 +1,6 @@
+在游戏中实现多语言系统
 
 ## 必要的插件对象
-
 - AJAX 
 - Dictionary 
 - JSON 
@@ -80,12 +80,14 @@
 | pt_BR   | Português                      | 葡萄牙語        |
 | fr_FR   | Français                       | 法語            |
 | ru_RU   | Russian                        | 俄語            |
- 
+  
+  
+  
 ## 场景
 
 1. 准备一个场景(Layout)，重命名为 Menu  
 
-<img width="84" src="https://user-images.githubusercontent.com/45864744/152724410-e28d63a2-8787-4e97-bb12-49ff54b2796c.png">
+<img width="120" src="https://user-images.githubusercontent.com/45864744/152724410-e28d63a2-8787-4e97-bb12-49ff54b2796c.png">
 
 2. 在场景安排一个 Text 对象。  
 
