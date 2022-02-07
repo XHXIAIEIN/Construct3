@@ -6,7 +6,7 @@
 - Dictionary 
   
 AJAX 负责在游戏中加载翻译文件。  
-JSON 负责接收从 AJAX 传递过来的文件数据，进行解析。
+JSON 负责接收从 AJAX 传递过来的文件数据，进行解析。  
 Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话。
 
 
