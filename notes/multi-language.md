@@ -112,7 +112,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
   
 如果此时预览游戏，可以看到数据已经可以加载到了。  
 
-<img width="240" src="https://user-images.githubusercontent.com/45864744/152727787-cf75ebe7-22f9-4db3-9825-02e6c37f53e7.png"> <img width="240" src="https://user-images.githubusercontent.com/45864744/152727942-ed11ecae-4e24-4453-8436-e335f7950f41.png">  
+<img width="230" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="230" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
 
 
 3. 打算
