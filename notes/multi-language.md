@@ -2,10 +2,12 @@
 
 ## 必要的插件对象
 - AJAX 
-- Dictionary 
 - JSON 
-
-<img width="120" src="https://user-images.githubusercontent.com/45864744/152724375-26a90101-ec3f-490e-b9ef-a1404402c474.png">
+- Dictionary 
+  
+AJAX 负责在游戏中加载翻译文件。  
+JSON 负责接收从 AJAX 传递过来的文件数据，进行解析。
+Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话。
 
 
 ## 翻译文件
@@ -104,11 +106,17 @@
 
 <img width="240" src="https://user-images.githubusercontent.com/45864744/152727006-802fc74f-faac-4b87-b7f2-fbdcb3c3e40d.png">
 
-2. AJAX，加载翻译文件，基本操作了
+2. AJAX，加载翻译文件，基本操作了。
 
 <img width="460" src="https://user-images.githubusercontent.com/45864744/152727071-9c748a8b-d706-4c45-8b4e-4400c4198024.png">
+  
+如果此时预览游戏，可以看到数据已经可以加载到了。  
+
+<img width="240" src="https://user-images.githubusercontent.com/45864744/152727787-cf75ebe7-22f9-4db3-9825-02e6c37f53e7.png"> <img width="240" src="https://user-images.githubusercontent.com/45864744/152727942-ed11ecae-4e24-4453-8436-e335f7950f41.png">  
 
 
-
-
+3. 打算
+															   
+															   
+															   
 
