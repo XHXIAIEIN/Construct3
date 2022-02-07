@@ -140,11 +140,18 @@ LayoutName + MessageID + language
 Dictionary.Get(LayoutName & "." & Self.MessageID & "." & Default_language)
 ```
 
+然后预览游戏，就完成了~
+<img width="460" src="https://user-images.githubusercontent.com/45864744/152730606-c9aeee45-5795-44a4-b8d6-62e4aaa2e36c.png">
+
+
 ## 最终结果
 
 <img width="460" src="https://user-images.githubusercontent.com/45864744/152730214-d753137f-59b4-4aee-bb04-57b2fb70d52a.png">
 
 
+事件剪贴板
+```
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"variable","name":"Default_language","type":"string","initialValue":"zh_CN","comment":"","isStatic":false,"isConstant":false},{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"request-project-file","objectClass":"AJAX","parameters":{"tag":"\"translations\"","file":"translations.json"}}]},{"eventType":"block","conditions":[{"id":"on-completed","objectClass":"AJAX","parameters":{"tag":"\"translations\""}}],"actions":[{"id":"parse","objectClass":"JSON","parameters":{"data":"AJAX.LastData"}}],"children":[{"eventType":"comment","text":"Layout"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"JSON","parameters":{"path":"JSON.Path"}}],"actions":[],"children":[{"eventType":"comment","text":"Message"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"JSON","parameters":{"path":"JSON.Path"}}],"actions":[],"children":[{"eventType":"comment","text":"Language"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"JSON","parameters":{"path":"JSON.Path"}}],"actions":[{"id":"add-key","objectClass":"Dictionary","parameters":{"key":"JSON.Path","value":"JSON.CurrentValue"}}]}]}]},{"eventType":"comment","text":"Text"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"System","parameters":{"object":"Text"}}],"actions":[{"id":"set-text","objectClass":"Text","parameters":{"text":"Dictionary.Get( LayoutName & \".\" & Self.MessageID & \".\" & Default_language )"}}]}]}]}
+```
 
-											   
 
