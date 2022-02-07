@@ -149,10 +149,15 @@ Dictionary.Get(LayoutName & "." & Self.MessageID & "." & Default_language)
 
 <img width="460" src="https://user-images.githubusercontent.com/45864744/152730214-d753137f-59b4-4aee-bb04-57b2fb70d52a.png">
 
-
-事件剪贴板
+事件表剪贴板
 ```
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"variable","name":"Default_language","type":"string","initialValue":"zh_CN","comment":"","isStatic":false,"isConstant":false},{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"request-project-file","objectClass":"AJAX","parameters":{"tag":"\"translations\"","file":"translations.json"}}]},{"eventType":"block","conditions":[{"id":"on-completed","objectClass":"AJAX","parameters":{"tag":"\"translations\""}}],"actions":[{"id":"parse","objectClass":"JSON","parameters":{"data":"AJAX.LastData"}}],"children":[{"eventType":"comment","text":"Layout"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"JSON","parameters":{"path":"JSON.Path"}}],"actions":[],"children":[{"eventType":"comment","text":"Message"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"JSON","parameters":{"path":"JSON.Path"}}],"actions":[],"children":[{"eventType":"comment","text":"Language"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"JSON","parameters":{"path":"JSON.Path"}}],"actions":[{"id":"add-key","objectClass":"Dictionary","parameters":{"key":"JSON.Path","value":"JSON.CurrentValue"}}]}]}]},{"eventType":"comment","text":"Text"},{"eventType":"block","conditions":[{"id":"for-each","objectClass":"System","parameters":{"object":"Text"}}],"actions":[{"id":"set-text","objectClass":"Text","parameters":{"text":"Dictionary.Get( LayoutName & \".\" & Self.MessageID & \".\" & Default_language )"}}]}]}]}
 ```
+
+Text对象剪贴板
+```
+{"is-c3-clipboard-data":true,"type":"world-instances","items":[{"type":"Text","properties":{"text":"Text","enable-bbcode":true,"font":"Arial","size":24,"line-height":0,"bold":false,"italic":false,"color":[0,0,0,1],"horizontal-alignment":"left","vertical-alignment":"top","wrapping":"word","initially-visible":true,"origin":"top-left"},"instanceVariables":{"MessageID":"GameStart"},"behaviors":{},"world":{"x":85,"y":148,"width":300,"height":46,"originX":0,"originY":0,"color":[1,1,1,1],"angle":0,"zElevation":0}},{"type":"Text","properties":{"text":"Text","enable-bbcode":true,"font":"Arial","size":24,"line-height":0,"bold":false,"italic":false,"color":[0,0,0,1],"horizontal-alignment":"left","vertical-alignment":"top","wrapping":"word","initially-visible":true,"origin":"top-left"},"instanceVariables":{"MessageID":"GameSetting"},"behaviors":{},"world":{"x":85,"y":222,"width":300,"height":46,"originX":0,"originY":0,"color":[1,1,1,1],"angle":0,"zElevation":0}}],"object-types":[{"name":"Text","plugin-id":"Text","isGlobal":false,"instanceVariables":[{"name":"MessageID","type":"string","desc":""}],"behaviorTypes":[],"effectTypes":[]}]}
+```
+
 
 
