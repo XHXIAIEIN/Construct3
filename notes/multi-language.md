@@ -14,7 +14,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
 
 新建一个 JSON 文件，重命名为 translations.json   
 
-<img width="120" src="https://user-images.githubusercontent.com/45864744/152725165-170460cf-c286-4692-9a9c-6e7a2db4ab5a.png">
+<img width="240" src="https://user-images.githubusercontent.com/45864744/152725165-170460cf-c286-4692-9a9c-6e7a2db4ab5a.png">
 
 双击编辑它，就可以进行编辑了。 
 
@@ -112,7 +112,7 @@ Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话
   
 如果此时预览游戏，可以看到数据已经可以加载到了。  
 
-<img width="230" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="230" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
+<img width="240" src="https://user-images.githubusercontent.com/45864744/152728167-077d39f2-8c4b-42bf-b67f-385b87ee31a0.png">  <img width="230" src="https://user-images.githubusercontent.com/45864744/152728171-567d8f05-7e02-4f69-90a0-ba7fa091ba86.png">
 
 3. 为了更方便地管理数据，可以将他们储存在字典(Dictionary)里。
 
