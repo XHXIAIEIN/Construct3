@@ -81,6 +81,6 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 当然，如果是这种需要快速反应的机制，在前面蓄力的过程 Set ChargeTime 的时候 clamp 上限应该要设置成比 Self.MaxChargeTime 更多一些，让他可以蓄力超出上限。然后再增加一个 "Miss" 或者 "Too slow" 的等级等等。这些细节就留给你自己设计了~ 举一反三
 
-<img width="460" src="https://user-images.githubusercontent.com/45864744/153021471-a21275fc-281c-4676-ac04-9ff7f8ef50b9.png">
+<img width="750" src="https://user-images.githubusercontent.com/45864744/153021471-a21275fc-281c-4676-ac04-9ff7f8ef50b9.png">
 
 
