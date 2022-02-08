@@ -20,7 +20,7 @@ Sprite 对象剪贴板（粘贴到Layout）
 
 ## 事件表
 
-1. 计算蓄力时间
+### 计算蓄力时间
    
 长按空格键时，进行蓄力。
 
@@ -35,4 +35,23 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 ```
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)"}}]},{"eventType":"block","conditions":[{"id":"else","objectClass":"System"},{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32},"isInverted":true}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"0"}}]}]}
 ```
+
+
+### 判断蓄力进度
+
+数据有了，接下来只需要判断数值，就可以计算蓄力进度了。  
+
+例如分为 3 个等级：
+
+| 等级           | 时间点               |  
+|:-------------- |:------------------- |
+| Too Fast       | t < 25%             | 
+| Good           | 25% <=  t <  90%    | 
+| Perfect        | 90% <=  t <=  100%  | 
+  
+<img width="680" src="https://user-images.githubusercontent.com/45864744/153011504-e393bde9-0cee-4ab9-8dac-87d423bfdb08.png">
+
+
+
+
 
