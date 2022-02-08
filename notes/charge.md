@@ -41,16 +41,16 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 数据有了，接下来只需要判断数值，就可以计算蓄力进度了。  
 
-例如分为 3 个等级：
+例如分为 4 个等级：
 
 | 等级           | 时间点               |  
 |:-------------- |:------------------- |
 | Too Fast       | t < 25%             | 
-| Good           | 25% <=  t <  90%    | 
-| Perfect        | 90% <=  t <=  100%  | 
-  
-<img width="680" src="https://user-images.githubusercontent.com/45864744/153011504-e393bde9-0cee-4ab9-8dac-87d423bfdb08.png">
+| Good           | 25% <=  t <  85%    | 
+| Perfect        | 85% <=  t <  99.9%  | 
+| Max            | t =  100%           | 
 
+<img width="680" src="https://user-images.githubusercontent.com/45864744/153011504-e393bde9-0cee-4ab9-8dac-87d423bfdb08.png">
 
 
 
