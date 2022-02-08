@@ -17,6 +17,6 @@ ChargeSpeed，每次蓄力增加的时间，数值越大，蓄力速度越快。
 
 ## 事件表
 
-1 长按空格键时，进行蓄力。
+1 长按空格键时，进行蓄力。松开则重置
 
 <img width="1000" src="https://user-images.githubusercontent.com/45864744/152938988-1993d3cd-2735-46b7-838d-dfaae6f18807.png">
