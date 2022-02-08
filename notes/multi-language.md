@@ -142,7 +142,7 @@ Dictionary.Get(LayoutName & "." & Self.MessageID & "." & Default_language)
 
 然后预览游戏，就完成了~  
 
-<img width="120" src="https://user-images.githubusercontent.com/45864744/152731002-87d03169-75d8-44f4-bfb9-fde6041f4222.png"> <img width="120" src="https://user-images.githubusercontent.com/45864744/152731286-f8c4f2a5-97a3-479b-be59-1033ac3eebc5.png"> <img width="120" src="https://user-images.githubusercontent.com/45864744/152731166-bfae4781-5f11-43c9-80e6-6ee012b31bca.png">
+<img width="120" src="https://user-images.githubusercontent.com/45864744/152731286-f8c4f2a5-97a3-479b-be59-1033ac3eebc5.png"> <img width="120" src="https://user-images.githubusercontent.com/45864744/152731166-bfae4781-5f11-43c9-80e6-6ee012b31bca.png">
 
 
 
