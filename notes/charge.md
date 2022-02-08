@@ -72,12 +72,15 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 如果想实现QTE、音游等那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
 
-当然，如果是这种需要快速反应的机制，在前面蓄力的过程 Set ChargeTime 的时候 clamp 上限应该要设置成比 Self.MaxChargeTime 更多一些，让他可以蓄力超出上限。然后再增加一个 "Miss" 或者 "Too slow" 的等级等等。这些细节就留给你自己设计了~ 举一反三
-
 <img width="1000" src="https://user-images.githubusercontent.com/45864744/153018599-07c21f8d-7902-4ddd-8672-4b9b1bf2262e.png">
 
 事件表剪贴板
 ```
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"variable","name":"ChargeLevel","type":"string","initialValue":"None","comment":"","isStatic":false,"isConstant":false},{"eventType":"block","conditions":[{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)"}}]},{"eventType":"block","conditions":[{"id":"else","objectClass":"System"},{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32},"isInverted":true}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"0"}}]},{"eventType":"block","conditions":[{"id":"on-key-pressed","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"None\""}}]},{"eventType":"block","conditions":[{"id":"on-key-released","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[],"children":[{"eventType":"comment","text":"Max"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":0,"second-value":"Sprite.MaxChargeTime"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Max\""}}]},{"eventType":"comment","text":"Too Fast:  t  <  25%"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":2,"second-value":"Sprite.MaxChargeTime * 0.25"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Too Fast\""}}]},{"eventType":"comment","text":"Good:  25  <  t  <  85%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.25","upper-bound":"Sprite.MaxChargeTime * 0.85"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Good\""}}]},{"eventType":"comment","text":"Prefect:  85  <  t  <  99%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.85","upper-bound":"Sprite.MaxChargeTime - 1"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Prefect\""}}]}]}]}
 ```
+
+当然，如果是这种需要快速反应的机制，在前面蓄力的过程 Set ChargeTime 的时候 clamp 上限应该要设置成比 Self.MaxChargeTime 更多一些，让他可以蓄力超出上限。然后再增加一个 "Miss" 或者 "Too slow" 的等级等等。这些细节就留给你自己设计了~ 举一反三
+
+<img width="460" src="https://user-images.githubusercontent.com/45864744/153021471-a21275fc-281c-4676-ac04-9ff7f8ef50b9.png">
+
 
