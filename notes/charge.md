@@ -52,11 +52,14 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 <img width="680" src="https://user-images.githubusercontent.com/45864744/153011504-e393bde9-0cee-4ab9-8dac-87d423bfdb08.png">
 
-然后就看实际的使用场景，是想在蓄力过程中计算呢，还是在松开蓄力键之后才计算呢。都可以，方法是一样的~  
+然后就看实际的使用场景，是想在蓄力过程中计算呢，还是在松开蓄力键之后才计算呢。
+其实都可以，他们方法是一样的~  
 
-如果是想实现类似洛克人那样，在蓄力过程中有不同的动画反馈，可以将计算蓄力进度的事件放在 ` Key is Down ` 的子条件里面。    
+如果想实现类似洛克人那样，蓄力过程有不同的动画反馈，可以将计算蓄力进度的事件放在 ` Key is Down ` 的子条件里面。    
 
-如果是想实现QTE、音游等需要快速反应那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
+如果想实现QTE、音游等需要快速反应那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
+
+这里为了测试方便，额外加了一个变量 ` ChargeLevel ` 来测试蓄力的等级。  
 
 <img width="1000" src="https://user-images.githubusercontent.com/45864744/153015413-1df93b35-a319-461c-b2e7-da41d9f74fa3.png">
 
