@@ -68,7 +68,7 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 如果想实现QTE、音游等需要快速反应那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
 
-<img width="1000" src="https://user-images.githubusercontent.com/45864744/153018223-80bf2ded-731b-49a8-93d0-6eeab7925993.png">
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/153018599-07c21f8d-7902-4ddd-8672-4b9b1bf2262e.png">
 
 事件表剪贴板
 ```
