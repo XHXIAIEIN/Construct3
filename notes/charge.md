@@ -70,7 +70,9 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 #### 松开后计算进度
 
-如果想实现QTE、音游等需要快速反应那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
+如果想实现QTE、音游等那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
+
+当然，如果是这种需要快速反应的机制，在前面蓄力的过程 Set ChargeTime 的时候 clamp 上限应该要设置成比 Self.MaxChargeTime 更多一些，让他可以蓄力超出上限。然后再增加一个 "Miss" 或者 "Too slow" 的等级等等。这些细节就留给你自己设计了~ 举一反三
 
 <img width="1000" src="https://user-images.githubusercontent.com/45864744/153018599-07c21f8d-7902-4ddd-8672-4b9b1bf2262e.png">
 
