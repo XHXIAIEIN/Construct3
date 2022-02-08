@@ -26,6 +26,7 @@ Sprite 对象剪贴板（粘贴到Layout）
 
 <img width="1000" src="https://user-images.githubusercontent.com/45864744/152938988-1993d3cd-2735-46b7-838d-dfaae6f18807.png">
 
+表达式
 ```
 clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 ```
