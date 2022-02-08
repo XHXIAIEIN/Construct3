@@ -52,6 +52,16 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 
 <img width="680" src="https://user-images.githubusercontent.com/45864744/153011504-e393bde9-0cee-4ab9-8dac-87d423bfdb08.png">
 
+然后就看实际的使用场景，是想在蓄力过程中计算呢，还是在松开蓄力键之后才计算呢。都可以，方法是一样的~  
 
+如果是想实现类似洛克人那样，在蓄力过程中有不同的动画反馈，可以将计算蓄力进度的事件放在 ` Key is Down ` 的子条件里面。    
 
+如果是想实现QTE、音游等需要快速反应那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
+
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/153015413-1df93b35-a319-461c-b2e7-da41d9f74fa3.png">
+
+事件表剪贴板
+```
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"variable","name":"ChargeLevel","type":"string","initialValue":"None","comment":"","isStatic":false,"isConstant":false},{"eventType":"block","conditions":[{"id":"on-key-pressed","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"None\""}}]},{"eventType":"block","conditions":[{"id":"on-key-released","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[],"children":[{"eventType":"comment","text":"Max"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":0,"second-value":"Sprite.MaxChargeTime"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Max\""}}]},{"eventType":"comment","text":"Too Fast:  t  <  25%"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":2,"second-value":"Sprite.MaxChargeTime * 0.25"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Too Fast\""}}]},{"eventType":"comment","text":"Good:  25  <  t  <  85%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.25","upper-bound":"Sprite.MaxChargeTime * 0.85"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Good\""}}]},{"eventType":"comment","text":"Prefect:  85  <  t  <  99%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.85","upper-bound":"Sprite.MaxChargeTime - 1"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Prefect\""}}]}]}]}
+```
 
