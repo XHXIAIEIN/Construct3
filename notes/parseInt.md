@@ -37,7 +37,7 @@ Function 剪贴板(粘贴到事件表)
 # 字符转换16进制
 
 ## 思路
-调用 `charCodeAt()` 方法将数据转换为16进制。  
+调用 `charCodeAt()` 方法，返回指定位置的字符 Unicode 编码。再使用 `toString()` 将数据转换为16进制。  
 
 
 示例1
@@ -73,5 +73,4 @@ for (var i = 0; i < str.length; i++) {
 
 // returns 41 42 43
 ```
-
 
