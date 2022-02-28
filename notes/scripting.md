@@ -86,13 +86,13 @@ for (const player of runtime.objects.Sprite.instances())
 
 ## 调用函数
 
-在 事件表Function 用脚本调用 事件表Function 的参数
+在 Function 用脚本调用参数
 
 ```javascript
 localVars.Parameter0
 ```
 
-在　C3 Function 用脚本返回值
+在 Function 用脚本返回值
 
 ```javascript
 runtime.setReturnValue();
