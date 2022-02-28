@@ -3,6 +3,9 @@
 ## 思路
 调用 JS 自带的 `parseInt` 方法将数据转换为16进制。  
 
+## 事件表
+
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/155926312-665a4b8c-7a5a-4d59-8319-b39ff42c83c6.png">
 
 ## 剪贴板
 
