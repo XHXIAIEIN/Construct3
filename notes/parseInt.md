@@ -81,7 +81,6 @@ for (var i = 0; i < str.length; i++) {
 
 ```javascript
 function decoded(encoded) {
-
     switch (encoded) {
         case 0x30: // '0'
         case 0x31: // '1'
