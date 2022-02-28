@@ -80,6 +80,33 @@ for (var i = 0; i < str.length; i++) {
 ## 其他
 
 ```javascript
+function encode(decoded) {
+    switch (decoded) {
+        case 0x00:
+        case 0x01:
+        case 0x02:
+        case 0x03:
+        case 0x04:
+        case 0x05:
+        case 0x06:
+        case 0x07:
+        case 0x08:
+        case 0x09:
+            return decoded + 0x30; // 0x30('0') - 0x39('9')
+        case 0x0A:
+        case 0x0B:
+        case 0x0C:
+        case 0x0D:
+        case 0x0E:
+        case 0x0F:
+            return decoded + 0x57; // 0x41('a') - 0x46('f')
+        default:
+            return decoded
+    }
+}
+```
+
+```javascript
 function decoded(encoded) {
     switch (encoded) {
         case 0x30: // '0'
