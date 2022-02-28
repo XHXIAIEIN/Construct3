@@ -80,7 +80,7 @@ for (var i = 0; i < str.length; i++) {
 ## 其他
 
 ```javascript
-function test(encoded) {
+function decoded(encoded) {
 
     switch (encoded) {
         case 0x30: // '0'
