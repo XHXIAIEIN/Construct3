@@ -1,7 +1,7 @@
-# 数据转换16进制整数
+# 数据转换16进制整数 Hex To Number
 
 ## 思路
-调用 JS 自带的 `parseInt` 方法将字符转换为16进制的整数。  
+调用 `parseInt()` 方法将字符串转换为16进制整数。  
 
 ## 事件表
 
@@ -15,12 +15,11 @@ runtime.setReturnValue(parseInt(localVars.string, localVars.radix))
 
 表达式
 ```
-Functions.parseInt("FD 01", 16)
-```
+Functions.parseInt("0xA", 16) // returns 10
+Functions.parseInt("A", 16) // returns 10
 
-输出结果
-```
-253
+Functions.parseInt("0x11", 16) // returns 17
+Functions.parseInt("FD 01", 16) // returns 253
 ```
 
 
@@ -40,17 +39,19 @@ Function 剪贴板(粘贴到事件表)
 调用 `charCodeAt()` 方法，返回指定位置的字符 Unicode 编码。再使用 `toString()` 将数据转换为16进制。  
 
 
+## 示例
+
 示例1
-```
+```javascript
 'ABC'.charCodeAt(0).toString(16);  // returns 41
 'ABC'.charCodeAt(1).toString(16);  // returns 42
 'ABC'.charCodeAt(2).toString(16);  // returns 43
 ```
 
 示例2
-```
-str = "ABC"
-code = ""
+```javascript
+let str = "ABC"
+let code = ""
 
 for (var i = 0; i < str.length; i++) {
   code += str.charCodeAt(i).toString(16);  
@@ -60,9 +61,9 @@ for (var i = 0; i < str.length; i++) {
 ```
 
 示例3
-```
-str = "ABC"
-code = ""
+```javascript
+let str = "ABC"
+let code = ""
 
 for (var i = 0; i < str.length; i++) {
  if(code == "")
@@ -73,4 +74,6 @@ for (var i = 0; i < str.length; i++) {
 
 // returns 41 42 43
 ```
+
+
 
