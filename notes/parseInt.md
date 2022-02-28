@@ -80,7 +80,9 @@ for (var i = 0; i < str.length; i++) {
 ## 其他
 
 ```javascript
-   switch (encoded) {
+function test(encoded) {
+
+    switch (encoded) {
         case 0x30: // '0'
         case 0x31: // '1'
         case 0x32: // '2'
@@ -109,4 +111,5 @@ for (var i = 0; i < str.length; i++) {
         default:
             return encoded
     }
+}
 ```
