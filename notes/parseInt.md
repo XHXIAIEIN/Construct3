@@ -77,3 +77,36 @@ for (var i = 0; i < str.length; i++) {
 
 
 
+## 其他
+
+```javascript
+   switch (encoded) {
+        case 0x30: // '0'
+        case 0x31: // '1'
+        case 0x32: // '2'
+        case 0x33: // '3'
+        case 0x34: // '4'
+        case 0x35: // '5'
+        case 0x36: // '6'
+        case 0x37: // '7'
+        case 0x38: // '8'
+        case 0x39: // '9'
+            return encoded - 0x30;
+        case 0x41: // 'A'
+        case 0x42: // 'B'
+        case 0x43: // 'C'
+        case 0x44: // 'D'
+        case 0x45: // 'E'
+        case 0x46: // 'F'
+            return encoded - 0x37;
+        case 0x61: // 'a'
+        case 0x62: // 'b'
+        case 0x63: // 'c'
+        case 0x64: // 'd'
+        case 0x65: // 'e'
+        case 0x66: // 'f'
+            return encoded - 0x57;
+        default:
+            return encoded
+    }
+```
