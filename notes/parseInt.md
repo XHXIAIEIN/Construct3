@@ -22,7 +22,7 @@ Functions.parseInt("0x11", 16) // returns 17
 Functions.parseInt("FD 01", 16) // returns 253
 ```
 
-
+ 
 ## 剪贴板
 
 Function 剪贴板(粘贴到事件表)
