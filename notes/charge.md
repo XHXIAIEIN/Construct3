@@ -2,13 +2,12 @@
 
 ## 必要的变量
 
--ChargeTime  
--ChargeSpeed  
--MaxChargeTime  
 
-ChargeTime，当前蓄力的时间进度，以毫秒为单位。  
-MaxChargeTime，可以蓄力的最大时间，数值越大，需要蓄力越久。  
-ChargeSpeed，每次蓄力增加的时间，数值越大，蓄力速度越快。  
+| 变量           | 类型    | 初始值 |  描述                                       |
+|:-------------- |:------ |:------ |:------------------------------------------- |
+| ChargeTime     | Number | 0      | 当前蓄力的时间进度。                          | 
+| MaxChargeTime  | Number | 60     | 可以蓄力的最大时间，数值越大，需要蓄力越久。    | 
+| ChargeSpeed    | Number | 1      | 每次蓄力增加的时间，数值越大，蓄力速度越快。    | 
   
 这里，我是将它作为实例变量使用。    
 
@@ -21,10 +20,13 @@ Sprite 对象剪贴板（粘贴到Layout）
 
 ## 事件表
 
-1 长按空格键时，进行蓄力。松开则重置
+### 计算蓄力时间
+   
+长按空格键时，进行蓄力。
 
 <img width="1000" src="https://user-images.githubusercontent.com/45864744/152938988-1993d3cd-2735-46b7-838d-dfaae6f18807.png">
 
+表达式
 ```
 clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 ```
@@ -33,4 +35,58 @@ clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)
 ```
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)"}}]},{"eventType":"block","conditions":[{"id":"else","objectClass":"System"},{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32},"isInverted":true}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"0"}}]}]}
 ```
+
+
+### 判断蓄力进度
+
+数据有了，接下来只需要判断数值，就可以计算蓄力进度了。  
+
+例如分为 4 个等级：
+
+| 等级           | 时间点               |  
+|:-------------- |:------------------- |
+| Too Fast       | t < 25%             | 
+| Good           | 25% <=  t <  85%    | 
+| Perfect        | 85% <=  t <  99.9%  | 
+| Max            | t =  100%           | 
+
+<img width="680" src="https://user-images.githubusercontent.com/45864744/153011504-e393bde9-0cee-4ab9-8dac-87d423bfdb08.png">
+
+然后就看实际的使用场景，是想在蓄力过程中计算呢，还是在松开蓄力键之后才计算呢。
+其实都可以，他们方法是一样的~  
+
+这里为了测试方便，额外加了一个变量 ` ChargeLevel ` 来测试蓄力的等级。  
+
+#### 蓄力时计算进度
+
+如果想实现类似洛克人那样，蓄力过程有不同的动画反馈，可以将计算蓄力进度的事件放在 ` Key is Down ` 的子条件里面。    
+
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/153017218-70fc8565-42c1-4447-a8cb-74d22c3e371d.png">
+
+事件表剪贴板
+```
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"variable","name":"ChargeLevel","type":"string","initialValue":"None","comment":"","isStatic":false,"isConstant":false},{"eventType":"block","conditions":[{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)"}}],"children":[{"eventType":"comment","text":"Max"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":0,"second-value":"Sprite.MaxChargeTime"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Max\""}}]},{"eventType":"comment","text":"Too Fast:  t  <  25%"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":2,"second-value":"Sprite.MaxChargeTime * 0.25"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Too Fast\""}}]},{"eventType":"comment","text":"Good:  25  <  t  <  85%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.25","upper-bound":"Sprite.MaxChargeTime * 0.85"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Good\""}}]},{"eventType":"comment","text":"Prefect:  85  <  t  <  99%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.85","upper-bound":"Sprite.MaxChargeTime - 1"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Prefect\""}}]}]},{"eventType":"block","conditions":[{"id":"else","objectClass":"System"},{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32},"isInverted":true}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"0"}},{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"None\""}}]}]}
+```
+
+#### 松开后计算进度
+
+如果想实现QTE、音游等那样，可以将计算蓄力进度的事件放在  ` On Key released ` 的子条件里面。   
+
+<img width="1000" src="https://user-images.githubusercontent.com/45864744/153018599-07c21f8d-7902-4ddd-8672-4b9b1bf2262e.png">
+
+事件表剪贴板
+```
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"variable","name":"ChargeLevel","type":"string","initialValue":"None","comment":"","isStatic":false,"isConstant":false},{"eventType":"block","conditions":[{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime)"}}]},{"eventType":"block","conditions":[{"id":"else","objectClass":"System"},{"id":"key-is-down","objectClass":"Keyboard","parameters":{"key":32},"isInverted":true}],"actions":[{"id":"set-instvar-value","objectClass":"Sprite","parameters":{"instance-variable":"ChargeTime","value":"0"}}]},{"eventType":"block","conditions":[{"id":"on-key-pressed","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"None\""}}]},{"eventType":"block","conditions":[{"id":"on-key-released","objectClass":"Keyboard","parameters":{"key":32}}],"actions":[],"children":[{"eventType":"comment","text":"Max"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":0,"second-value":"Sprite.MaxChargeTime"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Max\""}}]},{"eventType":"comment","text":"Too Fast:  t  <  25%"},{"eventType":"block","conditions":[{"id":"compare-two-values","objectClass":"System","parameters":{"first-value":"Sprite.ChargeTime","comparison":2,"second-value":"Sprite.MaxChargeTime * 0.25"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Too Fast\""}}]},{"eventType":"comment","text":"Good:  25  <  t  <  85%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.25","upper-bound":"Sprite.MaxChargeTime * 0.85"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Good\""}}]},{"eventType":"comment","text":"Prefect:  85  <  t  <  99%"},{"eventType":"block","conditions":[{"id":"is-between-values","objectClass":"System","parameters":{"value":"Sprite.ChargeTime","lower-bound":"Sprite.MaxChargeTime * 0.85","upper-bound":"Sprite.MaxChargeTime - 1"}}],"actions":[{"id":"set-eventvar-value","objectClass":"System","parameters":{"variable":"ChargeLevel","value":"\"Prefect\""}}]}]}]}
+```
+
+当然，如果是这种需要快速反应的机制，在蓄力的过程 Set ChargeTime 的时候 clamp 上限应该要设置成比 Self.MaxChargeTime 更多一些，让他可以蓄力超出上限。
+
+```
+clamp(Self.ChargeTime + Self.ChargeSpeed * 60 * dt, 0, Self.MaxChargeTime + 20 )
+```
+  
+然后再增加一个 "Too slow" 或者  "Miss" 的等级。或者稍微宽限些 "Perfect" 的区间，也可以在即将到达 "Perfect" 的时候减缓速度，提高容错率等等。。这些细节就留给你自己设计了~ 举一反三
+
+<img width="750" src="https://user-images.githubusercontent.com/45864744/153021471-a21275fc-281c-4676-ac04-9ff7f8ef50b9.png">
+
 
