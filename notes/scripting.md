@@ -37,6 +37,13 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
+## 调用函数(Call Function)
+
+例如，事件表里有一个自定义函数 add 
+```
+runtime.callFunction("add")
+```
+
 
 ## 获取第一个实例对象(First Instance Object)
 
