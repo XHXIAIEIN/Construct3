@@ -37,14 +37,6 @@ instVars["Score"]
 instance.instVars.Variable1
 ```
 
-## 调用函数(Call Function)
-
-例如，事件表里有一个自定义函数 add 
-```
-runtime.callFunction("add")
-```
-
-
 ## 获取第一个实例对象(First Instance Object)
 
 ```javascript
@@ -93,13 +85,18 @@ for (const player of runtime.objects.Sprite.instances())
 
 ## 调用函数
 
-在 Function 用脚本调用参数
+例如，事件表里有一个自定义函数 add 
+```
+runtime.callFunction("add")
+```
+
+用脚本获取自定义函数的参数
 
 ```javascript
 localVars.Parameter0
 ```
 
-在 Function 用脚本返回值
+用脚本设置自定义函数的返回值
 
 ```javascript
 runtime.setReturnValue();
