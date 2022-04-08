@@ -23,6 +23,8 @@
 <button class="nav-link" id="nav-runtime-tab" data-bs-toggle="tab" data-bs-target="#nav-runtime" type="button" role="tab" aria-controls="nav-runtime" aria-selected="false">Runtime</button>
 <button class="nav-link" id="nav-variable-tab" data-bs-toggle="tab" data-bs-target="#nav-variable" type="button" role="tab" aria-controls="nav-variable" aria-selected="false">Variable</button>
 <button class="nav-link" id="nav-instance-tab" data-bs-toggle="tab" data-bs-target="#nav-instance" type="button" role="tab" aria-controls="nav-instance" aria-selected="false">Instance</button>
+<button class="nav-link" id="nav-function-tab" data-bs-toggle="tab" data-bs-target="#nav-function" type="button" role="tab" aria-controls="nav-function" aria-selected="false">Function</button>
+<button class="nav-link" id="nav-data-tab" data-bs-toggle="tab" data-bs-target="#nav-data" type="button" role="tab" aria-controls="nav-data" aria-selected="false">Data</button>
 </div>
 </nav>
 
@@ -141,9 +143,8 @@ textInstance.text = "Hello World"
 
 </div>
 
-
 <!-- Function -->
-<div class="tab-pane fade" id="nav-function" role="tabpanel" aria-labelledby="nav-function-tab"></div>
+<div class="tab-pane fade" id="nav-function" role="tabpanel" aria-labelledby="nav-function-tab">
 <h2 class="subsection-title">调用函数(call function)</h2>
 <p>例如，事件表里有一个自定义函数 add ，如何用js来调用它</p>
 
@@ -158,7 +159,7 @@ textInstance.text = "Hello World"
 </div>
 
 <!-- Data -->
-<div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab"></div>
+<div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
 <h2 class="subsection-title">游戏数据</h2>
 
 <h2 class="subsection-title">AJAX 加载文件</h2>
@@ -179,8 +180,8 @@ console.log(MyData['Name'])
 </div>
 
 
+<!-- end;content -->
 </div>
-
 
 <!-- footer -->
 <div class="container footer">
