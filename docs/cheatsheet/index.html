@@ -84,7 +84,6 @@ function Tick(runtime)
 
 <!-- Variable -->
 <div class="tab-pane fade" id="nav-variable" role="tabpanel" aria-labelledby="nav-variable-tab">
-
 <h2 class="subsection-title">全局变量(Global variable)</h2>
 <p>用脚本获取全局变量。直接对它进行赋值操作也是可以的。</p>
 <pre><code class="language-javascript">runtime.globalVars.Variable1</code></pre>
@@ -132,9 +131,56 @@ const playerBehavior = player.behaviors.Platform;
 <pre><code class="language-javascript">const textObject = runtime.objects.Text;
 const textInstance = textObject.getFirstPickedInstance();
 textInstance.text = "Hello World"</code></pre>
-</div>
+
+<h2 class="subsection-title">编辑文本</h2>
+<pre><code class="language-javascript">const textObject = runtime.objects.Text;
+const textInstance = textObject.getFirstPickedInstance();
+  
+textInstance.text = "Hello World"
+}</code></pre>
 
 </div>
+
+
+<!-- Function -->
+<div class="tab-pane fade" id="nav-function" role="tabpanel" aria-labelledby="nav-function-tab"></div>
+<h2 class="subsection-title">调用函数(call function)</h2>
+<p>例如，事件表里有一个自定义函数 add ，如何用js来调用它</p>
+
+<p>调用函数</p>
+<pre><code class="language-javascript">runtime.callFunction("add")</code></pre>
+
+<p>获取函数的参数</p>
+<pre><code class="language-javascript">localVars.Parameter0</code></pre>
+
+<p>设置函数的返回值</p>
+<pre><code class="language-javascript">runtime.setReturnValue();</code></pre>
+</div>
+
+<!-- Data -->
+<div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab"></div>
+<h2 class="subsection-title">游戏数据</h2>
+
+<h2 class="subsection-title">AJAX 加载文件</h2>
+<p>在脚本中代替事件表AJAX加载文件的操作。</p>
+<pre><code class="language-javascript">async function OnBeforeProjectStart(runtime)
+  {
+    const InfoData = await runtime.assets.fetchJson('info.json')
+    runtime.objects.JSON.getFirstInstance().setJsonDataCopy(InfoData);
+  }
+}</code></pre>
+
+<h2 class="subsection-title">JSON 读取数据</h2>
+<pre><code class="language-javascript">const MyData = runtime.objects.JSON.getFirstInstance().getJsonDataCopy();
+console.log(MyData['Name'])
+</code></pre>
+
+
+</div>
+
+
+</div>
+
 
 <!-- footer -->
 <div class="container footer">
