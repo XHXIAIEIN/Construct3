@@ -186,12 +186,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/GridPathfinding.c3p">基于网格的寻路(配合 MoveTo)</a></td>
-                            <td>unkown</td>
+                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/PathfindingFTL.capx">基于Tilemp碰撞区的寻路</a></td>
+                            <td>dop2000</td>
                         </tr>
                         <tr>
-                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/pathfinderInstant2.capx">绘制寻路路径线条</a></td>
+                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/Pathfinding_Exact.c3p">精确寻路，保证对象能准确到达指定位置</a></td>
                             <td>dop2000</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/Pathfinding_Stack.c3p">寻路堆栈，将寻路目标位置存入数组，实现按任务计划前进</a></td>
+                            <td>dop2000</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/PATHFINDING_THROUGH_DOOR.capx">两点循环寻路。开门后切换寻路目标.移动时可碰撞</a></td>
+                            <td>mystazsea</td>
                         </tr>
                         <tr>
                             <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/Pathfinding_NoOverlapWhileMoving.c3p">队伍开火车寻路，并防止寻路对象相互叠加</a></td>
@@ -227,6 +235,10 @@
                         <tr>
                             <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/LineOfSight/DynamicShadowNotCanvas.capx">带有视野范围的动态阴影(不需要Canvas)</a></td>
                             <td>rokstars</td>
+                        </tr>
+                        <tr>
+                            <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/LineOfSight/StealthGameImproved.c3p">利用DrawingCanvas绘制视野范围</a></td>
+                            <td>dop2000</td>
                         </tr>
                         <tr>
                             <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/LineOfSight/VisualLOS.c3p">利用DrawingCanvas和Array，计算LOS多边形范围和射线</a></td>
@@ -1809,26 +1821,26 @@
             <table>
                 <thead>
                     <tr>
-                        <th>雷达小地图</th>
+                        <th>Minimap 雷达小地图</th>
                         <th>作者</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/MinimapTutorial.c3p">在画面右上角显示敌人位置小地图</a></td>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Minimap/MinimapTutorial.c3p">在画面右上角显示敌人位置小地图</a></td>
                         <td>FatalExit</td>
                     </tr>
                     <tr>
-                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Radar/simpleradar.capx">圆形雷达小地图，怪物生成后在小地图显示并显示位置</a></td>
-                        <td>sosensible</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Radar/simpleradar.capx">圆形雷达小地图，怪物生成后在小地图显示并显示位置</a></td>
-                        <td>sosensible</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/MinimapRound.c3p">利用DrawingCanvas绘制圆形小地图</a></td>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Minimap/MinimapRound.c3p">利用DrawingCanvas绘制圆形小地图</a></td>
                         <td>dop2000</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Minimap/simpleradar.capx">圆形雷达小地图，怪物生成后在小地图显示并显示位置</a></td>
+                        <td>sosensible</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Minimap/simpleradar.capx">圆形雷达小地图，怪物生成后在小地图显示并显示位置</a></td>
+                        <td>sosensible</td>
                     </tr>
                 </tbody>
             </table>
@@ -2606,6 +2618,10 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/AITopDownShooting.capx">敌人按路径点循环移动，玩家进入视野范围自动攻击并追逐，离开视野范围自动回归</a></td>
+                        <td>dop2000</td>
+                    </tr>
+                    <tr>
                         <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/AI/ruweKonijnen.capx">怪物随机在周围跳跃移动</a></td>
                         <td>99Instances2Go</td>
                     </tr>
@@ -2616,10 +2632,6 @@
                     <tr>
                         <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/Platform_Change_Direction2.capx">另一种实现敌人在墙体范围左右移动的思路，利用空气墙</a></td>
                         <td>MegaCoolL</td>
-                    </tr>
-                    <tr>
-                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/AITopDownShooting.capx">敌人在空中按路径点循环移动，玩家进入视野范围自动攻击并追逐，离开视野范围自动回归</a></td>
-                        <td>dop2000</td>
                     </tr>
                     <tr>
                         <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/AI/TDS2.capx">8方向怪物AI，发现玩家自动追踪，贴近自动攻击(需Rex插件)</a> | <a href="https://www.youtube.com/watch?v=64M3SB0kTCI">视频</a></td>
@@ -2882,11 +2894,15 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Grid 棋盘网格</th>
+                        <th>Grid 四边形网格</th>
                         <th>作者</th>
                     </tr>
                 </thead>
                 <tbody>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Pathfinding/GridPathfinding.c3p">四边形网格寻路</a></td>
+                        <td>unkown</td>
+                    </tr>
                     <tr>
                         <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Grid/LineInGrid.c3p">在网格的位置上，朝指定方向伸出延展线，检测覆盖的范围</a></td>
                         <td>DiegoM</td>
@@ -2911,8 +2927,35 @@
                         <td>R0J0hound</td>
                     </tr>
                     <tr>
-                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Hex/HexPathfindingMovement_C3.c3p">正六边形网格寻路(Pathfinding+MoveTo)</a></td>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Hex/HexPathfindingMovement.c3p">正六边形网格寻路(神经猫)</a></td>
                         <td>dop2000</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Pathfinding -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pathfinding 寻路算法</th>
+                        <th>作者</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Pathfinding/EasyStar_PreventOverlapping.c3p">EasyStar 寻路算法，避免敌人重叠</a></td>
+                        <td>dop2000</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Pathfinding/astar2_grid.capx">A*寻路算法实现(四边形网格)</a></td>
+                        <td>R0J0hound</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Pathfinding/astar2_hex.capx">A*寻路算法实现(六边形网格)</a></td>
+                        <td>R0J0hound</td>
+                    </tr>
+                    <tr>
+                        <td><a href="https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Pathfinding/astar2_mesh.capx">A*寻路算法实现(路径点)</a></td>
+                        <td>R0J0hound</td>
                     </tr>
                 </tbody>
             </table>
