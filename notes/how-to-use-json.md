@@ -233,3 +233,8 @@ JSON.Get("team.0.fruit.1")
 
 ```
 
+
+---
+
+扩展阅读：
+[在游戏中实现多语言菜单](https://github.com/XHXIAIEIN/Construct3/blob/main/notes/multi-language.md)
