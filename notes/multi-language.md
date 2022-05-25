@@ -167,5 +167,10 @@ translations.json 剪贴板
 ```
 
  
+---
 
+# 拓展阅读：
+
+Languages from JSON Template
+https://editor.construct.net/#open=languages-from-json
 
