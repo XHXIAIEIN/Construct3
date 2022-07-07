@@ -1,4 +1,4 @@
-在游戏中实现多语言菜单
+在游戏中实现多语言菜单。
 
 ## 必要的插件对象
 - AJAX 
@@ -7,7 +7,7 @@
   
 AJAX 负责在游戏中加载翻译文件。  
 JSON 负责接收从 AJAX 传递过来的文件数据，进行解析。  
-Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话。
+Dictionary 负责储存翻译文本数据，游戏中也是从这里调用对话内容。
 
 
 ## 翻译文件
@@ -167,5 +167,10 @@ translations.json 剪贴板
 ```
 
  
+---
 
+# 拓展阅读：
+
+Languages from JSON Template
+https://editor.construct.net/#open=languages-from-json
 

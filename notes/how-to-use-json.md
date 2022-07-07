@@ -1,3 +1,96 @@
+# 如何使用 JSON
+
+## Example 1
+```json
+{
+  "name": "Love"
+}
+```
+```js
+JSON.Get("name")  // Love
+```
+
+## Example 2
+```json
+{
+  "array": [123, 456]
+}
+```
+```js
+JSON.Get("array.0")  // 123
+```
+
+## Example 3
+```json
+{
+    "window": {
+        "title": "Construct 3",
+        "name": "main",
+        "width": 500,
+        "height": 500
+    },
+}
+```
+```js
+JSON.Get("window.name")  // main
+```
+
+## Example 4
+```json
+{
+    "window": {
+        "title": "Construct 3",
+        "name": "main",
+        "width": 500,
+        "height": 500,
+        "style": ["normal", "bold", "inherit"]
+    },
+}
+```
+```js
+JSON.Get("window.style.0") // normal
+```
+
+## Example 5
+```json
+{
+    "window": {
+        "title": "Construct 3",
+        "name": "main",
+        "width": 500,
+        "height": 500,
+        "image": { 
+            "name": "pig",
+            "width": 250,
+            "height": 250
+        },
+    },
+}
+```
+```js
+JSON.Get("window.image.name") // pig
+```
+
+## Example 6
+```json
+{  
+    "window": {
+        "title": "Construct 3",
+        "name": "main",
+        "example": [ 
+            { "color": "Red", "width": 500, "height": 500, "list":[0, 1, 2, 3]},
+            { "color": "Blue", "width": 500, "height": 500, "list":[5, 6, 7, 8]}
+        ]
+    },
+}
+```
+```js
+JSON.Get("window.example.0.color") // Red
+JSON.Get("window.example.1.list.0") // 5
+```
+
+---
+
 # 如何加载 JSON 文件
 
 在 C3 中加载 JSON 文件，必须要通过 AJAX 对象请求加载项目文件，请求成功后得到 `AJAX.LastData`。然后将数据传入 JSON 对象，使用 Parse 动作将数据解析成字符串，就可以使用了。
@@ -140,3 +233,8 @@ JSON.Get("team.0.fruit.1")
 
 ```
 
+
+---
+
+扩展阅读：
+[在游戏中实现多语言菜单](https://github.com/XHXIAIEIN/Construct3/blob/main/notes/multi-language.md)
