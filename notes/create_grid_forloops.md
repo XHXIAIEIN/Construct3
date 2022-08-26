@@ -24,8 +24,8 @@ For "Y" from 0 to 10-1
 ## 单循环方案 
 
 ```
-起始X位置 + 左右间距 + 方块宽度 * loopindex % 每行数量 
-起始Y位置 + 上下间距 + 方块高度 * floor(loopindex / 每行数量)
+起始X位置 + (左右间距 + 方块宽度) * loopindex % 每行数量 
+起始Y位置 + (上下间距 + 方块高度) * floor(loopindex / 每行数量)
 ```
 
 
@@ -33,12 +33,12 @@ For "Y" from 0 to 10-1
 
 ```
 For "" from 0 to 32-1
-    Create object Sprite on layer 0 at (10 + 2 + 16 × loopindex % 4, 10 + 2 + 16 × floor(loopindex÷4)), create hierarchy: False, template: (none)
+    Create object Sprite on layer 0 at (10 + (2 + 16) × loopindex % 4, 10 + (2 + 16) × floor(loopindex÷4)), create hierarchy: False, template: (none)
 ```
 
 剪贴板(需要 Sprite 对象)
 ```
-{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[],"children":[{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"\"","start-index":"0","end-index":"32-1"}}],"actions":[{"id":"create-object","objectClass":"System","parameters":{"object-to-create":"Sprite","layer":"0","x":"10 + 2 + 16 * loopindex % 4","y":"10 + 2 + 16 * floor(loopindex/4)","create-hierarchy":false,"use-template":null}}]}]}]}
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[],"children":[{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"\"","start-index":"0","end-index":"32-1"}}],"actions":[{"id":"create-object","objectClass":"System","parameters":{"object-to-create":"Sprite","layer":"0","x":"10 + (2 + 16) * loopindex % 4","y":"10 + (2 + 16) * floor(loopindex/4)","create-hierarchy":false,"use-template":null}}]}]}]}
 ```
 
 
