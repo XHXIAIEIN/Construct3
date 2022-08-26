@@ -41,4 +41,3 @@ For "" from 0 to 32-1
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[],"children":[{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"\"","start-index":"0","end-index":"32-1"}}],"actions":[{"id":"create-object","objectClass":"System","parameters":{"object-to-create":"Sprite","layer":"0","x":"10 + (2 + 16) * loopindex % 4","y":"10 + (2 + 16) * floor(loopindex/4)","create-hierarchy":false,"use-template":null}}]}]}]}
 ```
 
-
