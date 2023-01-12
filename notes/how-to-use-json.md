@@ -214,6 +214,101 @@ JSON.Get("team.0.fruit.1")
 如何获取 Ashely **全部** 喜欢的水果
 
 
+---
+
+# 修改 JSON 对象的数据
+
+
+## 在位置插入 JSON 数据
+
+现有：
+```json
+{
+    "array":
+    [
+        {"foo": "1"},
+        {"bar": "2"}
+    ]
+}
+```
+
+目标: 在 `array` 的数组中，插入一段 json 数据。
+```json
+{
+    "array":
+    [
+        {"foo": "1"},
+        {"bar": "2"},
+        {"new": "3"}
+    ]
+}
+```
+
+步骤：
+1. 使用 `Insert value` 动作，在 `array` 的前面位置插入任意的数据。
+2. 用 `Set JSON` 动作，修改 `array.0` 的内容为 `"{""new"": ""3""}"`。 
+
+注意，如果要在字符串的表达式中使用双引号 `"`，必须用连续两个 `""` 来代替。
+
+![Snipaste_2023-01-11_23-55-44](https://user-images.githubusercontent.com/45864744/211978066-c3442983-6036-4288-97ab-18fba5fdb239.png)
+
+
+## 
+
+# 使用脚本将数据保存到 JSON 对象
+
+```javascript
+const tempdata = {
+    "Levels": [
+        {
+            "LevelName" : "Home office",
+            "ObjectsCoordinates": [
+                {
+                    "x": 20,
+                    "y": 10
+                },
+                {
+                    "x": 30,
+                    "y": 60
+                }
+            ]
+        },
+        {
+            "LevelName" : "Living room",
+            "ObjectsCoordinates": [
+                {
+                    "x": 220,
+                    "y": 110
+                },
+                {
+                    "x": 30,
+                    "y": 660
+                }
+            ]
+        },
+        {
+            "LevelName" : "Master room",
+            "ObjectsCoordinates": [
+                {
+                    "x": 100,
+                    "y": 100
+                },
+                {
+                    "x": 30,
+                    "y": 100
+                }
+            ]
+        }
+    ]
+}
+
+const jsonObject = runtime.objects.JSON;
+const jsonInstance = jsonObject.getFirstPickedInstance();
+
+jsonInstance.setJsonDataCopy(tempdata)
+```
+
+![Snipaste_2023-01-12_11-32-01](https://user-images.githubusercontent.com/45864744/211977894-d88b4d25-4893-490c-9a2f-120732c54f24.png)
 
 
 ---
