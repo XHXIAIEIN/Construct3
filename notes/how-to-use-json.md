@@ -19,13 +19,13 @@
 
 ## 事件表
 
-- 加载步骤
+### 加载步骤
 
 1. 使用 AJAX 对象执行 `Request project file` 动作加载文件。  
 2. **异步等待 AJAX 读取完成**   
 3. 使用 JSON 对象执行 `Parse` 动作解析 `AJAX.LastData` 的数据  
 
-- 截图演示 
+### 截图演示 
 
 | AJAX  | JSON |
 | ----- | ---- |
@@ -44,7 +44,6 @@
 系统动作里的 ` Wait for previous actions `， 等待上个异步指令完成。  
 
 ![04](https://user-images.githubusercontent.com/45864744/147194826-39497b88-a0b4-4cf1-af54-fe6c70ae5120.png)
-
 
 **第二种**，监听AJAX请求完成的回调函数，再继续执行。适用于请求文件较多的项目，你需要认真的管理每个 Tag 的请求，好处就是，更易于管理，方便的结构化组织项目。    
   
