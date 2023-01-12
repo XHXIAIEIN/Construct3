@@ -1,99 +1,6 @@
-# 如何使用 JSON
-
-## Example 1
-```json
-{
-  "name": "Love"
-}
-```
-```js
-JSON.Get("name")  // Love
-```
-
-## Example 2
-```json
-{
-  "array": [123, 456]
-}
-```
-```js
-JSON.Get("array.0")  // 123
-```
-
-## Example 3
-```json
-{
-    "window": {
-        "title": "Construct 3",
-        "name": "main",
-        "width": 500,
-        "height": 500
-    },
-}
-```
-```js
-JSON.Get("window.name")  // main
-```
-
-## Example 4
-```json
-{
-    "window": {
-        "title": "Construct 3",
-        "name": "main",
-        "width": 500,
-        "height": 500,
-        "style": ["normal", "bold", "inherit"]
-    },
-}
-```
-```js
-JSON.Get("window.style.0") // normal
-```
-
-## Example 5
-```json
-{
-    "window": {
-        "title": "Construct 3",
-        "name": "main",
-        "width": 500,
-        "height": 500,
-        "image": { 
-            "name": "pig",
-            "width": 250,
-            "height": 250
-        },
-    },
-}
-```
-```js
-JSON.Get("window.image.name") // pig
-```
-
-## Example 6
-```json
-{  
-    "window": {
-        "title": "Construct 3",
-        "name": "main",
-        "example": [ 
-            { "color": "Red", "width": 500, "height": 500, "list":[0, 1, 2, 3]},
-            { "color": "Blue", "width": 500, "height": 500, "list":[5, 6, 7, 8]}
-        ]
-    },
-}
-```
-```js
-JSON.Get("window.example.0.color") // Red
-JSON.Get("window.example.1.list.0") // 5
-```
-
----
-
 # 如何加载 JSON 文件
 
-在 C3 中加载 JSON 文件，必须要通过 AJAX 对象请求加载项目文件，请求成功后得到 `AJAX.LastData`。然后将数据传入 JSON 对象，使用 Parse 动作将数据解析成字符串，就可以使用了。
+在 C3 中加载 JSON 文件，必须要通过 AJAX 对象请求加载项目文件，请求成功后得到 `AJAX.LastData`。然后将数据传入 JSON 对象，使用 Parse 动作将数据解析成字符串，就可以使用 `JSON.Get()` 获取对应数据了。
 
 ## 插件对象
 
@@ -151,18 +58,14 @@ JSON.Get("window.example.1.list.0") // 5
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"request-project-file","objectClass":"AJAX","parameters":{"tag":"\"file\"","file":"file.json"}}]},{"eventType":"block","conditions":[{"id":"on-completed","objectClass":"AJAX","parameters":{"tag":"\"file\""}}],"actions":[{"id":"parse","objectClass":"JSON","parameters":{"data":"AJAX.LastData"}}]}]}
 ```
   
-  
-现在JSON数据已经在 JSON 里面了。下面讲讲怎么使用它。
+现在 JSON 数据已经在 JSON 里面了。下面讲讲怎么读取它。
 
----
+# 如何读取 JSON 数据
 
-# 如何访问 JSON 数据
 
-例如，你的JSON结构是这样的
+## Example 1 
 
-## 案例一
-
-最简单的数据结构
+最简单的 JSON 数据结构
 
 ```json
 {
@@ -172,16 +75,52 @@ JSON.Get("window.example.1.list.0") // 5
 }
 ```
 
-读取到 ` name ` 的数据 (Ashely) ：  
+如何读取 `name` 的数据 (Ashely) ：  
 
 ```
 JSON.Get("name")
 ```
 
+## Example 2
 
-## 案例二
+比起前面的案例，外面多了一层 "team"。
 
-比起案例一，外面多了一层数组。数组的路径就是索引下标。
+```json
+{
+    "team": 
+    {
+        "name": "Ashely",
+        "age": 18,
+        "score": 100
+    }
+}
+```
+
+获取 `Ashely` 的名字
+
+```
+JSON.Get("team.name")
+```
+
+## Example 3
+
+最简单的数组结构，数组的路径就是索引下标，从 0 开始计数。
+
+```json
+{
+  "array": [123, 456]
+}
+```
+
+获取 `array` 的第 1 项目数据
+
+```js
+JSON.Get("array.0")
+```
+
+## Example 4
+
+比起前面的案例，又多了一层数组，数组的路径就是索引下标，从 0 开始计数。
 
 ```json
 {
@@ -193,45 +132,83 @@ JSON.Get("name")
 }
 ```
 
-获取 ` Ashely ` 的名字
+获取 `Ashely` 的名字
 
 ```
 JSON.Get("team.0.name")
 ```
 
-
-获取 ` Tom ` 的分数
+获取 `Tom` 的分数
 
 ```
 JSON.Get("team.1.score")
 ```
 
+## Example 5
 
-## 案例三
+注意看前面，它不再是 {} 的开头，而是 [] 作为 JSON 数组
 
-比起案例二，每个人的数据里，多了一个 `fruit` 喜欢的水果，它是一个数组。
+```json
+[
+    {
+        "name": "Ashely",
+        "age": 18,
+        "score": 100
+    },
+    {
+        "name": "Tom",
+        "age": 17,
+        "score": 95
+    }
+]
+```
+
+获取到 `Ashely` 的名字
+
+```
+JSON.Get("0.name")
+```
+
+获取 `Tom` 的分数
+
+```
+JSON.Get("0.score")
+```
+
+## Example 6
+
+比起之前的案例，现在每个人的数据里，多了一个 `fruit` 喜欢的水果，它是一个数组。
 
 ```json
 {
-  "team": 
-  [
-    { "name": "Ashely", "age": 18, "score": 100, "fruit":["Apple", "Banana", "Cherry", "Durian"] },
-    { "name": "Tom", "age": 17, "score": 95, "fruit":["Apple", "Berry"] }
-  ]
+    "team": [
+        {
+            "name": "Ashely",
+            "age": 18,
+            "score": 100,
+            "fruit": ["Apple", "Banana", "Cherry", "Durian"]
+        },
+        {
+            "name": "Tom",
+            "age": 17,
+            "score": 95,
+            "fruit": ["Apple","Berry"]
+        }
+    ]
 }
 ```
 
-获取 Ashely 喜欢的 **第二种** 水果( ` Banana ` )
+获取 `Ashely` 喜欢的 **第2种** 水果 (Banana)
 
 ```
 JSON.Get("team.0.fruit.1")
 ```
 
+## Example 7
+
 如何获取 Ashely **全部** 喜欢的水果
 
-```
 
-```
 
 
 ---
