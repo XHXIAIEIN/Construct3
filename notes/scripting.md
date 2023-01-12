@@ -131,3 +131,57 @@ async function OnBeforeProjectStart(runtime)
 const Data = runtime.objects.JSON.getFirstInstance().getJsonDataCopy();
 console.log(Data['Name'])
 ```
+
+## 将 JSON 数据储存到 JSON 对象中
+
+```javascript
+const tempdata = {
+    "Levels": [
+        {
+            "LevelName" : "Home office",
+            "ObjectsCoordinates": [
+                {
+                    "x": 20,
+                    "y": 10
+                },
+                {
+                    "x": 30,
+                    "y": 60
+                }
+            ]
+        },
+        {
+            "LevelName" : "Living room",
+            "ObjectsCoordinates": [
+                {
+                    "x": 220,
+                    "y": 110
+                },
+                {
+                    "x": 30,
+                    "y": 660
+                }
+            ]
+        },
+        {
+            "LevelName" : "Master room",
+            "ObjectsCoordinates": [
+                {
+                    "x": 100,
+                    "y": 100
+                },
+                {
+                    "x": 30,
+                    "y": 100
+                }
+            ]
+        }
+    ]
+}
+
+const jsonObject = runtime.objects.JSON;
+const jsonInstance = jsonObject.getFirstPickedInstance();
+
+jsonInstance.setJsonDataCopy(tempdata)
+```
+
