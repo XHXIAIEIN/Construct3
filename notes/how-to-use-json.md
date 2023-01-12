@@ -19,27 +19,27 @@
 
 ## 事件表
 
-### 过程思路
+加载步骤
 
-- 使用 AJAX 对象执行 ` Request project file ` 动作来读取文件  
-- **等待 AJAX 读取完成**   
-- 使用 JSON 对象执行 ` Parse ` 动作解析数据 ` AJAX.LastData `  
+1. 使用 AJAX 对象执行 `Request project file` 动作加载文件。  
+2. **异步等待 AJAX 读取完成**   
+3. 使用 JSON 对象执行 `Parse` 动作解析 `AJAX.LastData` 的数据  
 
-
-### 截图演示 
+截图演示 
 
 | AJAX  | JSON |
 | ----- | ---- |
 |  ![ajax_Request_project_file](https://user-images.githubusercontent.com/45864744/147197052-6ad3b6c8-6ab8-437e-9ba2-2af298ef74b4.png)  | ![json_parse](https://user-images.githubusercontent.com/45864744/147197183-edd2d8ed-6d19-4a57-af0a-728e6299fbf6.png) |
 
 
-### 异步指令
+**异步动作**
 
-注意到了吗？ AJAX 的动作后面都带有小时钟的图标，代表它是异步调用的。必须要等待它完成才可以进行下一步动作，否则如果数据还没请求完成，你就直接拿来用了，这样会拿不到完整数据的。所以，这中间需要加一个等待它完成的环节。  
+注意到了吗？ AJAX 的动作后面带有小时钟的图标，代表它是异步调用的。
+必须要等待它完成才可以进行下一步动作，否则如果数据还没请求完成，你就直接拿来用了，这样会拿不到完整数据的。所以，这中间需要加一个等待它完成的环节。  
 
 有 2 种方式，可以根据自己的使用需求选择：  
 
-第一种，直接等待它完成，再继续执行下一步。  
+**第一种**，直接等待它完成，再继续执行下一步。  
 适用于你的项目比较简单，只是随便用用，不需要想那么多的情况。  
 
 系统动作里的 ` Wait for previous actions `， 等待上个异步指令完成。  
@@ -47,18 +47,27 @@
 ![04](https://user-images.githubusercontent.com/45864744/147194826-39497b88-a0b4-4cf1-af54-fe6c70ae5120.png)
 
 
-第二种，监听AJAX请求完成的回调函数，再继续执行。  
-适用于请求文件较多的项目，你需要认真的管理每个Tag的请求，好处就是，更易于管理。    
+**第二种**，监听AJAX请求完成的回调函数，再继续执行。 
+
+适用于请求文件较多的项目，你需要认真的管理每个 Tag 的请求，好处就是，更易于管理，方便的结构化组织项目。    
   
 ![03](https://user-images.githubusercontent.com/45864744/147194744-761941c8-4884-4605-b573-b54b15b29f6b.png)  
-
 
 快速剪贴板:
 ```
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"request-project-file","objectClass":"AJAX","parameters":{"tag":"\"file\"","file":"file.json"}}]},{"eventType":"block","conditions":[{"id":"on-completed","objectClass":"AJAX","parameters":{"tag":"\"file\""}}],"actions":[{"id":"parse","objectClass":"JSON","parameters":{"data":"AJAX.LastData"}}]}]}
 ```
-  
-现在 JSON 数据已经在 JSON 里面了。下面讲讲怎么读取它。
+
+**动态加载文件**
+
+上面使用 `Request project file` 加载项目中的文件，但如果你的文件比较多，从下拉框里面选文件会变得非常繁琐，这时候你肯定希望能使用动态字符串引用变量来加载项目文件。
+
+那么就可以使用它旁边的 `Request URL` 动作，在 `URL` 填入文件名即可。
+
+| Request URL  | URL  |
+| ------------ | ---- |
+| ![ajax_Request_url](https://user-images.githubusercontent.com/45864744/211976126-26d37f42-a786-4fae-ab76-0a5a980070e5.png)  | ![request_url](https://user-images.githubusercontent.com/45864744/211976400-6cab7c88-5a51-4d08-b963-b1d9358fc537.png) |
+
 
 # 如何读取 JSON 数据
 
