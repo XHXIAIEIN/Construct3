@@ -25,4 +25,5 @@ if __name__ == '__main__':
     test(CORSRequestHandler, HTTPServer, port=50000)
 ```
 
+# 位置
 http://localhost:50000/addon.json
