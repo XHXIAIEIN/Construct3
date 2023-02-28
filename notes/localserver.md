@@ -22,5 +22,7 @@ class CORSRequestHandler (SimpleHTTPRequestHandler):
         SimpleHTTPRequestHandler.end_headers(self)
 
 if __name__ == '__main__':
-    test(CORSRequestHandler, HTTPServer, port=int(sys.argv[1]) if len(sys.argv) > 1 else 49990)
+    test(CORSRequestHandler, HTTPServer, port=50000)
 ```
+
+http://localhost:50000/addon.json
