@@ -74,13 +74,13 @@
 
 ```json
 {
-  "name": "Ashely",
+  "name": "Cheems",
   "age": 18,
   "score": 100
 }
 ```
 
-如何读取 `name` 的数据 (Ashely) ：  
+如何读取 `name` 的数据 (Cheems) ：  
 
 ```
 JSON.Get("name")
@@ -94,14 +94,14 @@ JSON.Get("name")
 {
     "team": 
     {
-        "name": "Ashely",
+        "name": "Cheems",
         "age": 18,
         "score": 100
     }
 }
 ```
 
-获取 `Ashely` 的名字
+获取 `Cheems` 的名字
 
 ```
 JSON.Get("team.name")
@@ -131,19 +131,19 @@ JSON.Get("array.0")
 {
   "team": 
   [
-    { "name": "Ashely", "age": 18, "score": 100 },
-    { "name": "Tom", "age": 17, "score": 95 }
+    { "name": "Cheems", "age": 18, "score": 100 },
+    { "name": "Marmot", "age": 17, "score": 95 }
   ]
 }
 ```
 
-获取 `Ashely` 的名字
+获取 `Cheems` 的名字
 
 ```
 JSON.Get("team.0.name")
 ```
 
-获取 `Tom` 的分数
+获取 `Marmot` 的分数
 
 ```
 JSON.Get("team.1.score")
@@ -156,25 +156,25 @@ JSON.Get("team.1.score")
 ```json
 [
     {
-        "name": "Ashely",
+        "name": "Cheems",
         "age": 18,
         "score": 100
     },
     {
-        "name": "Tom",
+        "name": "Marmot",
         "age": 17,
         "score": 95
     }
 ]
 ```
 
-获取到 `Ashely` 的名字
+获取到 `Cheems` 的名字
 
 ```
 JSON.Get("0.name")
 ```
 
-获取 `Tom` 的分数
+获取 `Marmot` 的分数
 
 ```
 JSON.Get("0.score")
@@ -188,13 +188,13 @@ JSON.Get("0.score")
 {
     "team": [
         {
-            "name": "Ashely",
+            "name": "Cheems",
             "age": 18,
             "score": 100,
             "fruit": ["Apple", "Banana", "Cherry", "Durian"]
         },
         {
-            "name": "Tom",
+            "name": "Marmot",
             "age": 17,
             "score": 95,
             "fruit": ["Apple","Berry"]
@@ -203,7 +203,7 @@ JSON.Get("0.score")
 }
 ```
 
-获取 `Ashely` 喜欢的 **第2种** 水果 (Banana)
+获取 `Cheems` 喜欢的 **第2种** 水果 (Banana)
 
 ```
 JSON.Get("team.0.fruit.1")
@@ -211,7 +211,7 @@ JSON.Get("team.0.fruit.1")
 
 ## Example 7
 
-如何获取 Ashely **全部** 喜欢的水果
+如何获取 Cheems **全部** 喜欢的水果
 
 
 ---
