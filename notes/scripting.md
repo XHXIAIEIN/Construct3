@@ -135,53 +135,31 @@ console.log(Data['Name'])
 ## 将 JSON 数据储存到 JSON 对象中
 
 ```javascript
-const tempdata = {
-    "Levels": [
-        {
-            "LevelName" : "Home office",
-            "ObjectsCoordinates": [
-                {
-                    "x": 20,
-                    "y": 10
-                },
-                {
-                    "x": 30,
-                    "y": 60
-                }
-            ]
-        },
-        {
-            "LevelName" : "Living room",
-            "ObjectsCoordinates": [
-                {
-                    "x": 220,
-                    "y": 110
-                },
-                {
-                    "x": 30,
-                    "y": 660
-                }
-            ]
-        },
-        {
-            "LevelName" : "Master room",
-            "ObjectsCoordinates": [
-                {
-                    "x": 100,
-                    "y": 100
-                },
-                {
-                    "x": 30,
-                    "y": 100
-                }
-            ]
-        }
-    ]
-}
-
+const tempdata = { "Name": 'player', "Score": 100 }
 const jsonObject = runtime.objects.JSON;
 const jsonInstance = jsonObject.getFirstPickedInstance();
 
 jsonInstance.setJsonDataCopy(tempdata)
 ```
+
+
+## 使用 complexJSobject 格式化并储存
+
+```javascript
+ const tempdata = {
+			name : "value1",
+			title : "value2",
+			score : 3,
+			item : [1,2,3,4],
+			text : {
+					sub1 : "subValue1",
+					sub2 : 2
+				}
+		};
+
+runtime.complexJSobject = JSON.stringify(tempdata);
+const jsonInstance = runtime.objects.JSON.getFirstPickedInstance();
+jsonInstance.setJsonDataCopy(JSON.parse(runtime.complexJSobject));
+```
+
 
