@@ -125,7 +125,7 @@ async function OnBeforeProjectStart(runtime)
 }
 ```
 
-## 读取JSON
+## 读取JSON对象
 
 ```javascript
 const Data = runtime.objects.JSON.getFirstInstance().getJsonDataCopy();
@@ -141,7 +141,6 @@ const jsonInstance = jsonObject.getFirstPickedInstance();
 
 jsonInstance.setJsonDataCopy(tempdata)
 ```
-
 
 ## 使用 complexJSobject 格式化并储存
 这里的 Key 没有使用引号
@@ -162,4 +161,46 @@ const jsonInstance = runtime.objects.JSON.getFirstPickedInstance();
 jsonInstance.setJsonDataCopy(JSON.parse(runtime.complexJSobject));
 ```
 
+
+## 读取Array对象
+
+一维数组
+a, b, c
+```javascript
+const arrayInstance = runtime.objects["Array"].getFirstInstance();
+
+for (let i = 0; i < arrayInstance.width; i++) {
+	console.log(arrayInstance.getAt(i));
+};
+```
+
+二维数组
+a, b, c
+1, 2, 3
+输出: a, 1, b, 2, c, 3
+```javascript
+const arrayInstance = runtime.objects["Array"].getFirstInstance();
+
+for (let x = 0; x < arrayInstance.width; x++) {
+	for (let y = 0; y < arrayInstance.height; y++) {
+		console.log(arrayInstance.getAt(x, y));
+	};
+};
+```
+
+合并输出
+a,1
+b,2
+c,3
+```
+const arrayInstance = runtime.objects["Array"].getFirstInstance();
+
+const data = Array.from({length: arrayInstance.height}, (_, y) =>
+    Array.from({length: arrayInstance.width}, (_, x) => arrayInstance.getAt(x, y))
+);
+
+const transpose = (arr) => arr[0].map((_, i) => arr.map(row => row[i]));
+
+transpose(data).forEach(item => console.log(item.join(',')));
+```
 
