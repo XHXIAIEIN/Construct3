@@ -2,17 +2,17 @@
 
 常用于菜单、队列、动画的光标索引。
 
+## 用于动画帧
+```
+((Self.AnimationFrame+1) + Self.AnimationFrameCount) % Self.AnimationFrameCount
+```
+
 ## 变量：
 - ` MaxOptions `
 - ` CurrentOption `
 
 ## 公式
 Set CurrentOption to `((CurrentOption +1) + MaxOptions) % MaxOptions`
-
-## 公式，用于动画帧
-```
-((Self.AnimationFrame+1) + Self.AnimationFrameCount) % Self.AnimationFrameCount
-```
 
 快速剪贴板
 ```
