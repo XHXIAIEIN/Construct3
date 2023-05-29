@@ -1,6 +1,6 @@
 # 数字在范围内循环
 
-常用于菜单、队列的光标索引。
+常用于菜单、队列、动画的光标索引。
 
 ## 变量：
 - ` MaxOptions `
@@ -8,6 +8,11 @@
 
 ## 公式
 Set CurrentOption to `((CurrentOption +1) + MaxOptions) % MaxOptions`
+
+## 公式，用于动画帧
+```
+((Self.AnimationFrame+1) + Self.AnimationFrameCount) % Self.AnimationFrameCount
+```
 
 快速剪贴板
 ```
