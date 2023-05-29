@@ -117,7 +117,7 @@ JSON.Get("team.name")
 }
 ```
 
-获取 `array` 的第 1 项目数据
+获取 `array` 的第 1 项目数据，也就是 123 的数字。
 
 ```js
 JSON.Get("array.0")
