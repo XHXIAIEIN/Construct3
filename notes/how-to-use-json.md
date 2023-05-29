@@ -66,6 +66,12 @@
 | ------------ | ---- |
 | ![ajax_Request_url](https://user-images.githubusercontent.com/45864744/211976126-26d37f42-a786-4fae-ab76-0a5a980070e5.png)  | ![request_url](https://user-images.githubusercontent.com/45864744/211976400-6cab7c88-5a51-4d08-b963-b1d9358fc537.png) |
 
+如果想要在文件夹中使用变量，就需要用 `"字符串" & 变量名 & ".文件后缀名"` 组合字符串。
+
+```
+"file" & variable & ".json"
+```
+
 
 # 如何读取 JSON 数据
 
