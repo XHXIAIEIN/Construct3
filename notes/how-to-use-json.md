@@ -318,6 +318,20 @@ jsonInstance.setJsonDataCopy(tempdata)
 ![Snipaste_2023-01-12_11-32-01](https://user-images.githubusercontent.com/45864744/211977894-d88b4d25-4893-490c-9a2f-120732c54f24.png)
 
 
+## 
+
+# 将 JSON 对象中的数组储存到 Array 对象中
+
+```json
+{
+  "text": "Hello",
+  "array": [123, 456]
+}
+```
+
+![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/9cd804b5-ba84-4d3a-9c2a-f7d0a1fc8724)
+
+
 ---
 
 扩展阅读：
