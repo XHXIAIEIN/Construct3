@@ -260,9 +260,11 @@ JSON.Get("team.0.fruit.1")
 ![Snipaste_2023-01-11_23-55-44](https://user-images.githubusercontent.com/45864744/211978066-c3442983-6036-4288-97ab-18fba5fdb239.png)
 
 
-## 
+---
 
-# 使用脚本将数据保存到 JSON 对象
+# 脚本
+
+## 使用脚本将数据保存到 JSON 对象
 
 ```javascript
 const tempdata = {
@@ -318,18 +320,92 @@ jsonInstance.setJsonDataCopy(tempdata)
 ![Snipaste_2023-01-12_11-32-01](https://user-images.githubusercontent.com/45864744/211977894-d88b4d25-4893-490c-9a2f-120732c54f24.png)
 
 
-## 
+---
 
-# 将 JSON 对象中的数组储存到 Array 对象中
+# 数组
+
+## 将 JSON 对象中的数组储存到 Array 对象
+
+先看个最简单简单的例子，这个适合最简单的一维数组。
 
 ```json
 {
-  "text": "Hello",
-  "array": [123, 456]
+  "array": [100, 200]
 }
 ```
 
+将它储存到 JSON 后， 通过 System: For `0` to `JSON.ArraySize("array")-1` 进行遍历，使用 Array 的 Push 动作将 `JSON.Get("array." & loopindex)` 推入数组即可。 
+
+由于是对数组进行 Push， 所以需要先对 Array 进行初始化，将 Size 设置为 0，确保没有多余的数据。
+
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/9cd804b5-ba84-4d3a-9c2a-f7d0a1fc8724)
+
+
+**例子2**
+
+现在扩展一下，外面多一层数组，然后以 \[name, score] 来储存数据。
+
+```json
+{
+	"array": [
+		["Cheems",100],
+		["Marmot",95],
+		["Roger",60]
+	]
+}
+```
+
+操作和上面几乎相同，但多了一个Y轴，所以 Push 的时候只推入第 0 项 `JSON.Get("array." & loopindex & ".0")`
+
+然后对 Y 轴进行赋值 Set Value: (loopindex, 1) `JSON.Get("array." & loopindex & ".1")` 
+
+![Snipaste_2023-06-12_15-24-38](https://github.com/XHXIAIEIN/Construct3/assets/45864744/fe8bd73e-f6e9-4a0e-9aeb-72e51cc41a3b)
+
+
+快速剪贴板（子条件）
+```json
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[],"actions":[{"id":"set-size","objectClass":"Array","parameters":{"width":"0","height":"JSON.ArraySize(\"array.0\")","depth":"1"}}]},{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"\"","start-index":"0","end-index":"JSON.ArraySize(\"array\")-1"}}],"actions":[{"id":"push","objectClass":"Array","parameters":{"where":"back","value":"JSON.Get(\"array.\" & loopindex & \".0\")","axis":"x"}},{"id":"set-at-xy","objectClass":"Array","parameters":{"x":"loopindex","y":"1","value":"JSON.Get(\"array.\" & loopindex & \".1\")"}}]}]}
+```
+
+**例子3**
+
+基于上面的例子，但数组是任意长度的，根据第1项填充数组大小。
+
+```json
+{
+	"array": [
+		["Cheems",100,123,456,6,10],
+		["Marmot",95,456,123,7,20],
+		["Roger",60,789,654,8,30]
+	]
+}
+```
+
+这就需要用到双重循环来操作，
+
+![Snipaste_2023-06-12_15-38-41](https://github.com/XHXIAIEIN/Construct3/assets/45864744/af5daecd-8b9d-42aa-b26b-1d62e12bcefb)
+
+
+快速剪贴板（子条件）
+
+```json
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[],"actions":[{"id":"set-size","objectClass":"Array","parameters":{"width":"0","height":"JSON.ArraySize(\"array.0\")","depth":"1"}}]},{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"x\"","start-index":"0","end-index":"JSON.ArraySize(\"array\")-1"}}],"actions":[{"id":"push","objectClass":"Array","parameters":{"where":"back","value":"JSON.Get(\"array.\" & loopindex(\"x\") & \".0\")","axis":"x"}}],"children":[{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"y\"","start-index":"1","end-index":"JSON.ArraySize(\"array.0\")-1"}}],"actions":[{"id":"set-at-xy","objectClass":"Array","parameters":{"x":"loopindex(\"x\")","y":"loopindex(\"y\")","value":"JSON.Get(\"array.\" & loopindex(\"x\") & \".\" & loopindex(\"y\"))"}}]}]}]}
+```
+
+**例子4** (FYI)
+
+在前面数组补充一个标题列，但是存入数组时希望能跳过它。
+
+```json
+{
+	"array":[
+		["name","score","age"],
+		["Cheems",100,17],
+		["Marmot",95,8],
+		["Roger",60,21]
+	]
+}
+```
 
 
 ---
