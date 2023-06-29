@@ -227,8 +227,7 @@ JSON.Get("team.0.fruit.1")
 
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/eece798b-3d6a-4258-92e6-929ca59d1923)
 
-运行结果：
-
+运行结果：  
 ```
 0 : Apple
 1 : Banana
@@ -243,7 +242,7 @@ JSON.Get("team.0.fruit.1")
 和前面的步骤类似，但这次直接用 Aray 对象的 Push 动作，将 `JSON.CurrentValue` 推入数组中。
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/c22e964d-0ed5-46b1-be7f-9aa3c3cc6500)
 
-运行结果：
+运行结果：  
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/2f8a98d5-b6fd-4c82-b7b0-5743b5a1c6f1)
 
 
@@ -254,6 +253,7 @@ JSON.Get("team.0.fruit.1")
 
 ![Snipaste_2023-06-29_11-32-04](https://github.com/XHXIAIEIN/Construct3/assets/45864744/fd128f49-ea95-476c-a377-aec408088a5a)
 
+运行结果：  
 ![Snipaste_2023-06-29_11-31-41](https://github.com/XHXIAIEIN/Construct3/assets/45864744/d8ea3688-9819-44c6-8fbd-7ba30a0238b8)
 
 
@@ -276,6 +276,7 @@ JSON.Get("team.0.fruit.1")
 ```
 
 目标: 在 `array` 的数组中，插入一段 json 数据。
+
 ```json
 {
     "array":
