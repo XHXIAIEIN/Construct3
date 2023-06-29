@@ -239,12 +239,17 @@ JSON.Get("team.0.fruit.1")
 
 如何获取 Cheems **全部** 喜欢的水果，并将它们存到数组里
 
-和前面的步骤类似，但这次直接用 Aray 对象的 Push 动作，将 `JSON.CurrentValue` 推入数组中。
+和前面的步骤类似，但这次直接用 Aray 对象的 Push 动作，将 `JSON.CurrentValue` 推入数组中。  
+
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/c22e964d-0ed5-46b1-be7f-9aa3c3cc6500)
 
 运行结果：  
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/2f8a98d5-b6fd-4c82-b7b0-5743b5a1c6f1)
 
+如何获取数据？
+```
+Array.At(0)
+```
 
 ## Example 7.3
 希望存到数组里面的是一个二维数组
@@ -255,6 +260,9 @@ JSON.Get("team.0.fruit.1")
 
 运行结果：  
 ![Snipaste_2023-06-29_11-31-41](https://github.com/XHXIAIEIN/Construct3/assets/45864744/d8ea3688-9819-44c6-8fbd-7ba30a0238b8)
+
+如何获取 Array 的数据？ `Array.At(X,Y)` 
+![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/8ef3aaf3-2f06-4781-a501-0cc5bfa84c0d)
 
 
 ---
