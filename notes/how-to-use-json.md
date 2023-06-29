@@ -261,7 +261,8 @@ Array.At(0)
 运行结果：  
 ![Snipaste_2023-06-29_11-31-41](https://github.com/XHXIAIEIN/Construct3/assets/45864744/d8ea3688-9819-44c6-8fbd-7ba30a0238b8)
 
-如何获取 Array 的数据？ `Array.At(X,Y)` 
+如何获取 Array 的数据？ `Array.At(X,Y)`   
+
 ![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/8ef3aaf3-2f06-4781-a501-0cc5bfa84c0d)
 
 
