@@ -216,9 +216,45 @@ JSON.Get("0.score")
 JSON.Get("team.0.fruit.1")
 ```
 
-## Example 7
+
+## Example 7.1
 
 如何获取 Cheems **全部** 喜欢的水果
+
+这里需要用到 "循环" 的概念，让事件通过 JSON 对象的 'For each' 条件，遍历整个 `team.0.fruit"` 节点，这时就可以用 `JSON.CurrentKey` 和 `JSON.CurrentValue` 获取到当前循环的键名和键值。
+
+![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/cabb2de4-8c19-46e6-b7be-d348071b2b35)
+
+![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/eece798b-3d6a-4258-92e6-929ca59d1923)
+
+运行结果：
+
+```
+0 : Apple
+1 : Banana
+2 : Cherry
+3 : Durian
+```
+
+## Example 7.2
+
+如何获取 Cheems **全部** 喜欢的水果，并将它们存到数组里
+
+和前面的步骤类似，但这次直接用 Aray 对象的 Push 动作，将 `JSON.CurrentValue` 推入数组中。
+![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/c22e964d-0ed5-46b1-be7f-9aa3c3cc6500)
+
+运行结果：
+![image](https://github.com/XHXIAIEIN/Construct3/assets/45864744/2f8a98d5-b6fd-4c82-b7b0-5743b5a1c6f1)
+
+
+## Example 7.3
+希望存到数组里面的是一个二维数组
+
+和前面的步骤类似，但这次 Array 的尺寸不同，并且多了一个 Set Value 的操作
+
+![Snipaste_2023-06-29_11-32-04](https://github.com/XHXIAIEIN/Construct3/assets/45864744/fd128f49-ea95-476c-a377-aec408088a5a)
+
+![Snipaste_2023-06-29_11-31-41](https://github.com/XHXIAIEIN/Construct3/assets/45864744/d8ea3688-9819-44c6-8fbd-7ba30a0238b8)
 
 
 ---
