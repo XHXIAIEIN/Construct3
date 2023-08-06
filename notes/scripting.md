@@ -204,3 +204,28 @@ const transpose = (arr) => arr[0].map((_, i) => arr.map(row => row[i]));
 transpose(data).forEach(item => console.log(item.join(',')));
 ```
 
+
+# 实用函数
+
+## 实现choose 随机选择
+```
+function floor(x)
+{
+  if (x >= 0)
+    return x | 0;
+  else
+    return (x | 0) - 1;
+}
+
+function choose()
+{
+  const index = floor(Math.random() * (arguments.length));
+  return (arguments[index]);
+}
+```
+Sample:
+```
+const pick = choose("a", "b", "c", "d");
+console.log(pick);
+// b
+```
