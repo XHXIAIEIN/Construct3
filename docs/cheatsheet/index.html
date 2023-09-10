@@ -174,7 +174,12 @@ textInstance.text = "Hello World"
 console.log(MyData['Name'])
 </code></pre>
 
-<h2 class="subsection-title">获取字典</h2>
+<h2 class="subsection-title">读取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/array">Array</a> 数据</h2>
+<pre><code class="language-javascript">const MyArray = runtime.objects.Dictionary.getFirstInstance();
+console.log(MyArray.getAt(0, 0))
+</code></pre>
+
+<h2 class="subsection-title">获取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/dictionary">Dictionary</a> 数据</h2>
 <pre><code class="language-javascript">const MyData = runtime.objects.Dictionary.getFirstInstance().getDataMap();
 console.log(MyData.get('Key'))
 </code></pre>
