@@ -170,8 +170,17 @@ textInstance.text = "Hello World"
 }</code></pre>
 
 <h2 class="subsection-title">JSON 读取数据</h2>
-<pre><code class="language-javascript">const MyData = runtime.objects.JSON.getFirstInstance().getJsonDataCopy();
-console.log(MyData['Name'])
+<pre><code class="language-javascript">const dataInst = runtime.objects.JSON.getFirstInstance();
+  const data = dataInst.getJsonDataCopy();
+console.log(data['Name'])
+</code></pre>
+
+<h2 class="subsection-title">JSON 更改数据</h2>
+这里引用了一个实例变量 name
+<pre><code class="language-javascript">const dataInst = runtime.objects.JSON.getFirstInstance();
+const data = dataInst.getJsonDataCopy();
+data.name = localVars.name;
+dataInst.setJsonDataCopy(filterItems);
 </code></pre>
 
 <h2 class="subsection-title">读取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/array">Array</a> 数据</h2>
@@ -184,6 +193,34 @@ console.log(MyArray.getAt(0, 0))
 console.log(MyData.get('Key'))
 </code></pre>
 
+<h2 class="subsection-title">将C3的Array文件转换成JSON</h2>
+在一个 Function 中的脚本块，Function 带有一个 String 类型的参数 <code>c3ArrayFile</code>，用于从在 AJAX 加载 Array文件时，将 AJAX.LastData 数据传入到这个 Function 中。
+Function 具有 String 类型的返回值，传出的是一个可被解析为 JSON 的字符串，用于在 JSON 对象中使用 Parse JSON string 动作时，使用 Functions.convertC3ArrayToJson(AJAX.LastData) 进行解析。
+<pre><code class="language-javascript">const { size, data } = JSON.parse(localVars.c3ArrayFile);
+const [, totalRows] = size;
+let output = [];
+
+const columnHeaders = data.map(column => column[0][0].trim());
+
+for (let rowIndex = 1; rowIndex < totalRows; rowIndex++) {
+	let rowObject = {};
+
+	columnHeaders.forEach((header, columnIndex) => {
+		if (!header) return;
+		let cellValue = data[columnIndex][rowIndex][0];
+		rowObject[header] = typeof cellValue === 'string' ? cellValue.trim() : cellValue;
+	});
+
+	if (Object.values(rowObject).some(value => value !== "")) {
+		output.push(rowObject);
+	}
+}
+
+runtime.setReturnValue(JSON.stringify(output));
+</code></pre>
+
+
+  
 </div>
 
 
