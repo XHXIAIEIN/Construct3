@@ -29,11 +29,11 @@ For "Y" from 0 to 10-1
 ```
 
 
-例如，在 (10, 10) 的位置，每行 4 个，共创建 32 个网格，每个网格尺寸 16x16, 上下左右间距 2 像素。
+例如，在 (10, 10) 的位置，每行 4 个，共创建 32 个网格，每个网格尺寸 32x32, 上下左右间距 2 像素。
 
 ```
 For "" from 0 to 32-1
-    Create object Sprite on layer 0 at (10 + (2 + 16) × loopindex % 4, 10 + (2 + 16) × floor(loopindex÷4))
+    Create object Sprite on layer 0 at (10 + (2 + 32) × loopindex % 4, 10 + (2 + 32) × floor(loopindex÷4))
 ```
 
 剪贴板(需要 Sprite 对象)
