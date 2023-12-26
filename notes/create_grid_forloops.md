@@ -33,7 +33,7 @@ For "Y" from 0 to 10-1
 
 ```
 For "" from 0 to 32-1
-    Create object Sprite on layer 0 at (10 + (2 + 32) × loopindex % 4, 10 + (2 + 32) × floor(loopindex÷4))
+    Create object Sprite on layer 0 at (10 + (32 + 2) × loopindex % 4, 10 + (32 + 2) × floor(loopindex÷4))
 ```
 
 剪贴板(需要 Sprite 对象)
