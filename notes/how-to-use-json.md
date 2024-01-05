@@ -1,5 +1,107 @@
 # 使用 JSON 对象操作 JSON
 
+示例1: 基本数据结构
+
+```json
+{
+    "name": "Cheems",
+    "age": 16,
+    "score": 100
+}
+```
+
+使用 `Set value` 动作
+
+![Snipaste_2024-01-05_14-53-26](https://github.com/XHXIAIEIN/Construct3/assets/45864744/fdd26193-1468-43e6-a15e-2d09cc226658)
+
+
+示例2: 嵌套字典结构
+
+比起前面的案例，外面多了一层 "team"。
+
+```json
+{
+    "team": {
+        "name": "Cheems",
+        "age": 16,
+        "score": 100
+    }
+}
+```
+
+先用 `Set object` 动作，将 "team" 作为对象。
+
+使用 `Set value` 动作设置其他值。
+
+方法1：绝对路径
+
+在指定路径时，前面加上 "team." 引用绝对路径。
+
+![Snipaste_2024-01-05_15-01-41](https://github.com/XHXIAIEIN/Construct3/assets/45864744/427e1c51-4627-47b2-b6a3-421f36986702)
+
+方法2：相对路径
+
+先使用 `Set Path` 进入到指定的路径。
+使用 `Set value` 动作设置其他值，前面只需加上 "." 即可使用相对路径。
+
+![Snipaste_2024-01-05_15-12-31](https://github.com/XHXIAIEIN/Construct3/assets/45864744/d2a3b919-0c90-47d2-88c0-76dd00e6cc7d)
+
+方法3：连续使用相对路径
+
+![Snipaste_2024-01-05_15-16-50](https://github.com/XHXIAIEIN/Construct3/assets/45864744/e3a9c19c-f41a-4083-b6ee-d30325c36677)
+
+```json
+{
+    "team": {
+        "name": "Cheems",
+        "age": 16,
+        "score": 100,
+        "hobby": {
+            "sing": 1,
+            "dance": 1,
+            "basketball": 0
+        }
+    }
+}
+```
+
+如何区分绝对路径，还是相对路径？
+
+绝对路径，包含完整的路径。而相对路径，则以 `.` 开头。
+
+如果路径层数较多，使用绝对路径每次都需要写很长：`team.hobby.basketball`
+
+使用相对路径，后面引用值得时候只需要前面加 "." 即可。
+
+
+示例3: 数组结构
+
+```json
+{
+    "team": [
+        "Red",
+        "Blue",
+        "Green"
+    ]
+}
+```
+
+先用 `Set array` 动作，将 "team" 作为数组。
+
+方法1： 使用 `Set value` 动作。
+
+数组使用下标索引作为路径，例如 `team.0` 是数组第 1 个元素，这里的设置值是 "Red"
+
+![Snipaste_2024-01-05_15-25-39](https://github.com/XHXIAIEIN/Construct3/assets/45864744/bc810a54-2ca1-42e7-92ff-1f7e6741c786)
+
+
+方法2： 使用 `Push value` 动作。
+
+将元素添加到数组的末尾/开头，并动态增加数组的长度。
+
+![Snipaste_2024-01-05_15-28-28](https://github.com/XHXIAIEIN/Construct3/assets/45864744/52c188bf-2063-4c20-b73c-2aff4423c10c)
+
+
 
 
 # 如何加载 JSON 文件
