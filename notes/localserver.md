@@ -49,12 +49,17 @@ if __name__ == '__main__':
 ## 用于测试插件
 https://www.construct.net/en/make-games/manuals/addon-sdk
 
+## SDK
+https://github.com/Scirra/Construct-Addon-SDK
+
 位置
 ```
 http://localhost:50000/addon.json
 ```
 
 ---
+
+## Effect
 
 **effect.fx**
 Sample WebGL 1 shader. this just outputs a red color.
