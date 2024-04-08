@@ -133,7 +133,25 @@ const playerBehavior = player.behaviors.Platform;
 <pre><code class="language-javascript">const textObject = runtime.objects.Text;
 const textInstance = textObject.getFirstPickedInstance();
 textInstance.text = "Hello World"</code></pre>
+	
+<p>也可以通过 <span>filter</span>来实现条件筛选。</p>
+<p>例如下方的代码，用于选出布尔型 foobar 是开启状态下 obj 实例对象。</p>
+<pre><code class="language-javascript">const instances = runtime.objects.Sprite.getAllInstances(); // get an array of instances
+const picked = instances.filter(obj => obj.instVars.foobar); // filter based on instance Variable</code></pre>
 
+再来一个示例
+<pre><code class="language-javascript">// 获取所有 Sprite 实例
+const instances = runtime.objects.Sprite.getAllInstances();
+
+// 使用筛选逻辑过滤实例
+const picked = instances.filter(obj => {
+  // 获取每个实例的分数
+  const score = obj.instVars["Score"];
+  // 返回分数小于或等于60的实例
+  return score <= 60;
+});
+</code></pre>
+	
 <h2 class="subsection-title">编辑文本</h2>
 <pre><code class="language-javascript">const textObject = runtime.objects.Text;
 const textInstance = textObject.getFirstPickedInstance();
