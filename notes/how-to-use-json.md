@@ -373,7 +373,6 @@ Array.At(0)
 
 # 修改 JSON 对象的数据
 
-
 ## 在位置插入 JSON 数据
 
 现有：
@@ -407,6 +406,44 @@ Array.At(0)
 注意，如果要在字符串的表达式中使用双引号 `"`，必须用连续两个 `""` 来代替。
 
 ![Snipaste_2023-01-11_23-55-44](https://user-images.githubusercontent.com/45864744/211978066-c3442983-6036-4288-97ab-18fba5fdb239.png)
+
+
+## 插入数组类型的JSON
+
+例如，想要在 JSON 中创建这样的数据
+
+```json
+[
+	{ "id": 111, "name": ""},
+	{ "id": 233, "name": ""},
+]
+```
+
+在事件表中，会稍微麻烦点。需要先将路径转换成不同的对象类型。
+
+<img width="664" alt="Snipaste_2024-05-04_22-04-13" src="https://github.com/XHXIAIEIN/Construct3/assets/45864744/dd9b7abf-1e0a-42f5-8c96-7c37b7b36971">
+
+
+```json
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"parse","objectClass":"JSON","parameters":{"data":"\"[]\""}},{"id":"set-array","objectClass":"JSON","parameters":{"path":"\".\"","size":"0"}}],"children":[{"eventType":"block","conditions":[{"id":"repeat","objectClass":"System","parameters":{"count":"2"}}],"actions":[{"id":"push-value","objectClass":"JSON","parameters":{"where":"back","path":"\".\"","value":"0"}},{"id":"set-object","objectClass":"JSON","parameters":{"path":"\".\" & loopindex"}},{"id":"set-value","objectClass":"JSON","parameters":{"path":"StringSub(\".{0}.id\", loopindex)","value":"0"}},{"id":"set-value","objectClass":"JSON","parameters":{"path":"StringSub(\".{0}.name\", loopindex)","value":"\"\""}}]}]}]}
+```
+
+但是用脚本倒是会方便很多：
+
+```js
+const dataInst = runtime.objects.JSON.getFirstInstance();
+
+const data = [
+	{ "id": 111, "name": ""},
+	{ "id": 233, "name": ""},
+]
+
+dataInst.setJsonDataCopy(data);
+```
+
+```
+{"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"type":"script","script":"const dataInst = runtime.objects.JSON.getFirstInstance();\n\nconst data = [\n\t{ \"id\": 111, \"name\": \"\"},\n\t{ \"id\": 233, \"name\": \"\"},\n]\n\ndataInst.setJsonDataCopy(data);"}]}]}
+```
 
 
 ---
