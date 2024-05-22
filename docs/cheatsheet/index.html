@@ -86,6 +86,9 @@ function Tick(runtime)
 
 <!-- Variable -->
 <div class="tab-pane fade" id="nav-variable" role="tabpanel" aria-labelledby="nav-variable-tab">
+
+https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime
+	
 <h2 class="subsection-title">全局变量(Global variable)</h2>
 <p>用脚本获取全局变量。直接对它进行赋值操作也是可以的。</p>
 <pre><code class="language-javascript">runtime.globalVars.Variable1</code></pre>
@@ -102,6 +105,15 @@ instVars["Variable3"]</code></pre>
 
 <!-- Instance -->
 <div class="tab-pane fade" id="nav-instance" role="tabpanel" aria-labelledby="nav-instance-tab">
+https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance
+<h2 class="subsection-title">挑选对象</h2>
+	
+<p>按UID挑选</p>
+<pre><code class="language-javascript">runtime.getInstanceByUid();</code></pre>
+
+<p>按名称挑选</p>
+<pre><code class="language-javascript">runtime.objects["Sprite"];</code></pre>
+	
 <h2 class="subsection-title">获取第一个实例对象(First Instance Object)</h2>
 <pre><code class="language-javascript">runtime.objects.Sprite.getFirstInstance()</code></pre>
 
@@ -139,7 +151,7 @@ textInstance.text = "Hello World"</code></pre>
 <pre><code class="language-javascript">const instances = runtime.objects.Sprite.getAllInstances(); // get an array of instances
 const picked = instances.filter(obj => obj.instVars.foobar); // filter based on instance Variable</code></pre>
 
-再来一个示例
+<p>获取所有满足条件的实例</p>
 <pre><code class="language-javascript">// 获取所有 Sprite 实例
 const instances = runtime.objects.Sprite.getAllInstances();
 
@@ -151,6 +163,18 @@ const picked = instances.filter(obj => {
   return score <= 60;
 });
 </code></pre>
+
+<h2 class="subsection-title">实例对象场景属性</h2>
+https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iworldinstance
+<p>获取通用属性：所在图层、场景、坐标、尺寸、碰撞框等</p>
+	
+<p>获取碰撞框</p>
+<pre><code class="language-javascript">const instance = runtime.objects.Sprite.getFirstInstance();
+console.log(instance.getBoundingBox())</code></pre>
+	
+<p>获取碰撞框</p>
+<pre><code class="language-javascript">const instance = runtime.objects.Sprite.getFirstInstance();
+console.log(instance.getBoundingBox())</code></pre>
 	
 <h2 class="subsection-title">编辑文本</h2>
 <pre><code class="language-javascript">const textObject = runtime.objects.Text;
