@@ -4119,7 +4119,7 @@
             ]
         },
         "Effect": {
-            "icon": "svg/editor_effect.svg",
+            "icon": "editor_effect.svg",
             "item": [
                 {
                     "category": "Effect",
@@ -4457,7 +4457,7 @@
             ]
         },
         "Timeline": {
-            "icon": "svg/plugin_timeline.svg",
+            "icon": "plugin_timeline.svg",
             "item": [
                 {
                     "category": "Timeline",
@@ -6228,7 +6228,7 @@
             ]
         },
         "Physics": {
-            "icon": "svg/behavior_physics.svg",
+            "icon": "behavior_physics.svg",
             "item": [
                 {
                     "category": "Physics",
@@ -6701,7 +6701,7 @@
             ]
         },
         "Pathfinding": {
-            "icon": "svg/behavior_pathfinding.svg",
+            "icon": "behavior_pathfinding.svg",
             "item": [
                 {
                     "category": "Pathfinding",
@@ -7205,7 +7205,7 @@
             ]
         },
         "HTML": {
-            "icon": "svg/plugin_html.svg",
+            "icon": "plugin_html.svg",
             "item": [
                 {
                     "category": "HTML",
@@ -7353,7 +7353,7 @@
             ]
         },
         "Animation": {
-            "icon": "svg/editor_animation.svg",
+            "icon": "editor_animation.svg",
             "item": [
                 {
                     "category": "Animation",
@@ -7440,7 +7440,7 @@
             ]
         },
         "Layout": {
-            "icon": "svg/editor_layout.svg",
+            "icon": "editor_layout.svg",
             "item": [
                 {
                     "category": "Layout",
