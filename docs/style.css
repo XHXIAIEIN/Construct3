@@ -4,6 +4,9 @@ body {
     padding: 0;
     background-color: #f7f9fc;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header-area {
@@ -92,6 +95,7 @@ main {
     padding: 1em;
     max-width: 900px;
     margin: 0 auto;
+    flex-grow: 1;
 }
 
 .section {
@@ -163,14 +167,4 @@ main {
     padding: 1.5em;
     text-align: center;
     margin-top: 1.5em;
-}
-
-.footer h3 {
-    margin: 0;
-    font-weight: normal;
-}
-
-.footer address {
-    margin-top: 0.5em;
-    font-style: normal;
 }
