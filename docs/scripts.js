@@ -55,6 +55,13 @@ document.addEventListener("DOMContentLoaded", function() {
                         itemAuthors.innerHTML = `作者: ${item.authors.join(', ')}`;
                         itemDiv.appendChild(itemAuthors);
 
+                        if (item.related_links && item.related_links.length > 0) {
+                            const relatedLinksDiv = document.createElement('div');
+                            relatedLinksDiv.className = 'item-related-links';
+                            relatedLinksDiv.innerHTML = item.related_links.map(link => `<a href="${link}">相关链接</a>`).join(' ');
+                            itemDiv.appendChild(relatedLinksDiv);
+                        }
+
                         categoryDiv.appendChild(itemDiv);
                     });
 
