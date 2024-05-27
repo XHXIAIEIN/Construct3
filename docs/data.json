@@ -1,5 +1,57 @@
 {
-    "lastUpdate":"2024-05-27"
+    "lastUpdated": "2024-05-20",
+    "navigation": {
+        "editor": [
+          {
+            "name": "Construct 3",
+            "link": "https://www.construct.net/a/260259?t=construct3"
+          },
+          {
+            "name": "Animate",
+            "link": "https://www.construct.net/a/260259?t=constructanimate"
+          }
+        ],
+        "manuals": [
+          {
+            "name": "论坛",
+            "link": "https://www.construct.net/en/forum"
+          },
+          {
+            "name": "教程",
+            "link": "https://www.construct.net/en/tutorials?flang=-1&content=0&orderID=3"
+          },
+          {
+            "name": "插件",
+            "link": "https://www.construct.net/en/make-games/addons"
+          },
+          {
+            "name": "表达式",
+            "link": "https://www.construct.net/en/make-games/manuals/construct-3/system-reference/system-expressions"
+          },
+          {
+            "name": "快捷键",
+            "link": "https://www.construct.net/en/make-games/manuals/construct-3/interface/keyboard-shortcuts#internalH1Link2"
+          }
+        ],
+        "cheatsheet": [
+          {
+            "name": "Cheatsheet",
+            "link": "https://xhxiaiein.github.io/Construct3/cheatsheet/"
+          },
+          {
+            "name": "Notes",
+            "link": "https://github.com/XHXIAIEIN/Construct3/tree/main/notes"
+          },
+          {
+            "name": "Example",
+            "link": "https://editor.construct.net/#open-example-browser"
+          },
+          {
+            "name": "Showcase",
+            "link": "showcase/index.html"
+          }
+        ]
+    },
     "example": {
         "适合新手入门的案例": {
             "Platform": {
@@ -2254,16 +2306,6 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Mouse/angleLerp_with_limit.c3p",
                         "related_links": []
-                    },
-                    {
-                        "category": "Mouse",
-                        "title": "用精灵代替鼠标，将鼠标限制在窗口内",
-                        "authors": [
-                            "FedericoCalchera"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Mouse/MouseBoundToViewport.c3p",
-                        "related_links": []
                     }
                 ]
             },
@@ -2410,26 +2452,6 @@
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/RandomStringArray.capx",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Array",
-                        "title": "随机打乱行的数据，保持其他数据的结构",
-                        "authors": [
-                            "XHXIAIEIN"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/2DArrayShuffle.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Array",
-                        "title": "随机选取2D数组中的元素",
-                        "authors": [
-                            "XHXIAIEIN"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/RandomPickArrayItem.c3p",
                         "related_links": []
                     },
                     {
