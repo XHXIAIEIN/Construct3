@@ -4,7 +4,7 @@ body {
     padding: 0;
     background-color: #f7f9fc;
     color: #333;
-    min-height: 200vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
@@ -136,13 +136,13 @@ main {
 
 .item {
     border-top: 1px solid #eee;
-    padding: 1em 0;
+    padding: 0.5em 0;
 }
 
 .item-title {
     font-weight: bold;
     color: #004a9f;
-    font-size: 1.1em;
+    font-size: 1em; /* 调整字体大小 */
 }
 
 .item-authors {
@@ -154,7 +154,7 @@ main {
 .item-link {
     color: #004a9f;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1em; /* 调整字体大小 */
 }
 
 .item-link:hover {
