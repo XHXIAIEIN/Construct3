@@ -2,7 +2,7 @@ import json
 import csv
 
 # 加载 JSON 数据
-file_path = 'data.json'  # 确保 data.json 文件和脚本文件在同一目录下
+file_path = 'data.json'
 with open(file_path, 'r', encoding='utf-8') as file:
     data = json.load(file)
 
@@ -13,7 +13,7 @@ csv_data = []
 for section, categories in data["example"].items():
     for category, category_data in categories.items():
         for item in category_data["data"]:
-            tags = [category] + item["tags"]  # 将分类内容与标签内容合并
+            tags = [category] + item["tags"]
             csv_row = {
                 "名称": item["title"],
                 "分类": item["category"],
@@ -24,14 +24,13 @@ for section, categories in data["example"].items():
             }
             csv_data.append(csv_row)
 
-# 定义 CSV 文件路径
+# 导出 CSV 文件
 csv_file_path = 'example_data.csv'
 
 # 写入 CSV 文件
 with open(csv_file_path, 'w', encoding='utf-8-sig', newline='') as csvfile:
     fieldnames = ["名称", "分类", "作者", "链接", "标签", "内容"]
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-
     writer.writeheader()
     writer.writerows(csv_data)
 
