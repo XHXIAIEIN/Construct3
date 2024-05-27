@@ -35,20 +35,20 @@
         ],
         "cheatsheet": [
           {
-            "name": "Cheatsheet",
+            "name": "脚本笔记",
             "link": "https://xhxiaiein.github.io/Construct3/cheatsheet/"
           },
           {
-            "name": "Notes",
+            "name": "功能笔记",
             "link": "https://github.com/XHXIAIEIN/Construct3/tree/main/notes"
           },
           {
-            "name": "Example",
+            "name": "官方案例",
             "link": "https://editor.construct.net/#open-example-browser"
           },
           {
-            "name": "Showcase",
-            "link": "showcase/index.html"
+            "name": "新图书馆",
+            "link": "https://8ed154a34cb81250.share.mingdao.net/public/page/6652814e94305d9f957e1106?%20Construct3-%E9%A6%96%E9%A1%B5"
           }
         ]
     },
