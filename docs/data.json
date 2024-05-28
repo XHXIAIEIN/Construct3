@@ -6407,7 +6407,17 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/VFX/slime_ceiling_drip_example.c3p",
                         "related_links": []
-                    }
+                    },
+                    {
+                        "category": "VFX",
+                        "title": "简单仿小丑牌，卡牌摇晃的效果",
+                        "authors": [
+                            "FedericoCalchera"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/VFX/wobble.c3p",
+                        "related_links": []
+                    },
                 ]
             },
             "Animation": {
