@@ -4029,10 +4029,22 @@
                         "category": "道具背包",
                         "title": "用字典储存道具数据，增减物品，显示背包页面",
                         "authors": [
-                            "揚 & XHXIAIEIN"
+                            "揚", 
+                            "XHXIAIEIN"
                         ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Dictionary/Dictionary%20Inventory.c3p",
+                        "tags": ["Inventory", "Dictionary", "LocalStorage"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Inventory/Dictionary%20Inventory.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "道具背包",
+                        "title": "用数组储存道具数据，增减物品，显示背包页面",
+                        "authors": [
+                            "揚", 
+                            "XHXIAIEIN"
+                        ],
+                        "tags": ["Inventory", "Array", "LocalStorage"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Inventory/Array%20Inventory.c3p",
                         "related_links": []
                     },
                     {
