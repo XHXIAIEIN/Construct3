@@ -561,6 +561,16 @@
                     },
                     {
                         "category": "DragDrop",
+                        "title": "拖拽吸附到网格，不与其他对象重叠",
+                        "authors": [
+                            "MountaineerDev"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/DragDrop/SnapToGridWithCollision.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "DragDrop",
                         "title": "拖拽物体限制再一个区域内",
                         "authors": [
                             "rafaeltrigo"
@@ -3476,6 +3486,16 @@
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Text/ScrollText.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Text",
+                        "title": "文字跑马灯，类似高铁的文字循环滚动播报",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Text/MarqueeText.c3p",
                         "related_links": []
                     },
                     {
