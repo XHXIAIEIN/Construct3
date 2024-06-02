@@ -105,14 +105,17 @@ instVars["Variable3"]</code></pre>
 
 <!-- Instance -->
 <div class="tab-pane fade" id="nav-instance" role="tabpanel" aria-labelledby="nav-instance-tab">
-https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance
+
 <h2 class="subsection-title">挑选对象</h2>
-	
+
 <p>按UID挑选</p>
 <pre><code class="language-javascript">runtime.getInstanceByUid();</code></pre>
 
 <p>按名称挑选</p>
 <pre><code class="language-javascript">runtime.objects["Sprite"];</code></pre>
+
+文档地址
+https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance
 	
 <h2 class="subsection-title">获取第一个实例对象(First Instance Object)</h2>
 <pre><code class="language-javascript">runtime.objects.Sprite.getFirstInstance()</code></pre>
@@ -121,6 +124,11 @@ https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-
 <p>返回的是一个数组。</p>
 <pre><code class="language-javascript">runtime.objects.Sprite.getAllInstances()</code></pre>
 
+<h2 class="subsection-title">获取实例对象的实例变量</h2>
+<pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
+const score = player.instVars["Score"];
+// console.log(score)</code></pre>
+	
 <h2 class="subsection-title">获取实例对象的行为属性(Instance behaviors)</h2>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
 const playerBehavior = player.behaviors.Platform;
@@ -262,7 +270,6 @@ runtime.setReturnValue(JSON.stringify(output));
 </code></pre>
 
 
-  
 </div>
 
 
