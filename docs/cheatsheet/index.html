@@ -86,8 +86,6 @@ function Tick(runtime)
 
 <!-- Variable -->
 <div class="tab-pane fade" id="nav-variable" role="tabpanel" aria-labelledby="nav-variable-tab">
-
-https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime
 	
 <h2 class="subsection-title">全局变量(Global variable)</h2>
 <p>用脚本获取全局变量。直接对它进行赋值操作也是可以的。</p>
@@ -101,6 +99,9 @@ https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-
 <pre><code class="language-javascript">runtime.globalVars["Variable1"]
 localVars["Variable2"]
 instVars["Variable3"]</code></pre>
+
+<a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime">文档</a>
+
 </div>
 
 <!-- Instance -->
@@ -208,6 +209,11 @@ textInstance.text = "Hello World"
 <pre><code class="language-javascript">runtime.setReturnValue();</code></pre>
 </div>
 
+<p>字符串调用函数</p>
+<pre><code class="language-javascript">const function = "AddValue, 123, ABC"
+runtime.callFunction(...function.split(",").map(e => isNaN(e.trim()) ? e.trim() : Number(e.trim())));</code></pre>
+
+
 <!-- Data -->
 <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
 <h2 class="subsection-title">AJAX 加载文件</h2>
@@ -279,9 +285,9 @@ runtime.setReturnValue(JSON.stringify(output));
 <!-- footer -->
 <div class="container footer">
 <div class="row">
-<div class="col">Construct by <a href="https://editor.construct.net/" target="_blank">Scirra</a></div>
-<div class="col"><a href="https://github.com/XHXIAIEIN/Construct3" target="_blank">XHXIAIEIN</a></div>
-<div class="col">QQ Group <a href="https://jq.qq.com/?_wv=1027&k=goJR2rPx" target="_blank">180911504</a></div>
+<div class="col">Construct by <a href="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime" target="_blank">官方文档</a></div>
+<div class="col"><a href="https://github.com/XHXIAIEIN/Construct3/edit/main/docs/cheatsheet/index.html" target="_blank">编辑</a></div>
+<div class="col"><a href="https://xhxiaiein.github.io/Construct3/" target="_blank">图书馆</a></div>
 </div>
 </div>
 
