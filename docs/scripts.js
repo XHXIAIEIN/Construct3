@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             const content = document.getElementById('content');
 
-            // 设置最后更新日期
+            // 最后更新日期
             const lastUpdated = document.querySelector('time');
             lastUpdated.textContent = data.lastUpdated;
 
@@ -31,16 +31,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 sectionTitle.innerHTML = sectionName;
                 sectionDiv.appendChild(sectionTitle);
 
+                // 分类
                 Object.keys(section).forEach(categoryName => {
                     const category = section[categoryName];
                     const categoryDiv = document.createElement('div');
                     categoryDiv.className = 'category';
 
-                    const categoryTitle = document.createElement('div');
-                    categoryTitle.className = 'category-title';
-                    categoryTitle.innerHTML = category.icon ? `<img src="svg/${category.icon}" class="category-icon"> ${categoryName}` : categoryName;
-                    categoryDiv.appendChild(categoryTitle);
+                    // 若分类和标题相同，则不显示
+                    if (categoryName !== sectionName || category.icon) {
+                        const categoryTitle = document.createElement('div');
+                        categoryTitle.className = 'category-title';
+                        categoryTitle.innerHTML = category.icon ? `<img src="svg/${category.icon}" class="category-icon"> ${categoryName}` : categoryName;
+                        categoryDiv.appendChild(categoryTitle);
+                    }
 
+                    // 单个案例
                     category.data.forEach(item => {
                         const itemDiv = document.createElement('div');
                         itemDiv.className = 'item';

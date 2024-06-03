@@ -55,7 +55,7 @@
     "example": {
         "适合新手入门的案例": {
             "Platform": {
-                "icon": "editor_construct.svg",
+                "icon": "",
                 "data": [
                     {
                         "category": "Platform",
@@ -1233,6 +1233,31 @@
                     }
                 ]
             },
+            "Function Map": {
+                "icon": "editor_function.svg",
+                "data": [
+                    {
+                        "category": "Function Map",
+                        "title": "一个更简单的Function Map 示例",
+                        "authors": [
+                            "mekonbekon"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Function/FunctionMap.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Function Map",
+                        "title": "简单的跑图任务系统，送信、传话",
+                        "authors": [
+                            "DiegoM"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Function/SimpleQuestSystem.c3p",
+                        "related_links": []
+                    }
+                ]
+            },
             "Mesh Distortion": {
                 "icon": "editor_mesh.svg",
                 "data": [
@@ -1394,7 +1419,7 @@
                 ]
             },
             "Z Order": {
-                "icon": "editor_layers.svg",
+                "icon": "editor_zort.svg",
                 "data": [
                     {
                         "category": "Z Order",
@@ -1783,31 +1808,6 @@
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Date/timewayelapsedtime.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "Function Map": {
-                "icon": "editor_function.svg",
-                "data": [
-                    {
-                        "category": "Function Map",
-                        "title": "一个更简单的Function Map 示例",
-                        "authors": [
-                            "mekonbekon"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Function/FunctionMap.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Function Map",
-                        "title": "简单的跑图任务系统，送信、传话",
-                        "authors": [
-                            "DiegoM"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Function/SimpleQuestSystem.c3p",
                         "related_links": []
                     }
                 ]
@@ -3643,7 +3643,7 @@
                 ]
             },
             "Dialogue": {
-                "icon": "plugin_dialogue.svg",
+                "icon": "",
                 "data": [
                     {
                         "category": "Dialogue",
@@ -3793,7 +3793,7 @@
                 ]
             },
             "HP Bar": {
-                "icon": "plugin_progressbar.svg",
+                "icon": "",
                 "data": [
                     {
                         "category": "HP Bar",
@@ -3888,7 +3888,7 @@
                 ]
             },
             "游戏菜单": {
-                "icon": "plugin_list.svg",
+                "icon": "",
                 "data": [
                     {
                         "category": "游戏菜单",
