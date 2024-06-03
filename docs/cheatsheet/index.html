@@ -46,21 +46,21 @@
 <!-- Runtime -->
 <div class="tab-pane fade" id="nav-runtime" role="tabpanel" aria-labelledby="nav-runtime-tab">
 <h2 class="subsection-title">Runtime events</h2>
-<pre><code class="language-javascript">runOnStartup(async runtime =>
+<pre><code class="language-javascript"runOnStartup(async runtime =>
 {
-  runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
-  runtime.addEventListener("afterprojectstart", () => OnAfterProjectStart(runtime));
+	runtime.addEventListener("beforeprojectstart", () => OnBeforeProjectStart(runtime));
 });
 
-function OnBeforeProjectStart(runtime)
+async function OnBeforeProjectStart(runtime)
 {
-  runtime.addEventListener("tick", () => OnTick(runtime));
+	runtime.addEventListener("tick", () => Tick(runtime));
 }
 
 function Tick(runtime)
 {
-// Code to run every tick
-}</code></pre>
+	// Code to run every tick
+}
+</code></pre>
 </div>
 
 <!-- globalThis -->
@@ -234,6 +234,13 @@ console.log(MyArray.getAt(0, 0))
 <h2 class="subsection-title">获取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/dictionary">Dictionary</a> 数据</h2>
 <pre><code class="language-javascript">const MyData = runtime.objects.Dictionary.getFirstInstance().getDataMap();
 console.log(MyData.get('Key'))
+</code></pre>
+
+遍历字典数据
+<pre><code class="language-javascript">const data = runtime.objects.Dictionary.getFirstInstance().getDataMap();
+for (const [key, value] of data) {
+	console.log(`${key}: ${value}`);
+}
 </code></pre>
 
 <h2 class="subsection-title">将C3的Array文件转换成JSON</h2>
