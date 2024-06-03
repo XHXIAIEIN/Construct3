@@ -21,6 +21,7 @@
 <div class="nav nav-tabs" id="nav-tab" role="tablist">
 <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><img src="img/icon.png" height="12em" alt="Welcome"></a></button>
 <button class="nav-link" id="nav-runtime-tab" data-bs-toggle="tab" data-bs-target="#nav-runtime" type="button" role="tab" aria-controls="nav-runtime" aria-selected="false">Runtime</button>
+<button class="nav-link" id="nav-globalThis-tab" data-bs-toggle="tab" data-bs-target="#nav-globalThis" type="button" role="tab" aria-controls="nav-globalThis" aria-selected="false">globaThis</button>
 <button class="nav-link" id="nav-variable-tab" data-bs-toggle="tab" data-bs-target="#nav-variable" type="button" role="tab" aria-controls="nav-variable" aria-selected="false">Variable</button>
 <button class="nav-link" id="nav-instance-tab" data-bs-toggle="tab" data-bs-target="#nav-instance" type="button" role="tab" aria-controls="nav-instance" aria-selected="false">Instance</button>
 <button class="nav-link" id="nav-function-tab" data-bs-toggle="tab" data-bs-target="#nav-function" type="button" role="tab" aria-controls="nav-function" aria-selected="false">Function</button>
@@ -41,6 +42,7 @@
 });</code></pre>
 </div>
 
+
 <!-- Runtime -->
 <div class="tab-pane fade" id="nav-runtime" role="tabpanel" aria-labelledby="nav-runtime-tab">
 <h2 class="subsection-title">Runtime events</h2>
@@ -53,29 +55,6 @@
 function OnBeforeProjectStart(runtime)
 {
   runtime.addEventListener("tick", () => OnTick(runtime));
-
-  runtime.addEventListener("keydown", e => OnKeyDown(e,runtime));
-  runtime.addEventListener("keyup", e => OnKeyUp(e,runtime));
-
-  runtime.addEventListener("mousedown", e => OnMouseDown(e,runtime));
-  runtime.addEventListener("mousemove", e => OnMouseMove(e,runtime));
-  runtime.addEventListener("mouseup", e => OnMouseUp(e,runtime));
-  runtime.addEventListener("dblclick", e => OnMouseDoubleClick(e,runtime));
-  runtime.addEventListener("wheel", e => OnMouseWheel(e,runtime));
-
-  runtime.addEventListener("pointerdown", e => OnPointDown(e,runtime));
-  runtime.addEventListener("pointermove", e => OnPointMove(e,runtime));
-  runtime.addEventListener("pointerup", e => OnPointUp(e,runtime));
-  runtime.addEventListener("pointercancel", e => OnPointCancel(e,runtime));
-
-  runtime.addEventListener("deviceorientation", e => OnDeviceOrientation(e,runtime));
-  runtime.addEventListener("devicemotion", e => OnDevicemotion(e,runtime));
-
-  runtime.addEventListener("save", e => OnSave(e,runtime));
-  runtime.addEventListener("load", e => OnLoad(e,runtime));
-
-  runtime.addEventListener("instancecreate", e => OnInstanceCreate(e,runtime));
-  runtime.addEventListener("instancedestroy", e => OnInstanceDestroy(e,runtime));
 }
 
 function Tick(runtime)
@@ -84,10 +63,15 @@ function Tick(runtime)
 }</code></pre>
 </div>
 
+<!-- globalThis -->
+<div class="tab-pane fade" id="nav-globalThis" role="tabpanel" aria-labelledby="nav-globalThis-tab">
+<h2 class="subsection-title">全局作用域</h2>
+可以在任何地方使用它，如事件表脚本块、JS文件等，可以用于引用第三方库的初始化对象，并在后续使用。
+<pre><code class="language-javascript">globalThis.Variable1 = 1</code></pre>
+</div>
+
 <!-- Variable -->
 <div class="tab-pane fade" id="nav-variable" role="tabpanel" aria-labelledby="nav-variable-tab">
-
-https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime
 	
 <h2 class="subsection-title">全局变量(Global variable)</h2>
 <p>用脚本获取全局变量。直接对它进行赋值操作也是可以的。</p>
@@ -101,6 +85,9 @@ https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-
 <pre><code class="language-javascript">runtime.globalVars["Variable1"]
 localVars["Variable2"]
 instVars["Variable3"]</code></pre>
+
+<a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime">文档</a>
+
 </div>
 
 <!-- Instance -->
@@ -206,7 +193,13 @@ textInstance.text = "Hello World"
 
 <p>设置函数的返回值</p>
 <pre><code class="language-javascript">runtime.setReturnValue();</code></pre>
+
+<p>字符串调用函数</p>
+<pre><code class="language-javascript">const function = "AddValue, 123, ABC"
+runtime.callFunction(...function.split(",").map(e => isNaN(e.trim()) ? e.trim() : Number(e.trim())));</code></pre>
+
 </div>
+
 
 <!-- Data -->
 <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
@@ -279,9 +272,9 @@ runtime.setReturnValue(JSON.stringify(output));
 <!-- footer -->
 <div class="container footer">
 <div class="row">
-<div class="col">Construct by <a href="https://editor.construct.net/" target="_blank">Scirra</a></div>
-<div class="col"><a href="https://github.com/XHXIAIEIN/Construct3" target="_blank">XHXIAIEIN</a></div>
-<div class="col">QQ Group <a href="https://jq.qq.com/?_wv=1027&k=goJR2rPx" target="_blank">180911504</a></div>
+<div class="col">Construct by <a href="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime" target="_blank">官方文档</a></div>
+<div class="col"><a href="https://xhxiaiein.github.io/Construct3/" target="_blank">图书馆</a></div>
+<div class="col"><a href="https://github.com/XHXIAIEIN/Construct3/edit/main/docs/cheatsheet/index.html" target="_blank">编辑</a></div>
 </div>
 </div>
 
