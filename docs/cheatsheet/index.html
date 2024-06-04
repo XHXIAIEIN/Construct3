@@ -128,7 +128,7 @@ const playerBehavior = player.behaviors.Platform;
 <p>遍历所有 Sprite 对象的实例变量 <span>Score</span>，同时销毁所有变量小于 60 的实例。</p>
 <pre><code class="language-javascript">for (const obj of runtime.objects.Sprite.instances())
 {
-  const score = player.instVars["Score"];
+  const score = obj.instVars["Score"];
 
   if (score <= 60) 
   {
