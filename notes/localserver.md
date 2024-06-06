@@ -2,8 +2,13 @@
 
 # 用于测试游戏
 
-https://servefolder.dev/
+```
+python -m http.server 8000
+```
 
+或
+https://servefolder.dev/
+https://xhxiaiein.github.io/servefolder.dev/
 
 # 运行本地服务器
 
