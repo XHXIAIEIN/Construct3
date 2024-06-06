@@ -2,7 +2,7 @@
 
 # 用于测试游戏
 
-```
+```cmd
 python -m http.server 8000
 ```
 
