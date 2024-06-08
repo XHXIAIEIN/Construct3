@@ -4583,6 +4583,31 @@
                     }
                 ]
             },
+            "有序生成": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "有序生成",
+                        "title": "在位置生成网格布局",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": ["循环", "生成", "网格", "棋盘", "格子"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/LoopGridSpawn.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "有序生成",
+                        "title": "在位置中心，向两边生成对象列表",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": ["循环", "生成", "菜单", "列表"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/LoopCenterSpawn.c3p",
+                        "related_links": []
+                    }
+                ]
+            },
             "预生成(数据解析)": {
                 "icon": "",
                 "data": [
