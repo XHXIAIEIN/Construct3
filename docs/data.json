@@ -2298,17 +2298,17 @@
                     }
                 ]
             },
-            "Touch": {
+            "Swipe": {
                 "icon": "plugin_touch.svg",
                 "data": [
                     {
                         "category": "Touch",
-                        "title": "判断手势划动的方向，然后向上/下/左/右方向移动",
+                        "title": "判断手势划动的方向，向四个方向移动",
                         "authors": [
                             "Biscotto"
                         ],
                         "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe-direction.c3p",
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe_direction.c3p",
                         "related_links": []
                     },
                     {
@@ -2323,7 +2323,7 @@
                     },
                     {
                         "category": "Touch",
-                        "title": "滑动手势，切换游戏场景",
+                        "title": "左右滑动手势，切换游戏场景",
                         "authors": [
                             "rafaeltrigo"
                         ],
@@ -2333,17 +2333,7 @@
                     },
                     {
                         "category": "Touch",
-                        "title": "滑动手势，星球环形切换菜单",
-                        "authors": [
-                            "rafaeltrigo"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/Swipe_Alt.capx",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Touch",
-                        "title": "滑动手势，切换卡片(翻相册效果)",
+                        "title": "左右滑动手势，切换卡片",
                         "authors": [
                             "AllanR"
                         ],
@@ -2351,6 +2341,31 @@
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe_alt.capx",
                         "related_links": []
                     },
+                    {
+                        "category": "Touch",
+                        "title": "左右滑动手势，星球圆弧环绕式，切换页面",
+                        "authors": [
+                            "rafaeltrigo"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe_menuplanet.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Touch",
+                        "title": "仿 Tomb of the Mask 滑动手势移动到墙的另一侧",
+                        "authors": [
+                            "alextro"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/tomb_miner.capx",
+                        "related_links": []
+                    }
+                ]
+            },
+            "Touch": {
+                "icon": "plugin_touch.svg",
+                "data": [
                     {
                         "category": "Touch",
                         "title": "仿水果忍者，切橘子",
@@ -2369,16 +2384,6 @@
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Demo/Slice_Object_DrawingCanvas_drestuff.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Touch",
-                        "title": "仿 Tomb of the Mask 滑动手势移动到墙的另一侧",
-                        "authors": [
-                            "alextro"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/tomb_miner.capx",
                         "related_links": []
                     }
                 ]
