@@ -940,7 +940,7 @@
                 "data": [
                     {
                         "category": "Tween",
-                        "title": "H5常见的UI小动画案例（）",
+                        "title": "H5常见的UI小动画案例",
                         "authors": [
                             "DoonDook Studio"
                         ],
@@ -966,6 +966,21 @@
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Tween/tweendemo_by_totoyan.c3p",
+                        "related_links": []
+                    }
+                ]
+            },
+            "Rotate": {
+                "icon": "behavior_rotate.svg",
+                "data": [
+                    {
+                        "category": "Rotate",
+                        "title": "命运之轮，点击高速转动，逐渐减慢停下",
+                        "authors": [
+                            "oosyrag"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Rotate/WheelOfFortune.capx",
                         "related_links": []
                     }
                 ]
