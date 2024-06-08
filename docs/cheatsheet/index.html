@@ -167,9 +167,17 @@ https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-
 <pre><code class="language-javascript">const instance = runtime.objects.Sprite.getFirstInstance();
 console.log(instance.getBoundingBox())</code></pre>
 	
-<p>获取碰撞框</p>
-<pre><code class="language-javascript">const instance = runtime.objects.Sprite.getFirstInstance();
-console.log(instance.getBoundingBox())</code></pre>
+<p>检测对象是否可以被另一个对象完全重叠</p>
+<pre><code class="language-javascript">for (const inst of runtime.objects.Sprite.pickedInstances()) {
+	const instBBox = inst.getBoundingBox();
+    const candidates = runtime.collisions.getCollisionCandidates(runtime.objects.Sprite2, instBBox)
+    for (const candidateInst of candidates) {
+		const candidateBBox = candidateInst.getBoundingBox();
+		if (candidateBBox.left <= instBBox.left && candidateBBox.right >= instBBox.right && candidateBBox.top <= instBBox.top && candidateBBox.bottom >= instBBox.bottom) {
+			inst.destroy()
+		}
+	}
+}</code></pre>
 	
 <h2 class="subsection-title">编辑文本</h2>
 <pre><code class="language-javascript">const textObject = runtime.objects.Text;
