@@ -2303,22 +2303,22 @@
                 "data": [
                     {
                         "category": "Touch",
-                        "title": "判断滑动手势的移动方向",
-                        "authors": [
-                            "DoonDook Studio"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe_detection.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Touch",
                         "title": "判断手势划动的方向，然后向上/下/左/右方向移动",
                         "authors": [
                             "Biscotto"
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe-direction.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Touch",
+                        "title": "按住后判断手势的方向，分六边形和四边形方向的角度判断",
+                        "authors": [
+                            "DoonDook Studio"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/swipe_detection.c3p",
                         "related_links": []
                     },
                     {
