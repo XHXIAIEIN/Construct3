@@ -44,9 +44,7 @@ Create object at
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[],"children":[{"eventType":"block","conditions":[{"id":"for","objectClass":"System","parameters":{"name":"\"\"","start-index":"0","end-index":"19"}}],"actions":[{"id":"create-object","objectClass":"System","parameters":{"object-to-create":"Sprite","layer":"0","x":"10 + (32 + 2) * loopindex % 5","y":"10 + (32 + 2) * floor(loopindex / 5)","create-hierarchy":false,"template-name":"\"\""}}]}]}]}
 ```
 
-## 在中心创建
-
-以中心向两边创建
+## 在中心创建向两边创建列表
 
 function
 ```
