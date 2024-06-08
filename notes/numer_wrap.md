@@ -3,7 +3,7 @@
 常用于菜单、队列、动画的光标索引。
 
 ## 简单运用
-数字在 Index Index+1 Index+2 之间循环
+数字在 Index   Index+1   Index+2 之间循环
 ```
 ((Index + 1) + 3) % 3
 ```
