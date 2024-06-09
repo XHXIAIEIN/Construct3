@@ -26,6 +26,7 @@
 <button class="nav-link" id="nav-instance-tab" data-bs-toggle="tab" data-bs-target="#nav-instance" type="button" role="tab" aria-controls="nav-instance" aria-selected="false">Instance</button>
 <button class="nav-link" id="nav-function-tab" data-bs-toggle="tab" data-bs-target="#nav-function" type="button" role="tab" aria-controls="nav-function" aria-selected="false">Function</button>
 <button class="nav-link" id="nav-data-tab" data-bs-toggle="tab" data-bs-target="#nav-data" type="button" role="tab" aria-controls="nav-data" aria-selected="false">Data</button>
+<button class="nav-link" id="nav-other-tab" data-bs-toggle="tab" data-bs-target="#nav-other" type="button" role="tab" aria-controls="nav-other" aria-selected="false">Other</button>
 </div>
 </nav>
 
@@ -279,10 +280,27 @@ for (let rowIndex = 1; rowIndex < totalRows; rowIndex++) {
 
 runtime.setReturnValue(JSON.stringify(output));
 </code></pre>
-
-
 </div>
 
+<!-- Other -->
+<div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
+<h1>其他函数</h2>
+
+	
+<h2 class="subsection-title">辅助函数</h2>
+
+生成指定范围内的随机整数
+<pre><code class="language-javascript">const randInt = (min, max) => {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
+};</code></pre>
+
+<pre><code class="language-javascript">// 例子
+let a = randInt(1, 10); // 生成 1 到 10 之间的随机整数
+let b = randInt(50, 100); // 生成 50 到 100 之间的随机整数
+let c = randInt(-10, 10); // 生成 -10 到 10 之间的随机整数
+console.log(c);</code></pre>
+
+</div>
 
 <!-- end;content -->
 </div>
