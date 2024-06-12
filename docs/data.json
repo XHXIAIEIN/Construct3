@@ -7020,6 +7020,16 @@
                 "data": [
                     {
                         "category": "合成系统",
+                        "title": "烹饪系统，添加任意顺序材料，合成食物。从 JSON 读取数据。",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/JSON/CookingMatchIngredientsJSON.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "合成系统",
                         "title": "类似涂鸦上帝，炼金术游戏。拖动两个元素，生成新的元素",
                         "authors": [
                             "Laura_D"
