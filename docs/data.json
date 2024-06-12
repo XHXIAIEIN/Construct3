@@ -3087,145 +3087,145 @@
                         }
                     ]
                 }
+            }
+        },
+        "网络服务": {
+            "版本更新": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "版本更新",
+                        "title": "进游戏前检查版本号是否一致，否则跳转至官网自行下载",
+                        "authors": [
+                            "rafaeltrigo"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.c3p",
+                        "related_links": [
+                            "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.php"
+                        ]
+                    }
+                ]
             },
-            "网络服务": {
-                "版本更新": {
-                    "icon": "",
-                    "data": [
-                        {
-                            "category": "版本更新",
-                            "title": "进游戏前检查版本号是否一致，否则跳转至官网自行下载",
-                            "authors": [
-                                "rafaeltrigo"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.c3p",
-                            "related_links": [
-                                "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.php"
-                            ]
-                        }
-                    ]
-                },
-                "在线文档": {
-                    "icon": "",
-                    "data": [
-                        {
-                            "category": "在线文档",
-                            "title": "从谷歌表格读取CSV数据并加载到数组中",
-                            "authors": [
-                                "XHXIAIEIN"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Data/load-csv-from-googlesheet.c3p",
-                            "related_links": []
-                        }
-                    ]
-                },
-                "邮件服务": {
-                    "icon": "",
-                    "data": [
-                        {
-                            "category": "邮件服务",
-                            "title": "在游戏中发送电子邮件，需自备php服务器",
-                            "authors": [
-                                "sizcoz"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/c2mail1.capx",
-                            "related_links": [
-                                "https://www.construct.net/en/tutorials/sending-an-email-from-construct2-1068"
-                            ]
-                        },
-                        {
-                            "category": "邮件服务",
-                            "title": "将屏幕截图发送到邮件，需自备php服务器",
-                            "authors": [
-                                "sizcoz"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/screenshot-to-email.capx",
-                            "related_links": [
-                                "https://www.construct.net/en/tutorials/screenshot-capture-email-1320"
-                            ]
-                        }
-                    ]
-                },
-                "排行榜 Leaderboard": {
-                    "icon": "",
-                    "data": [
-                        {
-                            "category": "排行榜 Leaderboard",
-                            "title": "本地排行榜，数组写入玩家名和分数，并排序显示",
-                            "authors": [
-                                "dop2000"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/LeaderboardSort.c3p",
-                            "related_links": []
-                        },
-                        {
-                            "category": "排行榜 Leaderboard",
-                            "title": "php网络排行榜(需自备php服务器)",
-                            "authors": [
-                                "rafaeltrigo"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/LeaderBoard.zip",
-                            "related_links": []
-                        },
-                        {
-                            "category": "排行榜 Leaderboard",
-                            "title": "PlayFab网络排行榜",
-                            "authors": [
-                                "blackhornet"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp1v2.c3p",
-                            "related_links": [
-                                "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2479"
-                            ]
-                        },
-                        {
-                            "category": "排行榜 Leaderboard",
-                            "title": "PlayFab网络排行榜(带登录功能)",
-                            "authors": [
-                                "blackhornet"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp2v2.c3p",
-                            "related_links": [
-                                "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2482"
-                            ]
-                        },
-                        {
-                            "category": "排行榜 Leaderboard",
-                            "title": "用 LocalStorage 制作本地排行榜(非完美方案，仅用于参考)",
-                            "authors": [
-                                "Gerald Franklin"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/scores-run.capx",
-                            "related_links": [
-                                "https://www.youtube.com/watch?v=enrmliUxwU4"
-                            ]
-                        }
-                    ]
-                },
-                "FireBase": {
-                    "icon": "",
-                    "data": [
-                        {
-                            "category": "FireBase",
-                            "title": "将数据储存在FireBase，在游戏中存档或读取",
-                            "authors": [
-                                "rafaeltrigo"
-                            ],
-                            "tags": [],
-                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/FireBase/savegamefirebase.c3p",
-                            "related_links": []
-                        }
-                    ]
-                }
+            "在线文档": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "在线文档",
+                        "title": "从谷歌表格读取CSV数据并加载到数组中",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Data/load-csv-from-googlesheet.c3p",
+                        "related_links": []
+                    }
+                ]
+            },
+            "邮件服务": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "邮件服务",
+                        "title": "在游戏中发送电子邮件，需自备php服务器",
+                        "authors": [
+                            "sizcoz"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/c2mail1.capx",
+                        "related_links": [
+                            "https://www.construct.net/en/tutorials/sending-an-email-from-construct2-1068"
+                        ]
+                    },
+                    {
+                        "category": "邮件服务",
+                        "title": "将屏幕截图发送到邮件，需自备php服务器",
+                        "authors": [
+                            "sizcoz"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/screenshot-to-email.capx",
+                        "related_links": [
+                            "https://www.construct.net/en/tutorials/screenshot-capture-email-1320"
+                        ]
+                    }
+                ]
+            },
+            "排行榜 Leaderboard": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "排行榜 Leaderboard",
+                        "title": "本地排行榜，数组写入玩家名和分数，并排序显示",
+                        "authors": [
+                            "dop2000"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/LeaderboardSort.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "排行榜 Leaderboard",
+                        "title": "php网络排行榜(需自备php服务器)",
+                        "authors": [
+                            "rafaeltrigo"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/LeaderBoard.zip",
+                        "related_links": []
+                    },
+                    {
+                        "category": "排行榜 Leaderboard",
+                        "title": "PlayFab网络排行榜",
+                        "authors": [
+                            "blackhornet"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp1v2.c3p",
+                        "related_links": [
+                            "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2479"
+                        ]
+                    },
+                    {
+                        "category": "排行榜 Leaderboard",
+                        "title": "PlayFab网络排行榜(带登录功能)",
+                        "authors": [
+                            "blackhornet"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp2v2.c3p",
+                        "related_links": [
+                            "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2482"
+                        ]
+                    },
+                    {
+                        "category": "排行榜 Leaderboard",
+                        "title": "用 LocalStorage 制作本地排行榜(非完美方案，仅用于参考)",
+                        "authors": [
+                            "Gerald Franklin"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/scores-run.capx",
+                        "related_links": [
+                            "https://www.youtube.com/watch?v=enrmliUxwU4"
+                        ]
+                    }
+                ]
+            },
+            "FireBase": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "FireBase",
+                        "title": "将数据储存在FireBase，在游戏中存档或读取",
+                        "authors": [
+                            "rafaeltrigo"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/FireBase/savegamefirebase.c3p",
+                        "related_links": []
+                    }
+                ]
             }
         },
         "广告变现": {
