@@ -2,58 +2,58 @@
     "lastUpdated": "2024-06-13",
     "navigation": {
         "editor": [
-          {
-            "name": "Construct 3",
-            "link": "https://www.construct.net/a/260259?t=construct3"
-          },
-          {
-            "name": "Animate",
-            "link": "https://www.construct.net/a/260259?t=constructanimate"
-          }
+            {
+                "name": "Construct 3",
+                "link": "https://www.construct.net/a/260259?t=construct3"
+            },
+            {
+                "name": "Animate",
+                "link": "https://www.construct.net/a/260259?t=constructanimate"
+            }
         ],
         "manuals": [
-          {
-            "name": "论坛",
-            "link": "https://www.construct.net/en/forum"
-          },
-          {
-            "name": "教程",
-            "link": "https://www.construct.net/en/tutorials?flang=-1&content=0&orderID=3"
-          },
-          {
-            "name": "插件",
-            "link": "https://www.construct.net/en/make-games/addons"
-          },
-          {
-            "name": "表达式",
-            "link": "https://www.construct.net/en/make-games/manuals/construct-3/system-reference/system-expressions"
-          },
-          {
-            "name": "快捷键",
-            "link": "https://www.construct.net/en/make-games/manuals/construct-3/interface/keyboard-shortcuts#internalH1Link2"
-          }
+            {
+                "name": "论坛",
+                "link": "https://www.construct.net/en/forum"
+            },
+            {
+                "name": "教程",
+                "link": "https://www.construct.net/en/tutorials?flang=-1&content=0&orderID=3"
+            },
+            {
+                "name": "插件",
+                "link": "https://www.construct.net/en/make-games/addons"
+            },
+            {
+                "name": "表达式",
+                "link": "https://www.construct.net/en/make-games/manuals/construct-3/system-reference/system-expressions"
+            },
+            {
+                "name": "快捷键",
+                "link": "https://www.construct.net/en/make-games/manuals/construct-3/interface/keyboard-shortcuts#internalH1Link2"
+            }
         ],
         "cheatsheet": [
-          {
-            "name": "脚本笔记",
-            "link": "https://xhxiaiein.github.io/Construct3/cheatsheet/"
-          },
-          {
-            "name": "功能笔记",
-            "link": "https://github.com/XHXIAIEIN/Construct3/tree/main/notes"
-          },
-          {
-            "name": "官方案例",
-            "link": "https://editor.construct.net/#open-example-browser"
-          },
-          {
-            "name": "本地服务器",
-            "link": "https://xhxiaiein.github.io/servefolder.dev/"
-          },
-          {
-            "name": "新图书馆",
-            "link": "https://8ed154a34cb81250.share.mingdao.net/public/page/6652814e94305d9f957e1106?%20Construct3-%E9%A6%96%E9%A1%B5"
-          }
+            {
+                "name": "脚本笔记",
+                "link": "https://xhxiaiein.github.io/Construct3/cheatsheet/"
+            },
+            {
+                "name": "功能笔记",
+                "link": "https://github.com/XHXIAIEIN/Construct3/tree/main/notes"
+            },
+            {
+                "name": "官方案例",
+                "link": "https://editor.construct.net/#open-example-browser"
+            },
+            {
+                "name": "本地服务器",
+                "link": "https://xhxiaiein.github.io/servefolder.dev/"
+            },
+            {
+                "name": "新图书馆",
+                "link": "https://8ed154a34cb81250.share.mingdao.net/public/page/6652814e94305d9f957e1106?%20Construct3-%E9%A6%96%E9%A1%B5"
+            }
         ]
     },
     "example": {
@@ -1326,7 +1326,9 @@
                         "authors": [
                             "CJJ"
                         ],
-                        "tags": ["旋转矩阵"],
+                        "tags": [
+                            "旋转矩阵"
+                        ],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/3d_card_rotate.c3p",
                         "related_links": []
                     },
@@ -1336,7 +1338,9 @@
                         "authors": [
                             "CJJ"
                         ],
-                        "tags": ["旋转矩阵"],
+                        "tags": [
+                            "旋转矩阵"
+                        ],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/3d_matrix_card.c3p",
                         "related_links": []
                     },
@@ -2852,374 +2856,376 @@
                     }
                 ]
             },
-            "云端数据": {
-                "icon": "editor_clouds.svg",
-                "data": [
-                    {
-                        "category": "云端数据",
-                        "title": "从谷歌表格读取CSV数据并加载到数组中",
-                        "authors": [
-                            "XHXIAIEIN"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Data/load-csv-from-googlesheet.c3p",
-                        "related_links": []
-                    }
-                ]
+            "Form Controls": {
+                "Video": {
+                    "icon": "plugin_video.svg",
+                    "data": [
+                        {
+                            "category": "Video",
+                            "title": "添加视频字幕。文本记录字幕出现和结束时间，写入数组定时显示文本",
+                            "authors": [
+                                "oosyrag"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Video/subtitlesexample.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "Video",
+                            "title": "带播放列表的视频播放器",
+                            "authors": [
+                                "korbaach"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Video/videoPlayer.capx",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "Audio": {
+                    "icon": "plugin_audio.svg",
+                    "data": [
+                        {
+                            "category": "Audio",
+                            "title": "区分音乐和音效、记住静音选项",
+                            "authors": [
+                                "DoonDook Studio"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/audio.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "Audio",
+                            "title": "切换场景播放不同的背景音乐",
+                            "authors": [
+                                "hcatarrunas"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/Music_by_layout.c3p",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "Audio Analyser": {
+                    "icon": "plugin_audio.svg",
+                    "data": [
+                        {
+                            "category": "Audio Analyser",
+                            "title": "音频可视化，曲线环绕",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/analyser/CircualarAnalyzer.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "Audio Analyser",
+                            "title": "音频可视化，圆柱环绕",
+                            "authors": [
+                                "skymen"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/analyser/CircularAudioAnalyser.capx",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "iframe": {
+                    "icon": "plugin_iframe.svg",
+                    "data": [
+                        {
+                            "category": "iframe",
+                            "title": "互相调用 iframe 和 C3 事件表 function",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/iframe/iFrame_CallFunction.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "iframe",
+                            "title": "利用iframe制作个人网站，通过JS调用C3 Function",
+                            "authors": [
+                                "rafaeltrigo"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/iframe/htmlpage.c3p",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "HTMLElement": {
+                    "icon": "plugin_htmlElement.svg",
+                    "data": [
+                        {
+                            "category": "HTMLElement",
+                            "title": "用 SVG 字体显示涂鸦抖动字体特效",
+                            "authors": [
+                                "XHXIAIEIN"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/HTML/HTMLSquigglyText.c3p",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "TextInput": {
+                    "icon": "plugin_textinput.svg",
+                    "data": [
+                        {
+                            "category": "TextInput",
+                            "title": "限制输入框只能输入特定的字符",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/TextInput/TextBoxFilterInput.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "TextInput",
+                            "title": "获取选中的文本",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/TextInput/GetSelectedText.c3p",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "Slider Bar": {
+                    "icon": "plugin_sliderbar.svg",
+                    "data": [
+                        {
+                            "category": "Slider Bar",
+                            "title": "自定义滑块",
+                            "authors": [
+                                "igortyhon"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/Castom-SliderBar.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "Slider Bar",
+                            "title": "基于Sprite的个性化样式滑动条",
+                            "authors": [
+                                "André"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/SliderBar/spritebased_sliderbar_drestuff.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "Slider Bar",
+                            "title": "基于Sprite的音量滑动条",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/customLogSlider.capx",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "Radio Button": {
+                    "icon": "plugin_button.svg",
+                    "data": [
+                        {
+                            "category": "Radio Button",
+                            "title": "基于Sprite的单选按钮",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/RadioButton/RadioButtonDemo.capx",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "Toggle": {
+                    "icon": "plugin_button.svg",
+                    "data": [
+                        {
+                            "category": "Toggle",
+                            "title": "用CSS实现切换开关控件",
+                            "authors": [
+                                "oosyrag"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Toggle/csstogglebuttonexample.c3p",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "CSS": {
+                    "icon": "editor_stylesheet.svg",
+                    "data": [
+                        {
+                            "category": "CSS",
+                            "title": "导入CSS文件，批量修改Button、TextBox的样式",
+                            "authors": [
+                                "Colludium"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Text/css-loading-demo.capx",
+                            "related_links": []
+                        },
+                        {
+                            "category": "CSS",
+                            "title": "基于Sprite + CSS 的控件样式美化（输入框，进度条，按钮，多选，单选，滑动条，主题模式）",
+                            "authors": [
+                                "DoonDook Studio"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/Settings%20Menu.c3p",
+                            "related_links": []
+                        }
+                    ]
+                }
             },
-            "FireBase": {
-                "icon": "",
-                "data": [
-                    {
-                        "category": "FireBase",
-                        "title": "将数据储存在FireBase，在游戏中存档或读取",
-                        "authors": [
-                            "rafaeltrigo"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/FireBase/savegamefirebase.c3p",
-                        "related_links": []
-                    }
-                ]
-            }
-        },
-        "Form Controls": {
-            "Video": {
-                "icon": "plugin_video.svg",
-                "data": [
-                    {
-                        "category": "Video",
-                        "title": "添加视频字幕。文本记录字幕出现和结束时间，写入数组定时显示文本",
-                        "authors": [
-                            "oosyrag"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Video/subtitlesexample.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Video",
-                        "title": "带播放列表的视频播放器",
-                        "authors": [
-                            "korbaach"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Video/videoPlayer.capx",
-                        "related_links": []
-                    }
-                ]
-            },
-            "Audio": {
-                "icon": "plugin_audio.svg",
-                "data": [
-                    {
-                        "category": "Audio",
-                        "title": "区分音乐和音效、记住静音选项",
-                        "authors": [
-                            "DoonDook Studio"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/audio.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Audio",
-                        "title": "切换场景播放不同的背景音乐",
-                        "authors": [
-                            "hcatarrunas"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/Music_by_layout.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "Audio Analyser": {
-                "icon": "plugin_audio.svg",
-                "data": [
-                    {
-                        "category": "Audio Analyser",
-                        "title": "音频可视化，曲线环绕",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/analyser/CircualarAnalyzer.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Audio Analyser",
-                        "title": "音频可视化，圆柱环绕",
-                        "authors": [
-                            "skymen"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/analyser/CircularAudioAnalyser.capx",
-                        "related_links": []
-                    }
-                ]
-            },
-            "iframe": {
-                "icon": "plugin_iframe.svg",
-                "data": [
-                    {
-                        "category": "iframe",
-                        "title": "互相调用 iframe 和 C3 事件表 function",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/iframe/iFrame_CallFunction.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "iframe",
-                        "title": "利用iframe制作个人网站，通过JS调用C3 Function",
-                        "authors": [
-                            "rafaeltrigo"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/iframe/htmlpage.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "HTMLElement": {
-                "icon": "plugin_htmlElement.svg",
-                "data": [
-                    {
-                        "category": "HTMLElement",
-                        "title": "用 SVG 字体显示涂鸦抖动字体特效",
-                        "authors": [
-                            "XHXIAIEIN"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/HTML/HTMLSquigglyText.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "TextInput": {
-                "icon": "plugin_textinput.svg",
-                "data": [
-                    {
-                        "category": "TextInput",
-                        "title": "限制输入框只能输入特定的字符",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/TextInput/TextBoxFilterInput.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "TextInput",
-                        "title": "获取选中的文本",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/TextInput/GetSelectedText.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "Slider Bar": {
-                "icon": "plugin_sliderbar.svg",
-                "data": [
-                    {
-                        "category": "Slider Bar",
-                        "title": "自定义滑块",
-                        "authors": [
-                            "igortyhon"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/Castom-SliderBar.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Slider Bar",
-                        "title": "基于Sprite的个性化样式滑动条",
-                        "authors": [
-                            "André"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/SliderBar/spritebased_sliderbar_drestuff.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Slider Bar",
-                        "title": "基于Sprite的音量滑动条",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/customLogSlider.capx",
-                        "related_links": []
-                    }
-                ]
-            },
-            "Radio Button": {
-                "icon": "plugin_button.svg",
-                "data": [
-                    {
-                        "category": "Radio Button",
-                        "title": "基于Sprite的单选按钮",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/RadioButton/RadioButtonDemo.capx",
-                        "related_links": []
-                    }
-                ]
-            },
-            "Toggle": {
-                "icon": "plugin_button.svg",
-                "data": [
-                    {
-                        "category": "Toggle",
-                        "title": "用CSS实现切换开关控件",
-                        "authors": [
-                            "oosyrag"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Toggle/csstogglebuttonexample.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "CSS": {
-                "icon": "editor_stylesheet.svg",
-                "data": [
-                    {
-                        "category": "CSS",
-                        "title": "导入CSS文件，批量修改Button、TextBox的样式",
-                        "authors": [
-                            "Colludium"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Text/css-loading-demo.capx",
-                        "related_links": []
-                    },
-                    {
-                        "category": "CSS",
-                        "title": "基于Sprite + CSS 的控件样式美化（输入框，进度条，按钮，多选，单选，滑动条，主题模式）",
-                        "authors": [
-                            "DoonDook Studio"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/Settings%20Menu.c3p",
-                        "related_links": []
-                    }
-                ]
-            },
-            "版本更新": {
-                "icon": "editor_couldserver.svg",
-                "data": [
-                    {
-                        "category": "版本更新",
-                        "title": "进游戏前检查版本号是否一致，否则跳转至官网自行下载",
-                        "authors": [
-                            "rafaeltrigo"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.c3p",
-                        "related_links": [
-                            "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.php"
-                        ]
-                    }
-                ]
-            },
-            "邮件服务": {
-                "icon": "editor_couldserver.svg",
-                "data": [
-                    {
-                        "category": "邮件服务",
-                        "title": "在游戏中发送电子邮件，需自备php服务器",
-                        "authors": [
-                            "sizcoz"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/c2mail1.capx",
-                        "related_links": [
-                            "https://www.construct.net/en/tutorials/sending-an-email-from-construct2-1068"
-                        ]
-                    },
-                    {
-                        "category": "邮件服务",
-                        "title": "将屏幕截图发送到邮件，需自备php服务器",
-                        "authors": [
-                            "sizcoz"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/screenshot-to-email.capx",
-                        "related_links": [
-                            "https://www.construct.net/en/tutorials/screenshot-capture-email-1320"
-                        ]
-                    }
-                ]
-            },
-            "Leaderboard 排行榜": {
-                "icon": "editor_couldserver.svg",
-                "data": [
-                    {
-                        "category": "Leaderboard 排行榜",
-                        "title": "本地排行榜，数组写入玩家名和分数，并排序显示",
-                        "authors": [
-                            "dop2000"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/LeaderboardSort.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Leaderboard 排行榜",
-                        "title": "php网络排行榜(需自备php服务器)",
-                        "authors": [
-                            "rafaeltrigo"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/LeaderBoard.zip",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Leaderboard 排行榜",
-                        "title": "PlayFab网络排行榜",
-                        "authors": [
-                            "blackhornet"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp1v2.c3p",
-                        "related_links": [
-                            "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2479"
-                        ]
-                    },
-                    {
-                        "category": "Leaderboard 排行榜",
-                        "title": "PlayFab网络排行榜(带登录功能)",
-                        "authors": [
-                            "blackhornet"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp2v2.c3p",
-                        "related_links": [
-                            "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2482"
-                        ]
-                    },
-                    {
-                        "category": "Leaderboard 排行榜",
-                        "title": "用 LocalStorage 制作本地排行榜(非完美方案，仅用于参考)",
-                        "authors": [
-                            "Gerald Franklin"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/scores-run.capx",
-                        "related_links": [
-                            "https://www.youtube.com/watch?v=enrmliUxwU4"
-                        ]
-                    }
-                ]
+            "网络服务": {
+                "版本更新": {
+                    "icon": "",
+                    "data": [
+                        {
+                            "category": "版本更新",
+                            "title": "进游戏前检查版本号是否一致，否则跳转至官网自行下载",
+                            "authors": [
+                                "rafaeltrigo"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.c3p",
+                            "related_links": [
+                                "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Server/checkversion.php"
+                            ]
+                        }
+                    ]
+                },
+                "在线文档": {
+                    "icon": "",
+                    "data": [
+                        {
+                            "category": "在线文档",
+                            "title": "从谷歌表格读取CSV数据并加载到数组中",
+                            "authors": [
+                                "XHXIAIEIN"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Data/load-csv-from-googlesheet.c3p",
+                            "related_links": []
+                        }
+                    ]
+                },
+                "邮件服务": {
+                    "icon": "",
+                    "data": [
+                        {
+                            "category": "邮件服务",
+                            "title": "在游戏中发送电子邮件，需自备php服务器",
+                            "authors": [
+                                "sizcoz"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/c2mail1.capx",
+                            "related_links": [
+                                "https://www.construct.net/en/tutorials/sending-an-email-from-construct2-1068"
+                            ]
+                        },
+                        {
+                            "category": "邮件服务",
+                            "title": "将屏幕截图发送到邮件，需自备php服务器",
+                            "authors": [
+                                "sizcoz"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Web/Email/screenshot-to-email.capx",
+                            "related_links": [
+                                "https://www.construct.net/en/tutorials/screenshot-capture-email-1320"
+                            ]
+                        }
+                    ]
+                },
+                "排行榜 Leaderboard": {
+                    "icon": "",
+                    "data": [
+                        {
+                            "category": "排行榜 Leaderboard",
+                            "title": "本地排行榜，数组写入玩家名和分数，并排序显示",
+                            "authors": [
+                                "dop2000"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Array/LeaderboardSort.c3p",
+                            "related_links": []
+                        },
+                        {
+                            "category": "排行榜 Leaderboard",
+                            "title": "php网络排行榜(需自备php服务器)",
+                            "authors": [
+                                "rafaeltrigo"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/LeaderBoard.zip",
+                            "related_links": []
+                        },
+                        {
+                            "category": "排行榜 Leaderboard",
+                            "title": "PlayFab网络排行榜",
+                            "authors": [
+                                "blackhornet"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp1v2.c3p",
+                            "related_links": [
+                                "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2479"
+                            ]
+                        },
+                        {
+                            "category": "排行榜 Leaderboard",
+                            "title": "PlayFab网络排行榜(带登录功能)",
+                            "authors": [
+                                "blackhornet"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/gspftp2v2.c3p",
+                            "related_links": [
+                                "https://www.construct.net/en/tutorials/add-playfab-cloud-storage-2482"
+                            ]
+                        },
+                        {
+                            "category": "排行榜 Leaderboard",
+                            "title": "用 LocalStorage 制作本地排行榜(非完美方案，仅用于参考)",
+                            "authors": [
+                                "Gerald Franklin"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Leaderboard/scores-run.capx",
+                            "related_links": [
+                                "https://www.youtube.com/watch?v=enrmliUxwU4"
+                            ]
+                        }
+                    ]
+                },
+                "FireBase": {
+                    "icon": "",
+                    "data": [
+                        {
+                            "category": "FireBase",
+                            "title": "将数据储存在FireBase，在游戏中存档或读取",
+                            "authors": [
+                                "rafaeltrigo"
+                            ],
+                            "tags": [],
+                            "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/FireBase/savegamefirebase.c3p",
+                            "related_links": []
+                        }
+                    ]
+                }
             }
         },
         "广告变现": {
@@ -3295,7 +3301,7 @@
                     }
                 ]
             },
-            "Bilibili":{
+            "Bilibili": {
                 "icon": "",
                 "data": [
                     {
@@ -4093,10 +4099,14 @@
                         "category": "道具背包",
                         "title": "用字典储存道具数据，增减物品，显示背包页面",
                         "authors": [
-                            "揚", 
+                            "揚",
                             "XHXIAIEIN"
                         ],
-                        "tags": ["Inventory", "Dictionary", "LocalStorage"],
+                        "tags": [
+                            "Inventory",
+                            "Dictionary",
+                            "LocalStorage"
+                        ],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Inventory/Dictionary%20Inventory.c3p",
                         "related_links": []
                     },
@@ -4104,10 +4114,14 @@
                         "category": "道具背包",
                         "title": "用数组储存道具数据，增减物品，显示背包页面",
                         "authors": [
-                            "揚", 
+                            "揚",
                             "XHXIAIEIN"
                         ],
-                        "tags": ["Inventory", "Array", "LocalStorage"],
+                        "tags": [
+                            "Inventory",
+                            "Array",
+                            "LocalStorage"
+                        ],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Inventory/Array%20Inventory.c3p",
                         "related_links": []
                     },
@@ -4642,7 +4656,13 @@
                         "authors": [
                             "XHXIAIEIN"
                         ],
-                        "tags": ["循环", "生成", "网格", "棋盘", "格子"],
+                        "tags": [
+                            "循环",
+                            "生成",
+                            "网格",
+                            "棋盘",
+                            "格子"
+                        ],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/LoopGridSpawn.c3p",
                         "related_links": []
                     },
@@ -4652,7 +4672,12 @@
                         "authors": [
                             "XHXIAIEIN"
                         ],
-                        "tags": ["循环", "生成", "菜单", "列表"],
+                        "tags": [
+                            "循环",
+                            "生成",
+                            "菜单",
+                            "列表"
+                        ],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/LoopCenterSpawn.c3p",
                         "related_links": []
                     }
