@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-06-01",
+    "lastUpdated": "2024-06-13",
     "navigation": {
         "editor": [
           {
@@ -1327,7 +1327,7 @@
                             "CJJ"
                         ],
                         "tags": ["旋转矩阵"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/3d_matrix_card.c3p",
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/3d_card_rotate.c3p",
                         "related_links": []
                     },
                     {
@@ -1337,7 +1337,7 @@
                             "CJJ"
                         ],
                         "tags": ["旋转矩阵"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/3d_card_rotate.c3p",
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/3d_matrix_card.c3p",
                         "related_links": []
                     },
                     {
