@@ -5508,6 +5508,16 @@
                 "data": [
                     {
                         "category": "关卡路线图",
+                        "title": "选关页面，通关后解锁下一关",
+                        "authors": [
+                            "DuckfaceNinja"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/LevelMap/ProgressiveLevelSelector.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "关卡路线图",
                         "title": "关卡路线分支图",
                         "authors": [
                             "R0J0hound"
