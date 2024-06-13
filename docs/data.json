@@ -140,6 +140,16 @@
                     },
                     {
                         "category": "Platform",
+                        "title": "角色状态机管理，墙跳，贴墙滑落，爬楼梯",
+                        "authors": [
+                            "skymen"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/platformer-template.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Platform",
                         "title": "角色动作状态，下蹲，滑铲",
                         "authors": [
                             "hcatarrunas"
