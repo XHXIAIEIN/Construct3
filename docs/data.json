@@ -265,6 +265,16 @@
                 "data": [
                     {
                         "category": "8Direction",
+                        "title": "控制移动，走到隐藏地图的区域时，显示地图",
+                        "authors": [
+                            "Lordshiva1948"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/8Direction/reveal_map.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "8Direction",
                         "title": "角色状态机管理，摄像机管理，Juice应用，Debug选项",
                         "authors": [
                             "Salman_Shh"
