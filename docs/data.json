@@ -5895,6 +5895,16 @@
                     },
                     {
                         "category": "Waypoint",
+                        "title": "按路径点前进，类地铁线路图",
+                        "authors": [
+                            "R0J0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Waypoint/astar_nodes.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Waypoint",
                         "title": "沿贝塞尔曲线移动",
                         "authors": [
                             "R0J0hound"
@@ -7171,7 +7181,17 @@
                 "data": [
                     {
                         "category": "合成系统",
-                        "title": "烹饪系统，添加任意顺序材料，合成食物。从 JSON 读取数据。",
+                        "title": "类似塞尔达烹饪系统，每个材料占1格，任意添加顺序，从 JSON 读取食谱数据。",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/JSON/CookingMatchIngredientsJSON.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "合成系统",
+                        "title": "烹饪系统，每类材料占1格，添加任意数量材料，从 JSON 读取食谱数据。",
                         "authors": [
                             "XHXIAIEIN"
                         ],
