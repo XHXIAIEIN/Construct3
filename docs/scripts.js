@@ -4,11 +4,9 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
             const content = document.getElementById('content');
 
-            // 最后更新日期
             const lastUpdated = document.querySelector('time');
             lastUpdated.textContent = data.lastUpdated;
 
-            // 加载导航
             const navigate = document.getElementById('navigate');
             const editorNav = data.navigation.editor?.map(item => `<a href="${item.link}" title="${item.name}">${item.name}</a>`).join(' | ') || '';
             const manualsNav = data.navigation.manuals?.map(item => `<a href="${item.link}" title="${item.name}">${item.name}</a>`).join(' | ') || '';
@@ -20,9 +18,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 ${cheatsheetNav}
             `;
 
-            // 加载内容
-            Object.keys(data.example).forEach(sectionName => {
-                const section = data.example[sectionName];
+            const fragment = document.createDocumentFragment();
+
+            Object.entries(data.example).forEach(([sectionName, section]) => {
                 const sectionDiv = document.createElement('div');
                 sectionDiv.className = 'section';
 
@@ -31,13 +29,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 sectionTitle.innerHTML = sectionName;
                 sectionDiv.appendChild(sectionTitle);
 
-                // 分类
-                Object.keys(section).forEach(categoryName => {
-                    const category = section[categoryName];
+                Object.entries(section).forEach(([categoryName, category]) => {
                     const categoryDiv = document.createElement('div');
                     categoryDiv.className = 'category';
 
-                    // 若分类和标题相同，则不显示
                     if (categoryName !== sectionName || category.icon) {
                         const categoryTitle = document.createElement('div');
                         categoryTitle.className = 'category-title';
@@ -45,36 +40,41 @@ document.addEventListener("DOMContentLoaded", function() {
                         categoryDiv.appendChild(categoryTitle);
                     }
 
-                    // 单个案例
                     category.data.forEach(item => {
-                        const itemDiv = document.createElement('div');
-                        itemDiv.className = 'item';
+                        try {
+                            const itemDiv = document.createElement('div');
+                            itemDiv.className = 'item';
 
-                        const itemTitle = document.createElement('div');
-                        itemTitle.className = 'item-title';
-                        itemTitle.innerHTML = `<a href="${item.link}" class="item-link">${item.title}</a>`;
-                        itemDiv.appendChild(itemTitle);
+                            const itemTitle = document.createElement('div');
+                            itemTitle.className = 'item-title';
+                            itemTitle.innerHTML = `<a href="${item.link}" class="item-link">${item.title}</a>`;
+                            itemDiv.appendChild(itemTitle);
 
-                        const itemAuthors = document.createElement('div');
-                        itemAuthors.className = 'item-authors';
-                        itemAuthors.innerHTML = `作者: ${item.authors.join(', ')}`;
-                        itemDiv.appendChild(itemAuthors);
+                            const itemAuthors = document.createElement('div');
+                            itemAuthors.className = 'item-authors';
+                            itemAuthors.innerHTML = `作者: ${item.authors.join(', ')}`;
+                            itemDiv.appendChild(itemAuthors);
 
-                        if (item.related_links && item.related_links.length > 0) {
-                            const relatedLinksDiv = document.createElement('div');
-                            relatedLinksDiv.className = 'item-related-links';
-                            relatedLinksDiv.innerHTML = item.related_links.map(link => `<a href="${link}">相关链接</a>`).join(' ');
-                            itemDiv.appendChild(relatedLinksDiv);
+                            if (item.related_links && item.related_links.length > 0) {
+                                const relatedLinksDiv = document.createElement('div');
+                                relatedLinksDiv.className = 'item-related-links';
+                                relatedLinksDiv.innerHTML = item.related_links.map(link => `<a href="${link}">相关链接</a>`).join(' ');
+                                itemDiv.appendChild(relatedLinksDiv);
+                            }
+
+                            categoryDiv.appendChild(itemDiv);
+                        } catch (e) {
+                            console.error('Error processing item:', item, e);
                         }
-
-                        categoryDiv.appendChild(itemDiv);
                     });
 
                     sectionDiv.appendChild(categoryDiv);
                 });
 
-                content.appendChild(sectionDiv);
+                fragment.appendChild(sectionDiv);
             });
+
+            content.appendChild(fragment);
         })
         .catch(error => console.error('Error loading data:', error));
 });
