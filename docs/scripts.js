@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const content = document.getElementById('content');
 
             const lastUpdated = document.querySelector('time');
-            lastUpdated.textContent = data.lastUpdated;
+            lastUpdated.textContent = `最后更新时间: ${data.lastUpdated}`;
 
             const navigate = document.getElementById('navigate');
             const editorNav = data.navigation.editor?.map(item => `<a href="${item.link}" title="${item.name}">${item.name}</a>`).join(' | ') || '';
