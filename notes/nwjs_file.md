@@ -90,4 +90,9 @@ tokenat(tokenat(userdata, 0, newline), 1, "=")
 Ashley
 ```
 
+---
 
+## 在 NW.JS 环境下 Local Storage 保存的位置
+
+"Users\username\appdata\gamename\"
+"~/Library/Application Support/gamename"
