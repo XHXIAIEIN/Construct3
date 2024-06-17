@@ -92,7 +92,7 @@ Ashley
 
 ---
 
-## 在 NW.JS 环境下 Local Storage 保存的位置
+## 在 NW.JS 环境下 Local Storage 保存的默认位置
 
-"Users\username\appdata\gamename\"
-"~/Library/Application Support/gamename"
+- Win: "Users\username\appdata\gamename\"
+- Mac: "~/Library/Application Support/gamename"
