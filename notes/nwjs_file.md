@@ -30,6 +30,22 @@ Hello World
 ![03](https://user-images.githubusercontent.com/45864744/147339645-31d8428b-a814-4ae0-a84e-c0d55abeaaea.png)
 
 
+---
+
+## 路径
+
+### NWjs.AppFolder
+指向项目文件夹内 .exe 文件的位置
+
+### NWjs.ProjectFilesFolder
+指向项目文件夹内 temp 文件夹的位置
+
+### NWjs.UserFolder 
+指向用户文件夹
+
+NWjs.UserFolder & "myfile.txt"
+NWjs.UserFolder & "游戏名文件夹/" & "myfile.txt"
+
 
 ---
 
