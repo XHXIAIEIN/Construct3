@@ -6317,21 +6317,34 @@
                         "related_links": [
                             "https://www.youtube.com/watch?v=R3cFDbRr0x8"
                         ]
-                    },
+                    }
+                ]
+            },
+            "Spider": {
+                "icon": "",
+                "data": [
                     {
-                        "category": "Animation",
-                        "title": "肢体关节动画、单胳膊基础动画",
+                        "category": "Spider",
+                        "title": "肢体关节，单手臂基础",
                         "authors": [
-                            "G.E.M"
+                            "abho"
                         ],
                         "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Animation/Character%20Animation%20Tutorial%20Basics.capx",
-                        "related_links": [
-                            "https://www.youtube.com/watch?v=7SadmfR0bmY"
-                        ]
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Animation/spiderIK.c3p",
+                        "related_links": []
                     },
                     {
-                        "category": "Animation",
+                        "category": "Spider",
+                        "title": "肢体关节动画，多胳膊实验",
+                        "authors": [
+                            "abho", "FedericoCalchera"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Animation/spiderIK_multiple.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Spider",
                         "title": "肢体关节动画、多关节动画",
                         "authors": [
                             "G.E.M"
@@ -6343,7 +6356,7 @@
                         ]
                     },
                     {
-                        "category": "Animation",
+                        "category": "Spider",
                         "title": "恐龙，多肢节联动",
                         "authors": [
                             "G.E.M"
@@ -6355,7 +6368,7 @@
                         ]
                     },
                     {
-                        "category": "Animation",
+                        "category": "Spider",
                         "title": "八爪鱼，多肢节联动",
                         "authors": [
                             "G.E.M"
