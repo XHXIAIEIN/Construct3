@@ -5196,13 +5196,7 @@
                         "authors": [
                             "XHXIAIEIN"
                         ],
-                        "tags": [
-                            "循环",
-                            "生成",
-                            "网格",
-                            "棋盘",
-                            "格子"
-                        ],
+                        "tags": ["循环","生成","网格","棋盘","格子"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/LoopGridSpawn.c3p",
                         "related_links": []
                     },
@@ -5212,13 +5206,18 @@
                         "authors": [
                             "XHXIAIEIN"
                         ],
-                        "tags": [
-                            "循环",
-                            "生成",
-                            "菜单",
-                            "列表"
-                        ],
+                        "tags": ["循环","生成","菜单","列表"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/LoopCenterSpawn.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "有序生成",
+                        "title": "以稳定固定时间间隔生成对象，不受帧率影响",
+                        "authors": [
+                            "R0J0hound"
+                        ],
+                        "tags": [""],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/EvenlyspaceSpawnBullets.c3p",
                         "related_links": []
                     }
                 ]
