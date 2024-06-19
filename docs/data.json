@@ -7880,7 +7880,7 @@
             }
         },
         "JavaScript": {
-            "JavaScript in C3": {
+            "JavaScript": {
                 "icon": "",
                 "data": [
                     {
@@ -7927,7 +7927,19 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Javascript/tick/set-layer-time-scale.zip",
                         "related_links": []
-                    }
+                    },
+                    {
+                        "category": "JavaScript Used",
+                        "title": "ZzFX - 一个微型的声音效果生成器。仅使用一行代码播放声音， 包含20种音效参数",
+                        "authors": [
+                            "clovelt", "KilledByAPixel"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Javascript/tick/hierachy-has-children.zip",
+                        "related_links": [
+                            "https://killedbyapixel.github.io/ZzFX/"
+                        ]
+                    },
                 ]
             }
         },
