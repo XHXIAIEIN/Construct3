@@ -1956,6 +1956,21 @@
                     }
                 ]
             },
+            "UID": {
+                "icon": "",
+                "data": [
+                    {
+                        "category": "UID",
+                        "title": "输入UID，检查 UID 对象是否存在，是否为家族成员，如果存在则销毁。",
+                        "authors": [
+                            "XHXIAIEIN"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/UID/DestoryUID.c3p",
+                        "related_links": []
+                    }
+                ]
+            },
             "Group": {
                 "icon": "",
                 "data": [
@@ -7939,7 +7954,7 @@
                         "related_links": [
                             "https://killedbyapixel.github.io/ZzFX/"
                         ]
-                    },
+                    }
                 ]
             }
         },
