@@ -34,9 +34,11 @@ StringSub("{0}:{1}", zeropad(floor((Sprite.Timer.Duration("end") - Sprite.Timer.
 ```
 
 <details><summary>clipboard</summary>
+  
 ```
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"start-timer","objectClass":"Sprite","behaviorType":"Timer","parameters":{"duration":"5.0","type":"once","tag":"\"end\""}}]},{"eventType":"block","conditions":[{"id":"is-timer-running","objectClass":"Sprite","behaviorType":"Timer","parameters":{"tag":"\"end\""}}],"actions":[{"id":"set-text","objectClass":"Text","parameters":{"text":"zeropad(floor((Sprite.Timer.Duration(\"end\") - Sprite.Timer.CurrentTime(\"end\")) / 60), 2) & \" : \" & zeropad(int((Sprite.Timer.Duration(\"end\") - Sprite.Timer.CurrentTime(\"end\")) % 60), 2) \r\n"}}]},{"eventType":"block","conditions":[{"id":"on-timer","objectClass":"Sprite","behaviorType":"Timer","parameters":{"tag":"\"end\""}}],"actions":[{"id":"set-text","objectClass":"Text","parameters":{"text":"\"\""}}]}]}
 ```
+  
 </details>
 
 
