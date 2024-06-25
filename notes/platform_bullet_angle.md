@@ -68,3 +68,14 @@ round(angle(0, 0, sign(Player.Width), 0))
 ```
 (angle(x1, y1, x2, y2)+360)%360
 ```
+
+
+
+### 计算子弹向量
+
+```
+vectorX = (Sprite.Bullet.Speed) * cos(Sprite.Bullet.AngleOfMotion)
+vectorY = (Sprite.Bullet.Speed) * sin(Sprite.Bullet.AngleOfMotion)
+```
+
+
