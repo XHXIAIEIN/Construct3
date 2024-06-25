@@ -12,7 +12,8 @@
 - Sprite.Timer.Duration(tag)
 - Sprite.Timer.TotalTime(tag)
 
-计算公式：  
+
+## 格式: s
 ``` 
 ceil(Sprite.Timer.Duration("tag") - Sprite.Timer.CurrentTime("tag"))
 ```
@@ -27,9 +28,9 @@ ceil(Sprite.Timer.Duration("tag") - Sprite.Timer.CurrentTime("tag"))
 ```
 </details>
 
-mm : ss
+## 格式: mm : ss
 ```
-zeropad(floor((Sprite.Timer.Duration("tag") - Sprite.Timer.CurrentTime("tag")) / 60), 2) & " : " & zeropad(int((Sprite.Timer.Duration("tag") - Sprite.Timer.CurrentTime("tag")) % 60), 2) 
+StringSub("{0}:{1}", zeropad(floor((Sprite.Timer.Duration("end") - Sprite.Timer.CurrentTime("end")) / 60), 2), zeropad(int((Sprite.Timer.Duration("end") - Sprite.Timer.CurrentTime("end")) % 60), 2))
 ```
 
 <details><summary>clipboard</summary>
@@ -37,7 +38,6 @@ zeropad(floor((Sprite.Timer.Duration("tag") - Sprite.Timer.CurrentTime("tag")) /
 {"is-c3-clipboard-data":true,"type":"events","items":[{"eventType":"block","conditions":[{"id":"on-start-of-layout","objectClass":"System"}],"actions":[{"id":"start-timer","objectClass":"Sprite","behaviorType":"Timer","parameters":{"duration":"5.0","type":"once","tag":"\"end\""}}]},{"eventType":"block","conditions":[{"id":"is-timer-running","objectClass":"Sprite","behaviorType":"Timer","parameters":{"tag":"\"end\""}}],"actions":[{"id":"set-text","objectClass":"Text","parameters":{"text":"zeropad(floor((Sprite.Timer.Duration(\"end\") - Sprite.Timer.CurrentTime(\"end\")) / 60), 2) & \" : \" & zeropad(int((Sprite.Timer.Duration(\"end\") - Sprite.Timer.CurrentTime(\"end\")) % 60), 2) \r\n"}}]},{"eventType":"block","conditions":[{"id":"on-timer","objectClass":"Sprite","behaviorType":"Timer","parameters":{"tag":"\"end\""}}],"actions":[{"id":"set-text","objectClass":"Text","parameters":{"text":"\"\""}}]}]}
 ```
 </details>
-
 
 
 # 表达式解释：
@@ -51,8 +51,6 @@ zeropad(floor((Sprite.Timer.Duration("tag") - Sprite.Timer.CurrentTime("tag")) /
 | zeropad        | 补零，如 zeropad(3,2) = 03   ； zeropad(45,6) = 000045    |
 | time/60%60     | 求时间分数     |
 | time%60        | 求时间秒数     |
-
-
 
 
 
