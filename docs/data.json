@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-06-16",
+    "lastUpdated": "2024-06-26",
     "navigation": {
         "editor": [
             {
@@ -4575,6 +4575,16 @@
                     },
                     {
                         "category": "Math",
+                        "title": "显示大数字、大单位数字",
+                        "authors": [
+                            "clovelt", "XHXIAIEIN"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/DisplayBigNumbers.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Math",
                         "title": "数字转换千位分隔符（正则表达式）",
                         "authors": [
                             "Federico Calchera"
@@ -4595,9 +4605,19 @@
                     },
                     {
                         "category": "Math",
+                        "title": "自定义精灵的图像原点，在任意点旋转精灵",
+                        "authors": [
+                            "R0j0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/rotate_custom_center.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Math",
                         "title": "远小近大的透视",
                         "authors": [
-                            "reddog"
+                            "R0j0hound"
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/cameraFromImage.capx",
