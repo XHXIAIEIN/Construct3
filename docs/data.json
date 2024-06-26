@@ -210,6 +210,16 @@
                     },
                     {
                         "category": "Platform",
+                        "title": "简单一行事件，抓取墙壁边缘动作",
+                        "authors": [
+                            "FedericoCalchera"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/1eventLedgeGrab.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Platform",
                         "title": "简单实现《Celeste 蔚蓝》的 Dash 冲刺机制",
                         "authors": [
                             "dop2000"
