@@ -3467,6 +3467,16 @@
                     },
                     {
                         "category": "Text",
+                        "title": "屏幕提示指令输入，输入指令更改精灵的位置、角度",
+                        "authors": [
+                            "R0j0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Dialog/Type/rough_autocomplete.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Text",
                         "title": "带历史对话滚动的对话框",
                         "authors": [
                             "Zackarotto"
