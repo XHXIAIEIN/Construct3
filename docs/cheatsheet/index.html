@@ -88,7 +88,6 @@ localVars["Variable2"]
 instVars["Variable3"]</code></pre>
 
 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime">文档</a>
-
 </div>
 
 <!-- Instance -->
@@ -102,20 +101,23 @@ instVars["Variable3"]</code></pre>
 <p>按名称挑选</p>
 <pre><code class="language-javascript">runtime.objects["Sprite"];</code></pre>
 
-文档地址
-https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance
+<a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance">文档</a>
 	
 <h2 class="subsection-title">获取第一个实例对象(First Instance Object)</h2>
 <pre><code class="language-javascript">runtime.objects.Sprite.getFirstInstance()</code></pre>
 
 <h2 class="subsection-title">获取所有实例对象(All Instances objects)</h2>
-<p>返回的是一个数组。</p>
 <pre><code class="language-javascript">runtime.objects.Sprite.getAllInstances()</code></pre>
 
 <h2 class="subsection-title">获取实例对象的实例变量</h2>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
 const score = player.instVars["Score"];
 // console.log(score)</code></pre>
+
+<h2 class="subsection-title">更改实例对象的滤镜参数</h2>
+<pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
+player.effects[0].setParameter(0, 100);
+</pre>
 	
 <h2 class="subsection-title">获取实例对象的行为属性(Instance behaviors)</h2>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
@@ -144,26 +146,22 @@ textInstance.text = "Hello World"</code></pre>
 	
 <p>也可以通过 <span>filter</span>来实现条件筛选。</p>
 <p>例如下方的代码，用于选出布尔型 foobar 是开启状态下 obj 实例对象。</p>
-<pre><code class="language-javascript">const instances = runtime.objects.Sprite.getAllInstances(); // get an array of instances
+<pre><code class="language-javascript">const instances = runtime.objects.Sprite.getAllInstances();
 const picked = instances.filter(obj => obj.instVars.foobar); // filter based on instance Variable</code></pre>
 
 <p>获取所有满足条件的实例</p>
 <pre><code class="language-javascript">// 获取所有 Sprite 实例
 const instances = runtime.objects.Sprite.getAllInstances();
-
 // 使用筛选逻辑过滤实例
 const picked = instances.filter(obj => {
-  // 获取每个实例的分数
-  const score = obj.instVars["Score"];
-  // 返回分数小于或等于60的实例
-  return score <= 60;
+  const score = obj.instVars["Score"];   // 获取每个实例的分数
+  return score <= 60;   // 返回分数小于或等于60的实例
 });
 </code></pre>
 
 <h2 class="subsection-title">实例对象场景属性</h2>
-https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iworldinstance
-<p>获取通用属性：所在图层、场景、坐标、尺寸、碰撞框等</p>
-	
+<a href="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iworldinstance">文档</a>
+
 <p>获取碰撞框</p>
 <pre><code class="language-javascript">const instance = runtime.objects.Sprite.getFirstInstance();
 console.log(instance.getBoundingBox())</code></pre>
@@ -212,9 +210,9 @@ runtime.callFunction(...function.split(",").map(e => e.trim()).map(e => (isNaN(e
 
 </div>
 
-
 <!-- Data -->
 <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
+
 <h2 class="subsection-title">AJAX 加载文件</h2>
 <p>在脚本中代替事件表AJAX加载文件的操作。</p>
 <pre><code class="language-javascript">async function OnBeforeProjectStart(runtime)
@@ -224,6 +222,8 @@ runtime.callFunction(...function.split(",").map(e => e.trim()).map(e => (isNaN(e
   }
 }</code></pre>
 
+<h1>JSON</h1>
+<a href="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/json"></a>
 <h2 class="subsection-title">JSON 读取数据</h2>
 <pre><code class="language-javascript">const dataInst = runtime.objects.JSON.getFirstInstance();
   const data = dataInst.getJsonDataCopy();
@@ -239,12 +239,13 @@ dataInst.setJsonDataCopy(filterItems);
 </code></pre>
 
 <h2 class="subsection-title">读取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/array">Array</a> 数据</h2>
-<pre><code class="language-javascript">const MyArray = runtime.objects.Dictionary.getFirstInstance();
-console.log(MyArray.getAt(0, 0))
+<pre><code class="language-javascript">const myArray = runtime.objects.Array.getFirstInstance();
+myArray.setAt(0, 1)
+console.log(myArray.getAt(0, 0))
 </code></pre>
 
 <h2 class="subsection-title">获取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/dictionary">Dictionary</a> 数据</h2>
-<pre><code class="language-javascript">const MyData = runtime.objects.Dictionary.getFirstInstance().getDataMap();
+<pre><code class="language-javascript">const myData = runtime.objects.Dictionary.getFirstInstance().getDataMap();
 console.log(MyData.get('Key'))
 </code></pre>
 
@@ -261,32 +262,43 @@ Function 具有 String 类型的返回值，传出的是一个可被解析为 JS
 <pre><code class="language-javascript">const { size, data } = JSON.parse(localVars.c3ArrayFile);
 const [, totalRows] = size;
 let output = [];
-
 const columnHeaders = data.map(column => column[0][0].trim());
-
 for (let rowIndex = 1; rowIndex < totalRows; rowIndex++) {
 	let rowObject = {};
-
 	columnHeaders.forEach((header, columnIndex) => {
 		if (!header) return;
 		let cellValue = data[columnIndex][rowIndex][0];
 		rowObject[header] = typeof cellValue === 'string' ? cellValue.trim() : cellValue;
 	});
-
 	if (Object.values(rowObject).some(value => value !== "")) {
 		output.push(rowObject);
 	}
 }
-
 runtime.setReturnValue(JSON.stringify(output));
 </code></pre>
 </div>
 
 <!-- Other -->
 <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
-<h1>其他函数</h2>
+
+<h1>鼠标</h2>
+获取鼠标的坐标
+<pre><code class="language-javascript">// getMousePosition(layer);
+const [mouseX, mouseY] = runtime.mouse.getMousePosition(0);</code></pre>
+
+<h1>键盘</h2>
+获取键盘的按键
+<pre><code class="language-javascript">const keyboard = runtime.keyboard;
+if (keyboard.isKeyDown("ArrowRight"))
+{
+	player.x += playerSpeed * dt;
+	player.angleDegrees = 0;
+}
+</code></pre>
 
 	
+<h1>其他函数</h2>
+
 <h2 class="subsection-title">辅助函数</h2>
 
 生成指定范围内的随机整数
@@ -313,10 +325,11 @@ console.log(c);</code></pre>
 <div class="col"><a href="https://github.com/XHXIAIEIN/Construct3/edit/main/docs/cheatsheet/index.html" target="_blank">编辑</a></div>
 </div>
 </div>
-
+<br><br>
 <script src="js/jquery-3.6.0.min.js" charset="utf-8"></script>
 <script src="js/bootstrap.min.js" charset="utf-8"></script>
 <script src="js/prism.js"></script>
 <script>hljs.highlightAll();</script>
 </body>
 </html>
+
