@@ -1856,6 +1856,16 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/3DShape/floor_mirror.c3p",
                         "related_links": []
+                    },
+                    {
+                        "category": "3D Shape",
+                        "title": "计算地形的高度差，低处无法通过墙壁，从高地走到空中会落地",
+                        "authors": [
+                            "R0J0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/3DShape/3d_box_and_wedge_collsion_response.c3p",
+                        "related_links": []
                     }
                 ]
             }
