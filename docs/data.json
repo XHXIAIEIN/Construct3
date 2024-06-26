@@ -5399,6 +5399,16 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/LevelEditor/sample-editor.capx",
                         "related_links": []
+                    },
+                    {
+                        "category": "关卡编辑器",
+                        "title": "点击不同的精灵，出现调整大小的锚点，调整精灵大小",
+                        "authors": [
+                            "R0j0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/LevelEditor/sample-editor.capx",
+                        "related_links": []
                     }
                 ]
             },
@@ -6727,6 +6737,16 @@
                         ],
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Fake3D/Minkowski_space.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "伪3D",
+                        "title": "3D隧道背景2",
+                        "authors": [
+                            "R0j0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Fake3D/pit_fall_effect.capx",
                         "related_links": []
                     },
                     {
