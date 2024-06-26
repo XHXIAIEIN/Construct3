@@ -4440,16 +4440,6 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Camera/Scrolling_background_train_scene_drestuff.c3p",
                         "related_links": []
-                    },
-                    {
-                        "category": "Camera",
-                        "title": "360全景环绕式场景拖动",
-                        "authors": [
-                            "xhxiaiein"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Camera/360wrapViewFix.c3p",
-                        "related_links": []
                     }
                 ]
             },
@@ -4466,6 +4456,31 @@
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Zoom/zoom-smoothly.c3p",
                         "related_links": []
                     }
+                ]
+            },
+            "Warp":{
+                "icon": "",
+                "data":[
+                    {
+                        "category": "Warp",
+                        "title": "360全景环绕式场景拖动",
+                        "authors": [
+                            "xhxiaiein"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Camera/360wrapViewFix.c3p",
+                        "related_links": []
+                    },
+                    {
+                        "category": "Warp",
+                        "title": "Tile Map 上下场景无线环绕滚动",
+                        "authors": [
+                            "unkown"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Warp/inf_vert_scroll.capx",
+                        "related_links": []
+                    },
                 ]
             },
             "Isometric": {
@@ -4871,9 +4886,14 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Rope/scarf_verlet.capx",
                         "related_links": []
-                    },
+                    }
+                ]
+            },
+           "布料物理":{
+                "icon": "",
+                "data": [
                     {
-                        "category": "模拟绳子",
+                        "category": "布料物理",
                         "title": "带物理的布料绳子",
                         "authors": [
                             "R0J0hound"
@@ -4883,7 +4903,17 @@
                         "related_links": []
                     },
                     {
-                        "category": "模拟绳子",
+                        "category": "布料物理",
+                        "title": "布料物理网，带碰撞",
+                        "authors": [
+                            "R0J0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/ClothPhysics/cloth_verlet2.capx",
+                        "related_links": []
+                    },
+                    {
+                        "category": "布料物理",
                         "title": "带物理的布料绳子，稍微改良版，更平滑的渲染",
                         "authors": [
                             "jg"
@@ -4893,7 +4923,7 @@
                         "related_links": []
                     }
                 ]
-            },
+           },
             "Bounce 物理动力模拟算法": {
                 "icon": "",
                 "data": [
