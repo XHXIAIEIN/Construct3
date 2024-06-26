@@ -7148,6 +7148,16 @@
                         "tags": [],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Demo/jigsaw/jigsaw_puzzle_pic.capx",
                         "related_links": []
+                    },
+                    {
+                        "category": "拼图 Jigsaw",
+                        "title": "用遮罩的方式制作拼图，用于精灵点击爆炸的碎片效果",
+                        "authors": [
+                            "r0j0hound"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mask/explosion.capx",
+                        "related_links": []
                     }
                 ]
             },
