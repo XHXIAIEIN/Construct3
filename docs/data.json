@@ -4550,16 +4550,6 @@
                     },
                     {
                         "category": "Math",
-                        "title": "数字转换千位分隔符（文本切割法）",
-                        "authors": [
-                            "hcatarrunas"
-                        ],
-                        "tags": [],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/Format/Fraction_Number_add_comma.c3p",
-                        "related_links": []
-                    },
-                    {
-                        "category": "Math",
                         "title": "远小近大的透视",
                         "authors": [
                             "reddog"
@@ -4730,6 +4720,16 @@
             "抛物线": {
                 "icon": "",
                 "data": [
+                    {
+                        "category": "抛物线",
+                        "title": "演示 qarp 函数使用，在两点之间移动，可调整曲线",
+                        "authors": [
+                            "Federico Calchera"
+                        ],
+                        "tags": [],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/qarp/qarpExample.c3p",
+                        "related_links": []
+                    },
                     {
                         "category": "抛物线",
                         "title": "用 qarp 函数实现抛物线运动，可调整抛物速度、偏移高度",
