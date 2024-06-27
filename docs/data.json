@@ -1637,6 +1637,12 @@
                 "data": [
                     {
                         "category": "Mouse",
+                        "title": "用精灵代替鼠标光标，限制在屏幕范围内",
+                        "authors": ["Federico Calchera"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Mouse/MouseBoundToViewport.c3p"
+                    },
+                    {
+                        "category": "Mouse",
                         "title": "鼠标跟随，限制最大旋转角度",
                         "authors": ["André"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Mouse/angleLerp_with_limit.c3p"
