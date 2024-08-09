@@ -602,6 +602,12 @@
                 "data": [
                     {
                         "category": "Timer",
+                        "title": "点击按钮开始计时，显示倒计时文本",
+                        "authors": ["fvcalderan"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Timer/button_timer_reset.c3p"
+                    },
+                    {
+                        "category": "Timer",
                         "title": "点击画面开始计时3秒。再次点击重置计时(可选)",
                         "authors": ["Mikal"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Timer/ClickTimer.c3p"
@@ -3471,7 +3477,7 @@
                         "category": "Room 生成随机房间",
                         "title": "简单实现连接房间的随机线路",
                         "authors": ["R0J0hound"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/primsAlgo.capx"
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Maze/primsAlgo.capx"
                     },
                     {
                         "category": "Room 生成随机房间",
