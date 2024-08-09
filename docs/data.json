@@ -1,6 +1,7 @@
 {
-    "lastUpdated": "2024-08-09",
-    "navigation": {
+    "lastUpdated": "2024-08-10",
+    "navigation": 
+    {
         "editor": [
             {
                 "name": "Construct 3",
@@ -2165,7 +2166,7 @@
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/AJAX/AJAXRequestMultiFiles.c3p"
                     }
                 ]
-            },
+            }
         },
         "HUD": {
             "Text": {
@@ -2766,7 +2767,7 @@
                     },
                     {
                         "category": "Camera",
-                        "title": "更平滑的屏幕震动，用 Noice 算法[相机振动\\震屏]",
+                        "title": "更平滑的屏幕震动，用 Noice 算法",
                         "authors": ["Federico Calchera"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Camera/camerazelda.c3p"
                     },
