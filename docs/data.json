@@ -2893,9 +2893,9 @@
                     },
                     {
                         "category": "Math",
-                        "title": "颜色值相互转换，RGB与16进制",
+                        "title": "颜色值相互转换，ColorValue、Hex、RGB",
                         "authors": ["xhxiaiein"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/ConvertRGBtoHex.c3p"
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/ColorValueAndHexConverter.c3p"
                     },
                     {
                         "category": "Math",
