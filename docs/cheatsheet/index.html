@@ -64,13 +64,6 @@ function Tick(runtime)
 </code></pre>
 </div>
 
-<!-- globalThis -->
-<div class="tab-pane fade" id="nav-globalThis" role="tabpanel" aria-labelledby="nav-globalThis-tab">
-<h2 class="subsection-title">全局作用域</h2>
-可以在任何地方使用它，如事件表脚本块、JS文件等，可以用于引用第三方库的初始化对象，并在后续使用。
-<pre><code class="language-javascript">globalThis.Variable1 = 1</code></pre>
-</div>
-
 <!-- Variable -->
 <div class="tab-pane fade" id="nav-variable" role="tabpanel" aria-labelledby="nav-variable-tab">
 	
@@ -87,7 +80,6 @@ function Tick(runtime)
 localVars["Variable2"]
 instVars["Variable3"]</code></pre>
 
-<a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/iruntime">文档</a>
 </div>
 
 <!-- Instance -->
@@ -198,7 +190,7 @@ textInstance.text = "Hello World"
 <p>获取函数的参数</p>
 <pre><code class="language-javascript">localVars.Parameter0</code></pre>
 
-解构赋值
+<p>解构赋值</p>
 <pre><code class="language-javascript">const { a, b } = localVars;</code></pre>
 
 <p>设置函数返回值</p>
@@ -208,11 +200,18 @@ textInstance.text = "Hello World"
 <pre><code class="language-javascript">const function = "AddValue, 123, ABC"
 runtime.callFunction(...function.split(",").map(e => e.trim()).map(e => (isNaN(e) ? e : Number(e))));</code></pre>
 
+<p>触发事件</p>
+<pre><code class="language-javascript">const event = C3.Event("")
+const object = runtime.objects.Sprite.getFirstInstance();
+object.dispatchEvent(event);
+</code></pre>
+	
 </div>
 
 <!-- Data -->
 <div class="tab-pane fade" id="nav-data" role="tabpanel" aria-labelledby="nav-data-tab">
 
+<h1>AJAX</h1>
 <h2 class="subsection-title">AJAX 加载文件</h2>
 <p>在脚本中代替事件表AJAX加载文件的操作。</p>
 <pre><code class="language-javascript">async function OnBeforeProjectStart(runtime)
@@ -243,12 +242,14 @@ data.name = localVars.name;
 dataInst.setJsonDataCopy(filterItems);
 </code></pre>
 
+<h1>Array</h1>
 <h2 class="subsection-title">读取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/array">Array</a> 数据</h2>
 <pre><code class="language-javascript">const myArray = runtime.objects.Array.getFirstInstance();
 myArray.setAt(0, 1)
 console.log(myArray.getAt(0, 0))
 </code></pre>
 
+<h1>Dictionary</h1>
 <h2 class="subsection-title">获取 <a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/plugin-interfaces/dictionary">Dictionary</a> 数据</h2>
 <pre><code class="language-javascript">const myData = runtime.objects.Dictionary.getFirstInstance().getDataMap();
 console.log(MyData.get('Key'))
@@ -261,6 +262,7 @@ for (const [key, value] of data) {
 }
 </code></pre>
 
+<h1>其他</h1>
 <h2 class="subsection-title">将C3的Array文件转换成JSON</h2>
 在一个 Function 中的脚本块，Function 带有一个 String 类型的参数 <code>c3ArrayFile</code>，用于从在 AJAX 加载 Array文件时，将 AJAX.LastData 数据传入到这个 Function 中。
 Function 具有 String 类型的返回值，传出的是一个可被解析为 JSON 的字符串，用于在 JSON 对象中使用 Parse JSON string 动作时，使用 Functions.convertC3ArrayToJson(AJAX.LastData) 进行解析。
@@ -283,15 +285,22 @@ runtime.setReturnValue(JSON.stringify(output));
 </code></pre>
 </div>
 
+<!-- globalThis -->
+<div class="tab-pane fade" id="nav-globalThis" role="tabpanel" aria-labelledby="nav-globalThis-tab">
+<h2 class="subsection-title">全局作用域</h2>
+可以在任何地方使用它，如事件表脚本块、JS文件等，可以用于引用第三方库的初始化对象，并在后续使用。
+<pre><code class="language-javascript">globalThis.Variable1 = 1</code></pre>
+</div>
+
 <!-- Other -->
 <div class="tab-pane fade" id="nav-other" role="tabpanel" aria-labelledby="nav-other-tab">
 
-<h1>鼠标</h2>
+<h2>鼠标</h2>
 获取鼠标的坐标
 <pre><code class="language-javascript">// getMousePosition(layer);
 const [mouseX, mouseY] = runtime.mouse.getMousePosition(0);</code></pre>
 
-<h1>键盘</h2>
+<h2>键盘</h2>
 获取键盘的按键
 <pre><code class="language-javascript">const keyboard = runtime.keyboard;
 if (keyboard.isKeyDown("ArrowRight"))
@@ -301,8 +310,16 @@ if (keyboard.isKeyDown("ArrowRight"))
 }
 </code></pre>
 
+屏蔽特定按键
+<pre><code class="language-javascript">window.addEventListener("keydown", e =>
+{
+	if (e.key === "Tab")
+		e.preventDefault();
+});
+</code></pre>
+
 	
-<h1>其他函数</h2>
+<h2>其他函数</h2>
 
 <h2 class="subsection-title">辅助函数</h2>
 
