@@ -147,6 +147,12 @@
                     },
                     {
                         "category": "Platform",
+                        "title": "带有斜坡的平台，走在斜坡可跳下穿透到地面",
+                        "authors": ["skymen"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Solid/One_Way_Doors.c3p"
+                    }
+                    {
+                        "category": "Platform",
                         "title": "另一种实现墙跳的思路",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/PlatformerWallJump.capx"
