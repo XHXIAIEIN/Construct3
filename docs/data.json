@@ -349,6 +349,12 @@
                     },
                     {
                         "category": "LineOfSight",
+                        "title": "利用法线角度捕获碰撞地形，玩家根据地形改变角度",
+                        "authors": ["Federico Calchera"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/LineOfSight/rayCastSolidAngle.c3p"
+                    },
+                    {
+                        "category": "LineOfSight",
                         "title": "带有视野范围的动态阴影(不需要Canvas)",
                         "authors": ["rokstars"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/LineOfSight/DynamicShadowNotCanvas.capx"
@@ -1444,21 +1450,21 @@
                 "data": [
                     {
                         "category": "Overlapping",
-                        "title": "依序抽取最顶部的木条，若点击底部则高亮顶部叠加部分",
-                        "authors": ["AllanR"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/PickZorder.capx"
+                        "title": "检查精灵多边形碰撞框是否完全和另一个对象重合",
+                        "authors": ["FedericoCalchera"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/polyPointCheck.c3p"
                     },
                     {
                         "category": "Overlapping",
-                        "title": "重叠的精灵随机移动位置修正，直到不重叠为止",
-                        "authors": ["newt"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/autoOverlap.c3p"
-                    },
-                    {
-                        "category": "Overlapping",
-                        "title": "推开重叠的精灵，直到不重叠为止",
+                        "title": "检查精灵是否在其他对象包围的范围内",
                         "authors": ["R0J0hound"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/box_push_out.capx"
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/pointInPoly.capx"
+                    },
+                    {
+                        "category": "Overlapping",
+                        "title": "在精灵多边形碰撞框范围内随机生成对象",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/pointInPoly2.c3p"
                     },
                     {
                         "category": "Overlapping",
@@ -1477,6 +1483,24 @@
                         "title": "在随机位置生成不重叠的实例 2",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/RandomSpawnNoOverlap.capx"
+                    }
+                    {
+                        "category": "Overlapping",
+                        "title": "重叠的精灵随机移动位置修正，直到不重叠为止",
+                        "authors": ["newt"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/autoOverlap.c3p"
+                    },
+                    {
+                        "category": "Overlapping",
+                        "title": "推开重叠的精灵，直到不重叠为止",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/box_push_out.capx"
+                    },
+                    {
+                        "category": "Overlapping",
+                        "title": "依序抽取最顶部的木条，若点击底部则高亮顶部叠加部分",
+                        "authors": ["AllanR"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/PickZorder.capx"
                     }
                 ]
             },
