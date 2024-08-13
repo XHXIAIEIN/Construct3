@@ -1483,7 +1483,7 @@
                         "title": "在随机位置生成不重叠的实例 2",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Overlapping/RandomSpawnNoOverlap.capx"
-                    }
+                    },
                     {
                         "category": "Overlapping",
                         "title": "重叠的精灵随机移动位置修正，直到不重叠为止",
