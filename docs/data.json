@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-08-10",
+    "lastUpdated": "2024-08-14",
     "navigation": 
     {
         "editor": [
@@ -83,7 +83,7 @@
                         "category": "Platform",
                         "title": "简单的太空射击游戏",
                         "authors": ["DoonDook Studio"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Platform/Platformer.c3p"
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/8Direction/Shooter.c3p"
                     },
                     {
                         "category": "Platform",
