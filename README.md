@@ -1,5 +1,6 @@
 # Construct 3 案例图书馆
 https://xhxiaiein.github.io/Construct3
+https://github.com/XHXIAIEIN/Construct3/tree/main/notes
 
 ## 本地调试
 
@@ -11,7 +12,6 @@ python -m http.server 8000
 ```
 http://localhost:8000/
 ```
-
 
 ## Sprite Template
 
