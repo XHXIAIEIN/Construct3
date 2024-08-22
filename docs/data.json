@@ -1032,6 +1032,12 @@
                     },
                     {
                         "category": "DrawingCanvas",
+                        "title": "将 Sprite 多边形裁切，图片并排遮罩",
+                        "authors": ["newt"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/DrawingCanvas/ImagePolygonMesh.c3p"
+                    },
+                    {
+                        "category": "DrawingCanvas",
                         "title": "根据自定义形状，将图片切割成碎片，用于拼图",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/DrawingCanvas/CutImage_JigsawPuzzle.c3p"
