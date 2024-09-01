@@ -690,6 +690,18 @@
             "Orbit": {
                 "data": [
                     {
+                        "category": "Rotate",
+                        "title": "演示 sin cos，绕原心创建对象",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Rotate/angleRotation.c3p"
+                    },
+                    {
+                        "category": "Rotate",
+                        "title": "演示 anglerotate 和 anglediff，在角度范围创建对象",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Rotate/angleStep.c3p"
+                    },
+                    {
                         "category": "Orbit",
                         "title": "使用 sin cos 环绕角度，调整距离",
                         "authors": ["Fishou con Baguette"],
@@ -736,6 +748,16 @@
                         "title": "恒星周围的3D环绕小行星带",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Orbit/AsteroidBelt.c3p"
+                    }
+                ]
+            },
+            "Carousel": {
+                "data": [
+                    {
+                        "category": "Orbit",
+                        "title": "3D环绕菜单，左右滑动",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Carousel/Carousel.c3p"
                     },
                     {
                         "category": "Orbit",
