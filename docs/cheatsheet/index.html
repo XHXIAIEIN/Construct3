@@ -82,6 +82,36 @@ instVars["Variable3"]</code></pre>
 
 </div>
 
+
+<!-- Function -->
+<div class="tab-pane fade" id="nav-function" role="tabpanel" aria-labelledby="nav-function-tab">
+<h2 class="subsection-title">调用函数(call function)</h2>
+<p>调用事件表的自定义函数</p>
+
+<p>调用函数</p>
+<pre><code class="language-javascript">runtime.callFunction("add", 1)</code></pre>
+
+<p>获取函数的参数</p>
+<pre><code class="language-javascript">localVars.Parameter0</code></pre>
+
+<p>解构赋值</p>
+<pre><code class="language-javascript">const { a, b } = localVars;</code></pre>
+
+<p>设置函数返回值</p>
+<pre><code class="language-javascript">runtime.setReturnValue(value);</code></pre>
+
+<p>通过字符串调用函数</p>
+<pre><code class="language-javascript">const function = "AddValue, 123, ABC"
+runtime.callFunction(...function.split(",").map(e => e.trim()).map(e => (isNaN(e) ? e : Number(e))));</code></pre>
+
+<p>触发事件</p>
+<pre><code class="language-javascript">const event = C3.Event("")
+const object = runtime.objects.Sprite.getFirstInstance();
+object.dispatchEvent(event);
+</code></pre>
+	
+</div>
+
 <!-- Instance -->
 <div class="tab-pane fade" id="nav-instance" role="tabpanel" aria-labelledby="nav-instance-tab">
 
@@ -93,8 +123,6 @@ instVars["Variable3"]</code></pre>
 <p>按名称挑选</p>
 <pre><code class="language-javascript">runtime.objects["Sprite"];</code></pre>
 
-<a herf="https://www.construct.net/en/make-games/manuals/construct-3/scripting/scripting-reference/object-interfaces/iinstance">文档</a>
-	
 <h2 class="subsection-title">获取第一个实例对象(First Instance Object)</h2>
 <pre><code class="language-javascript">runtime.objects.Sprite.getFirstInstance()</code></pre>
 
@@ -105,6 +133,22 @@ instVars["Variable3"]</code></pre>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
 const score = player.instVars["Score"];
 // console.log(score)</code></pre>
+
+<h2 class="subsection-title">获取实例对象的滤镜参数</h2>
+这里封装了一个 function，返回 any 类型。带有 3 个参数： UID, effectName, parameterIndex
+<pre><code class="language-javascript">const inst = runtime.getInstanceByUid(localVars.UID);
+
+const effect = inst.effects.find(e => e.name === localVars.effectName);
+
+if (!effect) return;
+
+const param = effect.getParameter(localVars.parameterIndex);
+
+const result = Array.isArray(param) ? param.map(v => Math.round(v * 255)).join(',') : param;
+
+runtime.setReturnValue(result);</code></pre>
+
+<pre><code class="language-json">{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"getEffectParameter","functionDescription":"","functionCategory":"","functionReturnType":"any","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"UID","type":"number","initialValue":"0","comment":""},{"name":"effectName","type":"string","initialValue":"","comment":""},{"name":"parameterIndex","type":"number","initialValue":"0","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const inst = runtime.getInstanceByUid(localVars.UID);\n\nconst effect = inst.effects.find(e => e.name === localVars.effectName);\n\nif (!effect) return;\n\nconst param = effect.getParameter(localVars.parameterIndex);\n\nconst result = Array.isArray(param) ? param.map(v => Math.round(v * 255)).join(',') : param;\n\nruntime.setReturnValue(result);"}]}]}</code></pre>
 
 <h2 class="subsection-title">更改实例对象的滤镜参数</h2>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
@@ -177,35 +221,6 @@ const textInstance = textObject.getFirstPickedInstance();
 textInstance.text = "Hello World"
 }</code></pre>
 
-</div>
-
-<!-- Function -->
-<div class="tab-pane fade" id="nav-function" role="tabpanel" aria-labelledby="nav-function-tab">
-<h2 class="subsection-title">调用函数(call function)</h2>
-<p>调用事件表的自定义函数</p>
-
-<p>调用函数</p>
-<pre><code class="language-javascript">runtime.callFunction("add", 1)</code></pre>
-
-<p>获取函数的参数</p>
-<pre><code class="language-javascript">localVars.Parameter0</code></pre>
-
-<p>解构赋值</p>
-<pre><code class="language-javascript">const { a, b } = localVars;</code></pre>
-
-<p>设置函数返回值</p>
-<pre><code class="language-javascript">runtime.setReturnValue(value);</code></pre>
-
-<p>通过字符串调用函数</p>
-<pre><code class="language-javascript">const function = "AddValue, 123, ABC"
-runtime.callFunction(...function.split(",").map(e => e.trim()).map(e => (isNaN(e) ? e : Number(e))));</code></pre>
-
-<p>触发事件</p>
-<pre><code class="language-javascript">const event = C3.Event("")
-const object = runtime.objects.Sprite.getFirstInstance();
-object.dispatchEvent(event);
-</code></pre>
-	
 </div>
 
 <!-- Data -->
