@@ -1054,6 +1054,12 @@
                     },
                     {
                         "category": "DrawingCanvas",
+                        "title": "图标CD时间进度遮罩，带有矩形、圆形方式",
+                        "authors": ["CJJ"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/DrawingCanvas/CoolDown.c3p"
+                    },
+                    {
+                        "category": "DrawingCanvas",
                         "title": "将 Sprite 多边形裁切，图片并排遮罩",
                         "authors": ["newt"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/DrawingCanvas/ImagePolygonMesh.c3p"
