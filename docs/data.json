@@ -1380,6 +1380,12 @@
                     },
                     {
                         "category": "Mesh Distortion",
+                        "title": "读取 Mesh 顶点数据的坐标位置",
+                        "authors": ["Federico Calchera"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/meshPointEventSheetGetters.c3p"
+                    },
+                    {
+                        "category": "Mesh Distortion",
                         "title": "鼠标拖动，卡片朝向任意方向旋转",
                         "authors": ["CJJ"],
                         "tag":["旋转矩阵"],
@@ -1427,6 +1433,12 @@
                         "title": "翻转动画，类似纸片马里奥",
                         "authors": ["R0J0hound"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/spritemeshflip.c3p"
+                    },
+                    {
+                        "category": "Mesh Distortion",
+                        "title": "将包含所有扑克牌图案的大图，截取其中1张扑克牌显示",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Mesh/card_spritesheet.c3p"
                     },
                     {
                         "category": "Mesh Distortion",
