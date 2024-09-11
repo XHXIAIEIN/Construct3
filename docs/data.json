@@ -970,6 +970,12 @@
                 "data": [
                     {
                         "category": "Timeline",
+                        "title": "简单演示Boss战逻辑。用 Timeline 设计移动路线，事件随机发射弹幕",
+                        "authors": ["Federico Calchera"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Timeline/bossExample.c3p"
+                    },
+                    {
+                        "category": "Timeline",
                         "title": "开场标题动画(轻松，欢快，翻转)",
                         "authors": ["hcatarrunas"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Timeline/contruct_intro.c3p"
