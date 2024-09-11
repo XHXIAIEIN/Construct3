@@ -123,18 +123,18 @@ object.dispatchEvent(event);
 <p>按名称挑选</p>
 <pre><code class="language-javascript">runtime.objects["Sprite"];</code></pre>
 
-<h2 class="subsection-title">获取第一个实例对象(First Instance Object)</h2>
+<p>获取第一个实例对象(First Instance Object)</p>
 <pre><code class="language-javascript">runtime.objects.Sprite.getFirstInstance()</code></pre>
 
-<h2 class="subsection-title">获取所有实例对象(All Instances objects)</h2>
+<p>获取所有实例对象(All Instances objects)</p>
 <pre><code class="language-javascript">runtime.objects.Sprite.getAllInstances()</code></pre>
 
-<h2 class="subsection-title">获取实例对象的实例变量</h2>
+<p>获取实例对象的实例变量</p>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
 const score = player.instVars["Score"];
 // console.log(score)</code></pre>
 
-<h2 class="subsection-title">获取实例对象的滤镜参数</h2>
+<p>获取实例对象的滤镜参数</p>
 这里封装了一个 function，返回 any 类型。带有 3 个参数： UID, effectName, parameterIndex
 <pre><code class="language-javascript">const inst = runtime.getInstanceByUid(localVars.UID);
 
@@ -150,12 +150,12 @@ runtime.setReturnValue(result);</code></pre>
 
 <pre><code class="language-json">{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"getEffectParameter","functionDescription":"","functionCategory":"","functionReturnType":"any","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"UID","type":"number","initialValue":"0","comment":""},{"name":"effectName","type":"string","initialValue":"","comment":""},{"name":"parameterIndex","type":"number","initialValue":"0","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const inst = runtime.getInstanceByUid(localVars.UID);\n\nconst effect = inst.effects.find(e => e.name === localVars.effectName);\n\nif (!effect) return;\n\nconst param = effect.getParameter(localVars.parameterIndex);\n\nconst result = Array.isArray(param) ? param.map(v => Math.round(v * 255)).join(',') : param;\n\nruntime.setReturnValue(result);"}]}]}</code></pre>
 
-<h2 class="subsection-title">更改实例对象的滤镜参数</h2>
+<p>更改实例对象的滤镜参数</p>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
 player.effects[0].setParameter(0, 100);
 </code></pre>
 	
-<h2 class="subsection-title">获取实例对象的行为属性(Instance behaviors)</h2>
+<p>获取实例对象的行为属性(Instance behaviors)</p>
 <pre><code class="language-javascript">const player = runtime.objects.Sprite.getFirstInstance();
 const playerBehavior = player.behaviors.Platform;
 // console.log(playerBehavior.maxSpeed)</code></pre>
@@ -163,8 +163,8 @@ const playerBehavior = player.behaviors.Platform;
 <p>在某些情况下，有些名称可能不是有效的标识符，此时，还可以用字符串来引用。</p>
 <pre><code class="language-javascript">instance.behaviors["8Direction"]["maxSpeed"]</code></pre>
 
-<h2 class="subsection-title">遍历所有实例对象的实例变量</h2>
-<p>遍历所有 Sprite 对象的实例变量 <span>Score</span>，同时销毁所有变量小于 60 的实例。</p>
+<p>遍历所有实例对象的实例变量</p>
+遍历所有 Sprite 对象的实例变量 <span>Score</span>，同时销毁所有变量小于 60 的实例。</p>
 <pre><code class="language-javascript">for (const obj of runtime.objects.Sprite.instances())
 {
   const score = obj.instVars["Score"];
@@ -278,7 +278,17 @@ for (const [key, value] of data) {
 </code></pre>
 
 <h1>其他</h1>
-<h2 class="subsection-title">将C3的Array文件转换成JSON</h2>
+
+转置数组
+<pre><code class="language-javascript">const array = JSON.parse(localVars.arrayJson);
+const [width, height, depth] = array["size"];
+array["size"] = [height, width, depth];
+array["data"] = array["data"][0].map((_, y) => array["data"].map(row => row[y]));
+runtime.setReturnValue(JSON.stringify(array));
+</code></pre>
+
+	
+将C3的Array文件转换成JSON
 在一个 Function 中的脚本块，Function 带有一个 String 类型的参数 <code>c3ArrayFile</code>，用于从在 AJAX 加载 Array文件时，将 AJAX.LastData 数据传入到这个 Function 中。
 Function 具有 String 类型的返回值，传出的是一个可被解析为 JSON 的字符串，用于在 JSON 对象中使用 Parse JSON string 动作时，使用 Functions.convertC3ArrayToJson(AJAX.LastData) 进行解析。
 <pre><code class="language-javascript">const { size, data } = JSON.parse(localVars.c3ArrayFile);
@@ -333,7 +343,7 @@ if (keyboard.isKeyDown("ArrowRight"))
 });
 </code></pre>
 
-	
+
 <h2>其他函数</h2>
 
 <h2 class="subsection-title">辅助函数</h2>
