@@ -91,14 +91,17 @@ instVars["Variable3"]</code></pre>
 <p>调用函数</p>
 <pre><code class="language-javascript">runtime.callFunction("add", 1)</code></pre>
 
+<p>设置函数返回值</p>
+<pre><code class="language-javascript">runtime.setReturnValue(value);</code></pre>
+
 <p>获取函数的参数</p>
 <pre><code class="language-javascript">localVars.Parameter0</code></pre>
 
 <p>解构赋值</p>
 <pre><code class="language-javascript">const { a, b } = localVars;</code></pre>
-
-<p>设置函数返回值</p>
-<pre><code class="language-javascript">runtime.setReturnValue(value);</code></pre>
+	
+<p>在 HTML 调用 C3 Function </p>
+<pre>c3_callFunction("Function1");</code></pre>
 
 <p>通过字符串调用函数</p>
 <pre><code class="language-javascript">const function = "AddValue, 123, ABC"
