@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-09-10",
+    "lastUpdated": "2024-09-14",
     "navigation": 
     {
         "editor": [
@@ -46,6 +46,10 @@
             {
                 "name": "官方案例",
                 "link": "https://editor.construct.net/#open-example-browser"
+            },
+            {
+                "name": "数据转换",
+                "link": "https://www.construct.net/en/tutorials/c3-data-convert-example-3021/array-jsondictionary-7"
             },
             {
                 "name": "本地服务器",
