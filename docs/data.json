@@ -1844,6 +1844,12 @@
                 "data": [
                     {
                         "category": "Audio",
+                        "title": "摩托车引擎加速声，通过控制播放倍速",
+                        "authors": ["signaljacker"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/Changing_Audio_Frequency.c3p"
+                    },
+                    {
+                        "category": "Audio",
                         "title": "区分音乐和音效、记住静音选项",
                         "authors": ["DoonDook Studio"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Audio/audio.c3p"
