@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-09-14",
+    "lastUpdated": "2024-09-18",
     "navigation": 
     {
         "editor": [
@@ -1986,21 +1986,49 @@
                 "data": [
                     {
                         "category": "Slider Bar",
+                        "title": "用精灵实现拖动滑块，支持手柄控制光标拖动",
+                        "authors": ["dop2000"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/SliderGamepad.c3p"
+                    },
+                    {
+                        "category": "Slider Bar",
                         "title": "自定义滑块",
                         "authors": ["igortyhon"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/Castom-SliderBar.c3p"
                     },
                     {
                         "category": "Slider Bar",
-                        "title": "基于Sprite的个性化样式滑动条",
+                        "title": "基于精灵的个性化样式滑动条",
                         "authors": ["André"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/FormControls/SliderBar/spritebased_sliderbar_drestuff.c3p"
+                    },
+                    {
+                        "category": "Slider Bar",
+                        "title": "垂直方向滑动条",
+                        "authors": ["dop2000"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/Vertical%20Sliders.c3p"
+                    },
+                    {
+                        "category": "Slider Bar",
+                        "title": "音量滑动条，控制音量",
+                        "authors": ["dop2000"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/VolumeSlider.c3p"
                     },
                     {
                         "category": "Slider Bar",
                         "title": "基于Sprite的音量滑动条",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/customLogSlider.capx"
+                    }
+                ]
+            },
+            "Progress Bar": {
+                "data": [
+                    {
+                        "category": "Progress Bar",
+                        "title": "使用精灵代替进度条组件",
+                        "authors": ["JeFawk"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/SliderBar/Progress%20bar.c3p"
                     }
                 ]
             },
