@@ -275,15 +275,21 @@
                     },
                     {
                         "category": "Bullet",
-                        "title": "弹幕游戏子弹地狱，同时朝360°方向发射子弹",
+                        "title": "基础弹幕游戏的子弹地狱，朝360°方向同时发射子弹",
                         "authors": ["jatin1726"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Bullet/hellbullet.capx"
                     },
                     {
                         "category": "Bullet",
-                        "title": "弹幕游戏子弹地狱，同时朝多个方向发射子弹（多种方式，教学向）",
-                        "authors": ["*❤ Ohh Baby !"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Bullet/Circle_BulletHell_Particle_Effect.capx"
+                        "title": "多种弹幕的形状，演示不同的数学公式效果",
+                        "authors": ["abho"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Bullet/BulletHellGroup.c3p"
+                    },
+                    {
+                        "category": "Bullet",
+                        "title": "拥有多种攻击模式的弹幕，有分裂、图形、连射等",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Bullet/BulletHellMode.capx"
                     }
                 ]
             },
