@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-09-18",
+    "lastUpdated": "2024-09-20",
     "navigation": 
     {
         "editor": [
@@ -1761,6 +1761,12 @@
                         "title": "水果忍者，利用 Drawing Canvas 实现切开特效",
                         "authors": ["André"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Demo/Slice_Object_DrawingCanvas_drestuff.c3p"
+                    },
+                    {
+                        "category": "Touch",
+                        "title": "手机摇一摇，含陀螺仪方位",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/ShakeShakeMobile.c3p"
                     }
                 ]
             },
