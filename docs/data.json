@@ -246,6 +246,12 @@
                         "title": "忽略特定对象的实体碰撞(Solid Tags)",
                         "authors": ["hcatarrunas"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Solid/Using_Solid_Tags.c3p"
+                    },
+                    {
+                        "category": "Solid",
+                        "title": "接触式双向开关门，用实体标签区分门的方向",
+                        "authors": ["André"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Interactive/ask-door_edit.c3p"
                     }
                 ]
             },
@@ -1349,6 +1355,16 @@
                         "title": "使用Group管理事件组，捡起武器后激活武器相关的事件",
                         "authors": ["piranha305"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Group/super_simple_example.c3p"
+                    }
+                ]
+            },
+            "BBCode": {
+                "data": [
+                    {
+                        "category": "BBCode",
+                        "title": "用正则表达式替换文本中动态标签内的内容",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/BBCode/Replace%20BBCode%20Tag.c3p"
                     }
                 ]
             },
@@ -3665,16 +3681,6 @@
                         "title": "在矩形范围中，生成不同大小排列的矩形",
                         "authors": ["André"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/array_spawn_grid.c3p"
-                    }
-                ]
-            },
-            "Interactive 互动": {
-                "data": [
-                    {
-                        "category": "Interactive 互动",
-                        "title": "接触式双向开关门",
-                        "authors": ["André"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Interactive/ask-door_edit.c3p"
                     }
                 ]
             },
