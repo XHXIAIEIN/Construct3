@@ -938,15 +938,21 @@
                 "data": [
                     {
                         "category": "Advanced Random",
-                        "title": "如何使用高级随机插件，概率表",
-                        "authors": ["Laura_D"],
-                        "link": "https://www.construct.net/en/tutorials/getting-grips-advanced-2323?vic=76"
+                        "title": "概率权重随机选择一个物品",
+                        "authors": ["dop2000"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/AdvancedRandom/getWeightedRandom.c3p"
                     },
                     {
                         "category": "Advanced Random",
                         "title": "随机且不重复选择一个动画帧",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/AdvancedRandom/PermutationRandomImages.c3p"
+                    },
+                    {
+                        "category": "Advanced Random",
+                        "title": "如何使用高级随机插件，概率表",
+                        "authors": ["Laura_D"],
+                        "link": "https://www.construct.net/en/tutorials/getting-grips-advanced-2323?vic=76"
                     }
                 ]
             },
