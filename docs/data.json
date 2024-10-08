@@ -3208,6 +3208,12 @@
                     },
                     {
                         "category": "抛物线",
+                        "title": "炮台抛物线，带有多种计算模式。纯手工移动子弹",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Trajectrory/TrajectroryCalculation_R0j0.capx"
+                    },
+                    {
+                        "category": "抛物线",
                         "title": "绘制一条抛物线，物理对象根据线移动，带线性阻尼计算",
                         "authors": ["R0J0hound"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Throw/path_phys.capx"
