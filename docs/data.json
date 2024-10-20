@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-09-20",
+    "lastUpdated": "2024-10-20",
     "navigation": 
     {
         "editor": [
@@ -94,6 +94,12 @@
                         "title": "在另一个对象的位置旁边继续生成对象",
                         "authors": ["fvcalderan"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Generator/boxStacking2D.c3p"
+                    },
+                    {
+                        "category": "Platform",
+                        "title": "演示混合模式，遮罩的关系",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/BlendMode/blend-mode.c3p"
                     }
                 ]
             }
@@ -831,9 +837,15 @@
                     },
                     {
                         "category": "Sprite",
-                        "title": "动态添加动画帧，远程加载",
+                        "title": "从本地文件夹读取多张图片，保存到同一个精灵，动态添加动画帧",
                         "authors": ["XHXIAIEIN"],
-                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Sprite/dynamic%20animations.c3p"
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Sprite/load_spriteDynamicAnimtions.c3p"
+                    },
+                    {
+                        "category": "Sprite",
+                        "title": "从本地文件夹读取一张图片，图片包含序列帧，使用Mesh裁剪图片并显示",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Sprite/load_spriteStrip.c3p"
                     }
                 ]
             },
@@ -1597,6 +1609,12 @@
             "Blend mode": {
                 "data": [
                     {
+                        "category": "Platform",
+                        "title": "演示混合模式，遮罩的关系",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/BlendMode/blend-mode.c3p"
+                    },
+                    {
                         "category": "Blend mode",
                         "title": "遮罩蒙版 Source Atop 混合角色",
                         "authors": ["drestuff"],
@@ -1789,10 +1807,14 @@
                         "title": "水果忍者，利用 Drawing Canvas 实现切开特效",
                         "authors": ["André"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Demo/Slice_Object_DrawingCanvas_drestuff.c3p"
-                    },
+                    }
+                ]
+            },
+            "Shake": {
+                "data": [
                     {
-                        "category": "Touch",
-                        "title": "手机摇一摇，含陀螺仪方位",
+                        "category": "Shake",
+                        "title": "手机摇一摇，含陀螺仪方位监听",
                         "authors": ["XHXIAIEIN"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Touch/ShakeShakeMobile.c3p"
                     }
@@ -2866,6 +2888,12 @@
                         "title": "全屏自适应拉伸背景",
                         "authors": ["skymen"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Fullscreen/integer_scale_outer.c3p"
+                    },
+                    {
+                        "category": "Fullscreen",
+                        "title": "在选项中，按比例更改窗口大小",
+                        "authors": ["fvcalderan"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Fullscreen/screen_resize.c3p"
                     }
                 ]
             },
@@ -4962,6 +4990,12 @@
                         "title": "推箱子，可以推动物体(同时推多个)",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Tilemap/PushMultipleBoxes.c3p"
+                    },
+                    {
+                        "category": "推箱子 Sokoban",
+                        "title": "像BabaIsYou，可以同时推多个，支持拖动",
+                        "authors": ["clovelt"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Push/PushLogic_DraggingNoOverlapping_Sokoban_DesktopIcons.c3p"
                     },
                     {
                         "category": "推箱子 Sokoban",
