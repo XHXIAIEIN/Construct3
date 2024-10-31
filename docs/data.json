@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-10-20",
+    "lastUpdated": "2024-10-31",
     "navigation": 
     {
         "editor": [
@@ -2739,6 +2739,12 @@
                         "authors": ["揚", "XHXIAIEIN"],
                         "tag": ["Inventory", "Array", "LocalStorage"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Inventory/Array%20Inventory.c3p"
+                    },
+                    {
+                        "category": "道具背包",
+                        "title": "物品有标签分类，只能被放入对应的道具栏中",
+                        "authors": ["Federico Calchera"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/UI/Inventory/Fedes_dragAndDropInventorySystem_0.5.c3p"
                     },
                     {
                         "category": "道具背包",
