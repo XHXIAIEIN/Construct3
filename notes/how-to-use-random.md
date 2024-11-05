@@ -82,3 +82,10 @@ start + floor(random((floor((end - start) / step) + 1))) * step
 2  7  12  17  22  27  32
 ```
 
+## Example 7
+
+[Eerp](https://x.com/FreyaHolmer/status/1813629237187817600)
+适合用在设置音频播放速度，让随机数集中在偏高的音调，也就是更多集中在头部，尾部逐渐减弱
+```
+a * exp(random(1) * ln(b / a))
+```
