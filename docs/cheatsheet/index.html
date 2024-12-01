@@ -62,6 +62,49 @@ function Tick(runtime)
 	// Code to run every tick
 }
 </code></pre>
+
+<h1>Function cheatsheet</h1>
+一些封装好的函数，复制粘贴到事件表，开箱即用。
+
+<h2>检查精灵是否存在动画名</h2>
+Test ObjectType Animation Exist
+Functions.hasAnimation("Sprite", "Default")
+<pre><code class="language-javascript">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasAnimation","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"objectType","type":"string","initialValue":"","comment":""},{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const inst = runtime.objects[localVars.objectType].getFirstInstance();\nconst result = inst.getAnimation(localVars.name) != null ? 1 : 0;\nruntime.setReturnValue(result);"}]}]}
+</code></pre>
+
+	
+<h2>检查场景名称是否存在</h2>
+Test Layout Name Exist
+Functions.hasLayoutName("Layout 1")
+<pre><code class="language-javascript">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasLayoutName","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"try {\n    runtime.getLayout(localVars.name);\n    runtime.setReturnValue(1);\n} catch (error) {\n    runtime.setReturnValue(0);\n}"}]}]}
+</code></pre>
+方法二: 遍历所有对象
+<pre><code class="language-javascript">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasLayoutName","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const result = +runtime.getAllLayouts().some(({ name }) => name.includes(localVars.name));\n\nruntime.setReturnValue(result);"}]}]}
+</code></pre>
+
+
+<h2>获取对象Effect参数</h2>
+Get Object effect parameter
+Functions.getEffectParameter(Sprite.UID, "AdjustHSL", 0)
+<pre><code class="language-javascript">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"getEffectParameter","functionDescription":"","functionCategory":"","functionReturnType":"any","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"UID","type":"number","initialValue":"0","comment":""},{"name":"effectName","type":"string","initialValue":"","comment":""},{"name":"parameterIndex","type":"number","initialValue":"0","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const inst = runtime.getInstanceByUid(localVars.UID);\n\nconst effect = inst.effects.find(e => e.name === localVars.effectName);\n\nif (!effect) return;\n\nconst param = effect.getParameter(localVars.parameterIndex);\n\nconst result = Array.isArray(param) ? param.map(v => Math.round(v * 255)).join(',') : param * 100;\n\nruntime.setReturnValue(result);"}]}]}
+</code></pre>
+
+<h2>Debug</h2>
+<pre><code class="language-javascript">
+StringSub("{0} objects | {1} FPS | {2}% CPU | {3}% GPU | {4}", objectcount,PlatformInfo.TicksPerSecond, roundToDp(cpuutilisation*100,1), roundToDp(gpuutilisation*100,1), PlatformInfo.Renderer)
+</code></pre>
+	
+<h2>expDecay</h2>
+Function.expDecay(0, 100, 25)
+<pre><code class="language-javascript">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"expDecay","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"a","type":"number","initialValue":"0","comment":""},{"name":"b","type":"number","initialValue":"1","comment":""},{"name":"decay","type":"number","initialValue":"16","comment":"1-25"}],"eventType":"function-block","conditions":[],"actions":[{"id":"set-function-return-value","objectClass":"Functions","parameters":{"value":"b + (a-b) * exp(-decay*dt)"}}]}]}
+</code></pre>
+	
+	
 </div>
 
 <p>发送信号</p>
