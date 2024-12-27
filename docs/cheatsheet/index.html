@@ -154,7 +154,12 @@ instVars["Variable3"]</code></pre>
 
 <p>通过字符串调用函数</p>
 <pre><code class="language-javascript">const function = "AddValue, 123, ABC"
-runtime.callFunction(...function.split(",").map(e => e.trim()).map(e => (isNaN(e) ? e : Number(e))));</code></pre>
+
+runtime.callFunction(...localVars["command"]
+.split(",").map(e => e.trim()))
+.map(e => (isNaN(e) ? e : Number(e)))
+);  
+</code></pre>
 
 <p>触发事件</p>
 <pre><code class="language-javascript">const event = C3.Event("")
