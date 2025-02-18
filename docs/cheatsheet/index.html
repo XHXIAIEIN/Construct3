@@ -68,9 +68,9 @@ function Tick(runtime)
 
 <h2>检查精灵是否存在动画名</h2>
 Test ObjectType Animation Exist
-Functions.hasAnimation("Sprite", "Default")
+Functions.hasAnimation(Sprite.ObjectTypeName, "Default")
 <pre><code class="language-javascript">
-{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasAnimation","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"objectType","type":"string","initialValue":"","comment":""},{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const inst = runtime.objects[localVars.objectType].getFirstInstance();\nconst result = inst.getAnimation(localVars.name) != null ? 1 : 0;\nruntime.setReturnValue(result);"}]}]}
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasAnimation","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"objectType","type":"string","initialValue":"","comment":""},{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"runtime.setReturnValue(runtime.objects[localVars.objectType].getAllAnimations().some(a => a.name.includes(localVars.name)) ? 1 : 0);"}]}]}
 </code></pre>
 
 	
@@ -80,11 +80,11 @@ Functions.hasLayoutName("Layout 1")
 <pre><code class="language-javascript">
 {"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasLayoutName","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"try {\n    runtime.getLayout(localVars.name);\n    runtime.setReturnValue(1);\n} catch (error) {\n    runtime.setReturnValue(0);\n}"}]}]}
 </code></pre>
+
 方法二: 遍历所有对象
 <pre><code class="language-javascript">
 {"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"hasLayoutName","functionDescription":"","functionCategory":"","functionReturnType":"number","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"name","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","script":"const result = +runtime.getAllLayouts().some(({ name }) => name.includes(localVars.name));\n\nruntime.setReturnValue(result);"}]}]}
 </code></pre>
-
 
 <h2>获取对象Effect参数</h2>
 Get Object effect parameter
