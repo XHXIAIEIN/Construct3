@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2024-10-31",
+    "lastUpdated": "2025-03-23",
     "navigation": 
     {
         "editor": [
@@ -3119,6 +3119,12 @@
             },
             "Lerp 线性插值": {
                 "data": [
+                    {
+                        "category": "Lerp",
+                        "title": "演示lerp, qarp, cubic, cosp 的表现",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/Bezier/interpolation.capx"
+                    },
                     {
                         "category": "Lerp",
                         "title": "实验几种 Lerp 的使用方式，实现不同的平滑效果",
