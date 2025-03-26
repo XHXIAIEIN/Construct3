@@ -8,7 +8,7 @@
 
 ## 入门指南 <a href="#what" id="what"></a>
 
-* [Construct 3, 启动！](what/construct-3-qi-dong.md)
+* [Construct, 启动！](what/construct-intro.md)
 * [新手操作指南](what/xin-shou-cao-zuo-zhi-nan/README.md)
   * [添加对象](what/xin-shou-cao-zuo-zhi-nan/tian-jia-dui-xiang.md)
   * [添加行为](what/xin-shou-cao-zuo-zhi-nan/tian-jia-xing-wei.md)

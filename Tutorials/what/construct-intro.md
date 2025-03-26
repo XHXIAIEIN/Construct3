@@ -1,14 +1,40 @@
-# Construct 3, 启动！
+# Construct, 启动！
 
-首先第一步，在浏览器打开 [Construct 3](https://www.construct.net/a/260259?t=construct3)。
+首先第一步，在浏览器打开 [Construct 3](https://www.construct.net/a/260259?t=construct3) 编辑器。
 
-Construct 3 是一款完全基于浏览器运行的游戏引擎。当第一次打开它时，会自动保存离线版本，随后左下角会提示离线版本下载完成，之后即使可以在没有网络的环境下也可以使用。
+首次进入时，编辑器会推荐你进入 「初学者入门指引」 的互动教程。不要急着关闭它～ 强烈推荐你跟着教程走一次，可以帮助你以最直接的方式了解到 Construct 的工作方式。
 
-<figure><img src="../.gitbook/assets/Construct3Editor.png" alt="Construct3 编辑器页面"><figcaption></figcaption></figure>
-
-在你首次进入时，编辑器会推荐你进入 「初学者入门指引」 的互动教程，强烈推荐你点击中间按钮，跟着教程走一次，可以帮助你了解到 Construct ，不要急着关闭它～ 当然，如果你手快点击了关闭也没关系，你可以随时从菜单中再次启动它。
+当然，如果手快点击了关闭也没关系，你可以随时从菜单中再次启动它。
 
 <figure><img src="../.gitbook/assets/Xnip2025-02-27_16-15-53.png" alt="Construct 3 编辑器新手指引"><figcaption></figcaption></figure>
+
+
+
+### 关于离线版
+
+当第一次打开 Construct 编辑器时，它会自动在后台保存离线版本，随后左下角会出现一条提示：离线版本下载完成，之后即使可以在没有网络的环境下也可以正常使用。
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-03-26_16-53-57.png" alt="Construct3 编辑器页面"><figcaption></figcaption></figure>
+
+### 关于桌面版
+
+Construct 3 是一款完全基于浏览器运行的游戏引擎。你可以通过浏览器提供的安装应用 / iOS 添加到主屏幕的功能，安装为应用程序来使用它。
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-03-26_17-06-12.png" alt=""><figcaption></figcaption></figure>
+
+在地址栏右侧会看到一个安装图标，点击后，会弹出这样的提示，点击 "安装" 选项。
+
+<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+
+安装后，桌面上会创建一个 Construct 3 的应用程序图标，并且自动关联 .c3p 项目文件的打开方式。
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-03-26_17-11-51.png" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-03-26_17-17-29.png" alt=""><figcaption></figcaption></figure>
+
+
+
+
 
 
 
