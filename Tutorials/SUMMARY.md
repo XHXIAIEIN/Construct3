@@ -47,6 +47,19 @@
     * [添加场景](what/beginners/make-a-puzzle-game/new-level.md)
     * [制作标题画面](what/beginners/make-a-puzzle-game/game-title.md)
 
+***
+
+* [新手必须知道的那些事](cheatsheet/README.md)
+  * [游戏分辨率](cheatsheet/viewpoint.md)
+  * [场景](cheatsheet/layout.md)
+  * [事件表](cheatsheet/event-sheet/README.md)
+    * [添加条件](cheatsheet/event-sheet/conditions.md)
+    * [添加动作](cheatsheet/event-sheet/tian-jia-dong-zuo.md)
+    * [添加变量](cheatsheet/event-sheet/variables.md)
+    * [添加函数(动作组)](cheatsheet/event-sheet/function.md)
+    * [导入事件表](cheatsheet/event-sheet/include-eventsheet.md)
+    * [添加代码](cheatsheet/event-sheet/coding-in-eventsheet.md)
+
 ## 功能讲解 <a href="#how-to-use" id="how-to-use"></a>
 
 * [Array 数组](how-to-use/array.md)
