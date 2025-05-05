@@ -38,6 +38,32 @@ Construct 3 的项目文件通常以 .c3p 格式保存，安装桌面应用后�
 
 <figure><img src="../.gitbook/assets/Snipaste_2025-03-26_17-17-29.png" alt=""><figcaption></figcaption></figure>
 
+
+
+### 自动备份(很重要！)
+
+注意！！下面这个设置，请务必要打开！！可以确保你的工作进度，不会因为任何突发事故而丢失。
+
+对于任何创作者来说，最可怕的噩梦就是 "没有保存" ！可能因为软件突然崩溃、电脑突然死机、关机、小区停电，或者不小心误触强制关闭了软件.... 任何突发事故。这绝对不是小概率事件！
+
+接触到任何创作工具时，都应该先打开设置菜单，检查自动保存的设置。
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-05-05_16-36-56.png" alt=""><figcaption></figcaption></figure>
+
+在 Construct 3 的设置选项中，请找到保存与备份这栏。然后勾选 **定期备份** 选项。
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-05-05_16-48-20.png" alt=""><figcaption></figcaption></figure>
+
+请选择一个本地备份文件夹。
+
+<figure><img src="../.gitbook/assets/Snipaste_2025-05-05_16-52-46.png" alt=""><figcaption></figcaption></figure>
+
+版本管理：
+
+通常我会把本地备份文件夹选择在网盘自动备份的目录，例如 OneDrive 。网盘会帮你自动进行版本管理，你可以轻松回退到历史某个时间节点的状态。
+
+对于多人协作项目，建议保存为**文件夹项目** ，这样可以针对具体某个文件的改动进行管理。
+
 ### 其他注意事项
 
 请注意：
