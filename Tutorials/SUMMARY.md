@@ -50,8 +50,16 @@
 ***
 
 * [新手必须知道的那些事](cheatsheet/README.md)
-  * [游戏分辨率](cheatsheet/viewpoint.md)
-  * [场景](cheatsheet/layout.md)
+  * [编辑器设置](cheatsheet/editor/README.md)
+    * [场景](cheatsheet/editor/layout.md)
+    * [图层](cheatsheet/editor/layer.md)
+    * [可视区域](cheatsheet/editor/viewpoint.md)
+    * [网格对齐](cheatsheet/editor/wang-ge-dui-qi.md)
+    * [视差滚动](cheatsheet/editor/layer-parallax.md)
+  * [对象类型](cheatsheet/object-types/README.md)
+    * [全局对象](cheatsheet/object-types/global-object.md)
+    * [家族](cheatsheet/object-types/family.md)
+    * [对象层级](cheatsheet/object-types/hierarchy.md)
   * [事件表](cheatsheet/event-sheet/README.md)
     * [添加条件](cheatsheet/event-sheet/conditions.md)
     * [添加动作](cheatsheet/event-sheet/tian-jia-dong-zuo.md)
@@ -59,6 +67,13 @@
     * [添加函数(动作组)](cheatsheet/event-sheet/function.md)
     * [导入事件表](cheatsheet/event-sheet/include-eventsheet.md)
     * [添加代码](cheatsheet/event-sheet/coding-in-eventsheet.md)
+  * [游戏适配](cheatsheet/project/README.md)
+    * [屏幕适配](cheatsheet/project/screen-mode.md)
+    * [加载页样式](cheatsheet/project/loader-page.md)
+  * [导出项目](cheatsheet/export/README.md)
+    * [网页版 .html](cheatsheet/export/web.md)
+    * [桌面版 .exe](cheatsheet/export/exe.md)
+    * [安卓版 .apk](cheatsheet/export/apk.md)
 
 ## 功能讲解 <a href="#how-to-use" id="how-to-use"></a>
 
