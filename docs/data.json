@@ -699,6 +699,22 @@
                     }
                 ]
             },
+            "Ease": {
+                "data": [
+                    {
+                        "category": "Ease",
+                        "title": "自定义缓动曲线用到数值表达式",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Ease/Use%20Ease%20to%20Value.c3p"
+                    },
+                    {
+                        "category": "Ease",
+                        "title": "自定义缓动曲线用到移动路径",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Ease/Use%20Ease%20to%20Path.c3p"
+                    },
+                ]
+            },
             "Rotate": {
                 "data": [
                     {
@@ -1961,6 +1977,12 @@
                         "title": "用 SVG 字体显示涂鸦抖动字体特效",
                         "authors": ["XHXIAIEIN"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/HTML/HTMLSquigglyText.c3p"
+                    },
+                    {
+                        "category": "HTMLElement",
+                        "title": "用 HTML 表格显示 Array 数据",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/HTML/Array%20to%20HTML%20Table.c3p"
                     }
                 ]
             },
@@ -2464,6 +2486,24 @@
             },
             "Localization 本地化": {
                 "data": [
+                    {
+                        "category": "本地化",
+                        "title": "更简单的i18n插件案例",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Localization/i18n.c3p"
+                    },
+                    {
+                        "category": "本地化",
+                        "title": "基于Hash的多语言方案",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Localization/multi-language%20using%20Hash.c3p"
+                    },
+                    {
+                        "category": "本地化",
+                        "title": "基于Hash的多语言方案，应用到流程图",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Localization/Flowchart%20with%20Multi-language.c3p"
+                    },
                     {
                         "category": "本地化",
                         "title": "更简单的i18n插件案例",
