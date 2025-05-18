@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2025-03-23",
+    "lastUpdated": "2025-05-16",
     "navigation": 
     {
         "editor": [
@@ -4769,6 +4769,12 @@
                         "title": "拖动积木，按网格定位放到棋盘，所有积木铺满棋盘时过关",
                         "authors": ["dop2000"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/DragDrop/BlockPuzzle2.c3p"
+                    },
+                    {
+                        "category": "积木拼图",
+                        "title": "拖动积木，按网格定位放到棋盘，所有积木铺满棋盘时过关。积木带旋转",
+                        "authors": ["Justifun"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/DragDrop/Building%20Placement%20With%20Rotation.c3p"
                     }
                 ]
             }
