@@ -789,6 +789,16 @@
                     }
                 ]
             },
+            "DrawLine": {
+                "data": [
+                    {
+                        "category": "DrawLine",
+                        "title": "连接2个对象画一条线，完美像素，基于Tilemap的方案",
+                        "authors": ["LukeW"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Tilemap/Bresenham's%20line%20algorithm.c3p"
+                    }
+                ]
+            },
             "Carousel": {
                 "data": [
                     {
