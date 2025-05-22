@@ -3330,6 +3330,12 @@
                         "title": "模拟绳子、藤曼的物理互动效果",
                         "authors": ["jg"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Physics/ChainsHangers.c3p"
+                    },
+                    {
+                        "category": "Chain 物理链条",
+                        "title": "模拟链条、贪吃蛇跟随行为",
+                        "authors": ["R0J0hound"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Chain/chain_stiffness.c3p"
                     }
                 ]
             },
