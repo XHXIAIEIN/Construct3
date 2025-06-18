@@ -1283,7 +1283,7 @@
                         "title": "简单的鸟瞰等距视角平台移动跳跃",
                         "authors": ["Peter Stubbs"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/3DCamera/Isometric_Example.c3p"
-                    },
+                    }
                 ]
             },
             "3D Shape": {
