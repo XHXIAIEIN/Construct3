@@ -153,12 +153,28 @@ instVars["Variable3"]</code></pre>
 <pre>c3_callFunction("Function1");</code></pre>
 
 <p>通过字符串调用函数</p>
-<pre><code class="language-javascript">const function = "AddValue, 123, ABC"
+<pre><code class="language-javascript">
+runtime.callFunction("functionName", parameter0);
+</code></pre>
 
-runtime.callFunction(...localVars["command"]
-.split(",").map(e => e.trim()))
-.map(e => (isNaN(e) ? e : Number(e)))
-);  
+<p>通过字符串调用函数</p>
+"functionName, parameter1, parameter2..."
+<pre><code class="language-javascript">
+runtime.callFunction(...localVars["command"].split(",").map(e => e.trim()))
+</code></pre>
+
+<pre><code class="language-json">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"callFunction","functionDescription":"","functionCategory":"","functionReturnType":"none","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"command","type":"string","initialValue":"","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","language":"javascript","script":["runtime.callFunction(...localVars[\"command\"].split(\",\").map(e => e.trim()))"]}]}]}
+</code></pre>
+
+参数自动识别数字和字符串
+<pre><code class="language-javascript">
+runtime.callFunction(...localVars["command"].split(",").map(e => (e = e.trim(), e && !isNaN(e) ? +e : e)));
+</code></pre>
+
+容错版，如果 function 找不到，则使用备用的 function
+<pre><code class="language-javascript">
+{"is-c3-clipboard-data":true,"type":"events","items":[{"functionName":"callFunction","functionDescription":"","functionCategory":"","functionReturnType":"none","functionCopyPicked":false,"functionIsAsync":false,"functionParameters":[{"name":"command","type":"string","initialValue":"","comment":""},{"name":"default","type":"string","initialValue":"default","comment":""}],"eventType":"function-block","conditions":[],"actions":[{"type":"script","language":"javascript","script":["let result; try { result = runtime.callFunction(...localVars[\"command\"].split(\",\").map(e => (e = e.trim(), e && !isNaN(e) ? +e : e))); } catch (e) { if (e.message && e.message.includes(\"cannot find function name\") && localVars[\"default\"] && localVars[\"command\"] !== localVars[\"default\"]) result = runtime.callFunction(...localVars[\"default\"].split(\",\").map(e => (e = e.trim(), e && !isNaN(e) ? +e : e))); else throw e; }"]}]}]}
 </code></pre>
 
 <p>触发事件</p>
