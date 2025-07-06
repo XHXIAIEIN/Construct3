@@ -1,5 +1,5 @@
 {
-    "lastUpdated": "2025-05-19",
+    "lastUpdated": "2025-07-07",
     "navigation": 
     {
         "editor": [
@@ -1437,6 +1437,12 @@
                         "title": "简单的跑图任务系统，送信、传话",
                         "authors": ["DiegoM"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Function/SimpleQuestSystem.c3p"
+                    },
+                    {
+                        "category": "Function Map",
+                        "title": "使用字符串调用Function, 支持动态参数，以及找不到 Function 时的备选方案",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/Function/callFunction%20using%20String.c3p"
                     }
                 ]
             },
