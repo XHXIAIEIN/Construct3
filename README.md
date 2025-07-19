@@ -1,17 +1,6 @@
 # Construct 3 案例图书馆
-https://xhxiaiein.github.io/Construct3
-https://github.com/XHXIAIEIN/Construct3/tree/main/notes
-
-## 本地调试
-
-打开 docs 文件夹，在空白处右键，打开终端控制台，并运行：
-```
-python -m http.server 8000
-```
-随后访问，即可预览
-```
-http://localhost:8000/
-```
+* https://xhxiaiein.github.io/Construct3
+* https://github.com/XHXIAIEIN/Construct3/tree/main/notes
 
 ## Sprite Template
 
