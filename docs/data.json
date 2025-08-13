@@ -897,6 +897,16 @@
                     }
                 ]
             },
+            "9Patch": {
+                "data": [
+                    {
+                        "category": "9Patch",
+                        "title": "自适应边距缩放，避免边距过小时，边距强制覆盖",
+                        "authors": ["TackerTacker"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Plugins/9patch/shrink_edges_9patch.c3p"
+                    }
+                ]
+            },
             "Tilemap": {
                 "data": [
                     {
@@ -3298,6 +3308,12 @@
                     },
                     {
                         "category": "抛物线",
+                        "title": "将 qarp 函数与 Tween 结合",
+                        "authors": ["XHXIAIEIN"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Throw/qarpTweenParabola.c3p"
+                    },
+                    {
+                        "category": "抛物线",
                         "title": "用 qarp 函数实现抛物线运动，可调整抛物速度、偏移高度",
                         "authors": ["R0J0hound"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Math/Bezier/jumpArc.c3p"
@@ -3307,6 +3323,12 @@
                         "title": "鼠标滚轮调整抛物线，计算角度，终点，最高点",
                         "authors": ["erigato"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Throw/trajectory.capx"
+                    },
+                    {
+                        "category": "抛物线",
+                        "title": "使用 Tween 制作抛物线，指定一个位置，带抛物线到达",
+                        "authors": ["skymen"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Other/Throw/tweenParabola.c3p"
                     },
                     {
                         "category": "抛物线",
@@ -5190,6 +5212,26 @@
             }
         },
         "网络服务": {
+            "第三方登录": {
+                "data": [
+                    {
+                        "category": "第三方登录",
+                        "title": "官方插件，使用第三方登录创建账号系统，如 Google, Steam, X, Facebook...",
+                        "authors": ["Scirra"],
+                        "link": "https://editor.construct.net/#open=cgs-auth-providers"
+                    }
+                ]
+            },
+            "云存档": {
+                "data": [
+                    {
+                        "category": "云存档",
+                        "title": "官方插件，云游戏服务",
+                        "authors": ["Scirra"],
+                        "link": "https://www.construct.net/en/game-services"
+                    }
+                ]
+            },
             "版本更新": {
                 "data": [
                     {
@@ -5231,6 +5273,12 @@
             },
             "排行榜 Leaderboard": {
                 "data": [
+                    {
+                        "category": "排行榜 Leaderboard",
+                        "title": "官方排行榜",
+                        "authors": ["Scirra"],
+                        "link": "https://editor.construct.net/#open=cgs-leaderboards"
+                    },
                     {
                         "category": "排行榜 Leaderboard",
                         "title": "本地排行榜，数组写入玩家名和分数，并排序显示",
@@ -5312,7 +5360,7 @@
                     },
                     {
                         "category": "Steam功能",
-                        "title": "社区 Greengrinds 插件(比官方更友好)",
+                        "title": "社区 Greengrinds 插件(官方衍生插件，需先安装官方版)",
                         "authors": ["Mikal"],
                         "link": "https://www.construct.net/en/make-games/addons/244/greengrinds"
                     },
@@ -5321,16 +5369,6 @@
                         "title": "如何使用 Greenworks 插件激活 Steam 成就 (视频教程)",
                         "authors": ["AJ Ordaz"],
                         "link": "https://www.youtube.com/watch?v=D1ZF6pnsFeA"
-                    }
-                ]
-            },
-            "Bilibili": {
-                "data": [
-                    {
-                        "category": "Steam功能",
-                        "title": "集成 Bili 直播间弹幕、礼物的接收事件",
-                        "authors": ["Dengdads (QQ: 1611599235)"],
-                        "link": ""
                     }
                 ]
             }
