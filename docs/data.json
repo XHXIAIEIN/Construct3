@@ -265,6 +265,12 @@
                 "data": [
                     {
                         "category": "Sine",
+                        "title": "通过 Sin 行为实现无限滚动的背景。",
+                        "authors": ["XHXIAIEIN", ".Potion", "傅老师"],
+                        "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Sine/Background%20Scrolling.c3p"
+                    },
+                    {
+                        "category": "Sine",
                         "title": "添加多个 Sine 行为，实现鸟儿在位置附近随机飞行的效果。",
                         "authors": ["Federico Calchera"],
                         "link": "https://c2c3.oss-cn-beijing.aliyuncs.com/project/example/Behaviors/Sine/exampleBird.c3p"
