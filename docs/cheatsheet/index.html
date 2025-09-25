@@ -336,11 +336,13 @@ console.log(data['Name'])
 </code></pre>
 
 <h2 class="subsection-title">JSON 更改数据</h2>
-这里引用了一个实例变量 name
-<pre><code class="language-javascript">const dataInst = runtime.objects.JSON.getFirstInstance();
-const data = dataInst.getJsonDataCopy();
-data.name = localVars.name;
-dataInst.setJsonDataCopy(filterItems);
+<pre><code class="language-javascript">const jsonInst = runtime.objects.JSON.getFirstInstance();
+
+const jsonData = jsonInst.getJsonDataCopy();
+
+jsonData.path = data
+
+jsonInst.setJsonDataCopy(jsonData);
 </code></pre>
 
 <h1>Array</h1>
