@@ -44,7 +44,7 @@ class Config:
         'column_index': 1,                   # 要转换的列索引（0为第一列）
         'start_row': 0,                      # 起始行数（0为从第一行开始）
         'limit': 0,                          # 最大处理行数（0为不限制）
-        'batch_size': 1000,                  # 批次大小，每N行显示进度报告
+        'batch_size': 500,                  # 批次大小，每N行显示进度报告
 
         'converter_engine': 'opencc',        # 转换引擎: opencc, zhconv
         'opencc_config': ['s2t', 't2tw'],    # OpenCC转换配置(支持多步转换)
@@ -152,28 +152,48 @@ def _convert_punctuation(text: str) -> str:
 
 
 def _convert_quotes(text: str) -> str:
-    """简化的引号转换逻辑"""
-    if not any(c in text for c in ["'", "'", "'"]):
+    """转换引号为中文引号「」"""
+    # 检测需要转换的引号类型
+    quote_chars = ["'", "'", "'", '"', """, """]
+    if not any(c in text for c in quote_chars):
         return text
     
-    # 统一先转换为英文引号
-    text = text.replace("'", "'").replace("'", "'")
+    # 统一转换各种引号为标准英文引号便于处理
+    replacements = {
+        "'": "'", "'": "'",     # 中文单引号转英文
+        """: '"', """: '"',     # 中文双引号转英文
+    }
     
-    # 简单的左右引号判断：根据前后字符决定
+    for old_char, new_char in replacements.items():
+        text = text.replace(old_char, new_char)
+    
+    # 转换引号为中文引号「」
     chars = list(text)
-    quote_state = True  # True=左引号, False=右引号
+    quote_stack = []  # 用栈来跟踪引号配对
     
     for i, char in enumerate(chars):
-        if char == "'":
-            # 检查前一个字符判断引号类型
-            if i == 0 or chars[i-1] in ' \t\n':
-                chars[i] = "'"  # 左引号
-                quote_state = False
-            elif '\u4e00' <= chars[i-1] <= '\u9fff':
-                chars[i] = "'" if quote_state else "'"
-                quote_state = not quote_state
+        if char in ["'", '"']:
+            # 判断是开引号还是闭引号
+            prev_char = chars[i-1] if i > 0 else ' '
+            next_char = chars[i+1] if i < len(chars) - 1 else ' '
+            
+            # 判断引号类型的逻辑
+            is_opening = (
+                i == 0 or                                    # 行首
+                prev_char in ' \t\n([{' or                   # 前面是空白或开括号
+                ('\u4e00' <= prev_char <= '\u9fff' and      # 前面是中文且后面不是空白
+                 next_char != ' ')
+            )
+            
+            # 如果栈为空或者明显是开引号，则为开引号
+            if not quote_stack or is_opening:
+                chars[i] = '「'
+                quote_stack.append(i)
             else:
-                chars[i] = "'"  # 默认右引号
+                # 否则为闭引号
+                chars[i] = '」'
+                if quote_stack:
+                    quote_stack.pop()
     
     return ''.join(chars)
 
